@@ -26,21 +26,7 @@
 
 ### 2. 实习目标与工作范围
 
-真实机器人模型研发并不是取得数据后直接训练。设备侧轨迹首先需要经过来源追踪、质量检查、动作语义确认、视觉编码和训练格式组织；模型训练后还要用统一协议判断改进是否真实有效。因此，本次实习的目标是打通以下链路：
-
-```text
-生产现场与云端原始数据
-        ↓
-下载、追踪、Schema 识别与质量分级
-        ↓
-动作/状态构造、图像预处理与 VAE 编码
-        ↓
-Cosmos/LeRobot 数据集与固定 train/validation 划分
-        ↓
-Cosmos Policy 离线分布式训练
-        ↓
-Action、World、Value 与 RGB 分层评测
-```
+真实机器人模型研发并不是取得数据后直接训练。设备侧轨迹首先需要经过来源追踪、质量检查、动作语义确认、视觉编码和训练格式组织；模型训练后还要用统一协议判断改进是否真实有效。因此，本次实习以生产现场及云端原始数据为起点，依次完成数据下载与追踪、Schema 识别与质量分级、动作和状态构造、图像预处理与 VAE 编码、Cosmos/LeRobot 数据集组织及固定训练集/验证集划分，最终开展 Cosmos Policy 离线分布式训练，并从 Action、World、Value 和 RGB 四个层次评测模型。
 
 具体工作包括三部分：第一，学习强化学习、世界模型和 Cosmos Policy 方法并熟悉团队代码；第二，建立稳定、可审计的数据下载与转换流程；第三，在原始视频模型上开展机器人数据离线中训练，并比较动作表示和训练目标的影响。
 
@@ -56,17 +42,7 @@ Action、World、Value 与 RGB 分层评测
 
 现场采集数据先上传至对象存储，再由算法人员按任务下载。由于采集程序、设备型号和生产批次不断变化，不同 HDF5 的相机名称、机器人字段、轨迹长度甚至关键字段完整性可能不同。原始数据必须经过整理和转换，才能进入模型训练。
 
-本项目将运作流程整理为两个相互衔接的阶段：
-
-```text
-阶段 A：数据治理
-验收表/BOS → 冻结下载计划 → 断点续传 → HDF5 扫描
-             → Schema 分类 → 质量分级 → 事务搬运 → 核验
-
-阶段 B：模型数据生产
-HDF5 → episode 检查 → action/proprio 构造 → 图像裁剪
-     → 多 GPU VAE → latent 注入 → Parquet/metadata → preflight
-```
+本项目将运作流程整理为两个相互衔接的阶段。阶段 A 为数据治理：由验收表和 BOS 来源形成冻结下载计划，经过断点续传、HDF5 扫描、Schema 分类、质量分级和事务式搬运后完成核验。阶段 B 为模型数据生产：对 HDF5 逐 episode 检查，构造 action 与 proprio，完成图像裁剪和多 GPU VAE 编码，再将机器人信息注入 latent，最终写入 Parquet、metadata 并执行 preflight 完整性检查。
 
 训练阶段不修改原始 HDF5，而是读取转换生成的 Parquet 和独立 manifest。这样既能保护原始数据，也能固定 train/validation 划分，使不同实验使用完全相同的样本范围。
 
@@ -148,13 +124,13 @@ Cosmos Policy 将当前机器人状态、动作、未来状态和价值信息组
 - Value：给定当前状态、action 和未来状态，预测 value；
 - Inverse Dynamics：给定当前和未来状态，预测中间 action。
 
-本次主实验使用 Cosmos Policy/Predict2 的 EDM 加权去噪损失。设模型预测与目标误差为 (e)，噪声权重为 (w(\sigma))，目标 mask 为 (M)，则反向传播标量可写为：
+本次主实验使用 Cosmos Policy/Predict2 的 EDM 加权去噪损失。设模型预测与目标误差为 e，噪声权重为 w(σ)，目标 mask 为 M，则反向传播标量可写为：
 
 \[
 L_{EDM}=\frac{\sum M\,w(\sigma)e^2}{\sum M}.
 \]
 
-训练时噪声强度随机采样；验证时固定噪声和随机种子，使不同 checkpoint 可以公平比较。系统还支持梯度累积、BF16、checkpoint/断点恢复、配置归档、Prometheus 和 WandB 监控。四卡主实验中 micro-batch 为 2/rank、累积 16 次，因此每次参数更新的有效 batch 为 (2\times4\times16=128)。
+训练时噪声强度随机采样；验证时固定噪声和随机种子，使不同 checkpoint 可以公平比较。系统还支持梯度累积、BF16、checkpoint/断点恢复、配置归档、Prometheus 和 WandB 监控。四卡主实验中 micro-batch 为 2/rank、累积 16 次，因此每次参数更新的有效 batch 为 2×4×16=128。
 
 #### 4.4 分层评测设计
 
@@ -173,7 +149,7 @@ L_{EDM}=\frac{\sum M\,w(\sigma)e^2}{\sum M}.
 
 #### 5.1 实验设计
 
-2×2 实验包含 Euler Policy-only（E-P）、Euler Joint（E-J）、rotation-6D Policy-only（6D-P）和 rotation-6D Joint（6D-J）。四组实验使用相同的 221 个成功 episode，其中 train 177 个、validation 44 个；训练集 274,870 rows，验证集 67,340 rows。所有 run 从同一 Cosmos-Predict2-2B-Video2World 基础权重开始，采用 seed 42、有效 batch 128、学习率 (10^{-4}) 和 2,000 optimizer steps，共处理 256,000 row-samples，约 0.93 epoch。
+2×2 实验包含 Euler Policy-only（E-P）、Euler Joint（E-J）、rotation-6D Policy-only（6D-P）和 rotation-6D Joint（6D-J）。四组实验使用相同的 221 个成功 episode，其中 train 177 个、validation 44 个；训练集 274,870 rows，验证集 67,340 rows。所有 run 从同一 Cosmos-Predict2-2B-Video2World 基础权重开始，采用 seed 42、有效 batch 128、学习率 10⁻⁴ 和 2,000 optimizer steps，共处理 256,000 row-samples，约 0.93 epoch。
 
 #### 5.2 主要定量结果
 
@@ -269,9 +245,9 @@ E-P 与 6D-P 到 2,000 steps 仍在改善；6D-J 在 1,500 steps 出现验证波
 
 ## 参考文献
 
-[1] NVIDIA. *Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning*.
+[1] NVIDIA. Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning.
 
-[2] NVIDIA. *Cosmos 3: Omnimodal World Models for Physical AI*.
+[2] NVIDIA. Cosmos 3: Omnimodal World Models for Physical AI.
 
 [3] Ho J, Jain A, Abbeel P. Denoising Diffusion Probabilistic Models.
 
@@ -281,9 +257,9 @@ E-P 与 6D-P 到 2,000 steps 仍在改善；6D-J 在 1,500 steps 出现验证波
 
 [6] Kumar A, Zhou A, Tucker G, Levine S. Conservative Q-Learning for Offline Reinforcement Learning.
 
-## 附录：建议保留的精简图表
+## 附录：补充材料索引
 
-为控制正文篇幅，正式排版时建议正文只保留一张总流程图、一张动作/训练模式对比图和一张 RGB 预测示例，其余材料置于附录：
+为便于复核实验结果，电子版材料中保留了以下补充图表：
 
 1. 动作表示与训练模式对比：[fig2_translation_2x2.png](figures/compare/fig2_translation_2x2.png)
 2. 未来相机 PSNR：[fig8_future_cameras_psnr.png](figures/compare/fig8_future_cameras_psnr.png)
@@ -291,4 +267,4 @@ E-P 与 6D-P 到 2,000 steps 仍在改善；6D-J 在 1,500 steps 出现验证波
 4. Euler Policy RGB 示例：[euler_14d_policy_2000](figures/rgb_examples/euler_14d_policy_2000_0804_am_success_0804_095314_row750.png)
 5. rotation-6D Policy RGB 示例：[rotation6d_20d_policy_2000](figures/rgb_examples/rotation6d_20d_policy_2000_0804_am_success_0804_095314_row750.png)
 
-详细代码、指标公式和数字底稿分别见同目录下的 [CODE.md](CODE.md)、[DATA_CONVERT.md](DATA_CONVERT.md)、[DATA_DOWNLOAD.md](DATA_DOWNLOAD.md)、[RESULTS.md](RESULTS.md) 与 `tables/`。这些技术说明不必全部并入 12 页正文。
+详细代码说明、指标公式和数字底稿分别见同目录下的 [CODE.md](CODE.md)、[DATA_CONVERT.md](DATA_CONVERT.md)、[DATA_DOWNLOAD.md](DATA_DOWNLOAD.md)、[RESULTS.md](RESULTS.md) 与 `tables/`。

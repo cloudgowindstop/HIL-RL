@@ -1,0 +1,52 @@
+{
+  "slide": 8,
+  "title": "动作结果：Euler 与 rotation-6D 各有优势",
+  "prompt": "# Codex PPT Slide Image Prompt\n\n## Canvas\n{\n  \"type\": \"16:9 full-slide PowerPoint image\",\n  \"language\": \"Chinese\",\n  \"slide_number\": 8,\n  \"render_slide_number\": false\n}\n\n## Deck Goal\n面向生产实习答辩，清晰说明机器人数据治理、Cosmos数据转换、离线训练、受控实验结果、个人贡献与后续计划。\n\n## Required Background\n{\n  \"deck_context\": {\n    \"source_summary\": \"葛铭博在北京人形机器人创新中心具身智能部完成10周生产实习，在团队采集系统、控制代码和Cosmos Policy基础能力上，个人开发数据下载与Schema治理、HDF5到Cosmos转换、多GPU VAE、离线DDP训练、多目标mask、监控、2×2实验和多层评测。\",\n    \"core_claim\": \"项目把真实机器人生产数据转化为可训练、可扩展、可复现、可解释的Cosmos Policy离线中训练闭环。动作表示没有单一赢家；有限预算下Joint存在目标竞争，但改善Value排序。\",\n    \"canonical_terms\": [\n      \"Cosmos-Predict2-2B-Video2World\",\n      \"Euler 14D\",\n      \"rotation-6D 20D\",\n      \"Policy-only\",\n      \"Policy/World/Value Joint\",\n      \"EDM\",\n      \"Lazy Parquet\",\n      \"DistributedSampler\"\n    ],\n    \"factual_boundaries\": [\n      \"当前是Predict2 EDM微调，不是Cosmos 3 rectified-flow mid-training\",\n      \"ID训练未完成，只能作为未来方向\",\n      \"RGB评测使用GT action，不代表实机闭环成功率\",\n      \"主实验为单任务、单seed、2000 steps、约0.93 epoch\"\n    ]\n  },\n  \"slide_local_context\": \"translation MAE是控制尺度，不能标为米。不同维数的raw loss不能直接比较。\"\n}\n\n## Global Style\n{\n  \"name\": \"简约科研答辩风\",\n  \"visual_direction\": \"正式中文科研答辩，证据优先、结构严谨、简约克制；页面布局随封面、流程、架构、数据证据和总结角色变化，不重复同一模板。\",\n  \"color_palette\": \"白色#FFFFFF与浅灰#F5F7FA背景，深学术蓝#003F8F为主色，研究蓝#0B5CAD和浅蓝#EAF2FF为辅助，暗红#B5121B只强调关键结论。\",\n  \"typography\": \"清晰的中文无衬线字体；标题粗体左对齐或封面居左，正文投影可读；英文术语和数字保持准确。\",\n  \"texture_and_finish\": \"平面化、轻边框、少量浅阴影、充分留白，不使用重渐变、商业海报、卡通、虚构Logo或装饰性照片。\",\n  \"deck_consistency\": \"匹配已批准Slide 6的配色、字体气质、信息密度和技术图示语言，但根据页面语义改变构图。\"\n}\n\n## Input Images\n\n- Image 1: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png — approved sample slide style reference; match palette, typography mood, density and finish only; do not copy the architecture layout\n- Image 2: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig2_translation_2x2.png — strict input asset: main 2x2 translation error evidence chart; preserve all data, axes, labels, legends, colors and values; do not redraw\n- Image 3: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig10_left_arm_curve.png — strict input asset: checkpoint validation curve; preserve all data, axes, labels, legends, colors and values; do not redraw\n\n\n## Slide\n{\n  \"number\": 8,\n  \"title\": \"动作结果：Euler 与 rotation-6D 各有优势\",\n  \"role\": \"data evidence\",\n  \"intent\": \"用原始图表说明动作表示权衡和训练预算影响。\"\n}\n\n## Text\n{\n  \"title\": \"动作结果：Euler 与 rotation-6D 各有优势\",\n  \"key_points\": [\n    \"左臂：E-P 0.0281 vs 6D-P 0.0494，Euler低43.1%\",\n    \"右臂：0.0162 vs 0.0154，差异很小\",\n    \"夹爪接近饱和，主要差异来自更困难的左臂\",\n    \"同表示下Policy-only总体优于Joint\",\n    \"step 2000仍在改善：阶段性比较，不是收敛上限\"\n  ],\n  \"speaker_focus\": null\n}\n\n## Layout\n{\n  \"composition\": \"左侧约62%放两张原始图，上大下小；右侧约38%放三条结论和一个红色边界提示。\"\n}\n\n## Visual Elements\n{\n  \"main_visual\": \"两张严格输入实验图\",\n  \"supporting_elements\": \"对E-P和6D-P关键数字做外围标注，不覆盖图表\"\n}\n\n## Source Image Rules\n原图是证据，不允许重绘、改轴、改颜色或修改任何数值。\n\n## Constraints\n[\n  \"原图必须清晰可读\",\n  \"不把MAE写成米\",\n  \"不声称已经收敛\"\n]\n\n## Style Reference Rule\nUse Image 1 as the approved sample-slide style reference. Match its palette, typography mood, density, texture, and overall visual identity. Do not copy its exact layout unless this slide's layout explicitly asks for it.\n\n## Input Image Handling Rules\nFor any input image marked as a strict input asset, include it visibly and preserve its content. Do not redraw, replace, relabel, or invent a similar figure. Scale and crop only as needed for composition while keeping the important labels, arrows, data, and relationships recognizable.\n\n## Universal Constraints\n- The final image itself must contain the title and key points.\n- Render Chinese text exactly and legibly; avoid garbled characters.\n- Keep the confirmed deck style consistent while varying layout by slide role.\n- No watermark, unrelated logo, or extra slide number.\n",
+  "out": "slide_08.png",
+  "input_images": [
+    {
+      "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+      "role": "approved sample slide style reference",
+      "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+    },
+    {
+      "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig2_translation_2x2.png",
+      "role": "strict input asset: main 2x2 translation error evidence chart",
+      "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+    },
+    {
+      "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig10_left_arm_curve.png",
+      "role": "strict input asset: checkpoint validation curve",
+      "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+    }
+  ],
+  "requires_context_images": true,
+  "expected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "Slide 6 approved outline prompt with single-machine multi-GPU wording correction",
+    "size": "16:9 landscape, built-in output 1536x864",
+    "quality": "built-in default",
+    "approved_sample_path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+    "input_context_preparation": "For local required images, inspect with view_image before generation; for user-uploaded conversation images, use the smallest num_last_images_to_include that includes the target and approved sample.",
+    "handoff_rule": "Use the built-in image_gen backend in generate mode. Use the approved sample only as style reference. Return a blocker if the backend or required source image is unavailable."
+  },
+  "generation_contract": {
+    "must_use_selected_image_backend": true,
+    "must_match_sample_generation_method": true,
+    "forbidden_final_image_methods": [
+      "local drawing/rendering scripts",
+      "Pillow-generated slides",
+      "SVG/HTML/CSS/canvas screenshots",
+      "python-pptx/PptxGenJS/native PPT layout screenshots",
+      "manually composited text/image overlays"
+    ],
+    "must_return": [
+      "backend_used",
+      "selected_source",
+      "qa_note"
+    ]
+  }
+}

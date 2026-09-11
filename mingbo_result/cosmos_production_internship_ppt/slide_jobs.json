@@ -1,0 +1,437 @@
+{
+  "run_status": "slides_recorded",
+  "deck_name": "cosmos_production_internship_ppt",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "Slide 6 approved outline prompt with single-machine multi-GPU wording correction",
+    "size": "16:9 landscape, built-in output 1536x864",
+    "quality": "built-in default",
+    "approved_sample_path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+    "input_context_preparation": "For local required images, inspect with view_image before generation; for user-uploaded conversation images, use the smallest num_last_images_to_include that includes the target and approved sample.",
+    "handoff_rule": "Use the built-in image_gen backend in generate mode. Use the approved sample only as style reference. Return a blocker if the backend or required source image is unavailable."
+  },
+  "max_concurrent_slides": 3,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "面向具身智能的机器人数据治理与 Cosmos Policy 离线中训练实践",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        },
+        {
+          "path": "conversation://uploaded_image_3",
+          "role": "strict input asset: user-uploaded real single-arm robot photograph; use as the right-side hero visual",
+          "fidelity": "preserve the real robot and workbench; do not replace it with a generated robot"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_01",
+        "agent_nickname": "slide_01",
+        "prompt": "prompts/slide_01.json",
+        "prompt_sha256": "3d1f4d8114ebaec86e957ef475cb0b84977cbf9422eb2fff5df8a1e9abac93d9",
+        "dispatched_at": "2026-09-11T12:39:43Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_01",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907a-a209-7273-9e23-54f07a4f2a8a/exec-8c268122-4125-485d-a83f-61004068dac9.png",
+        "selected_source_sha256": "775bdd84cc6d9679432c0128eb0e4f1961fc653a65db60ddc1a99014a0c9bd03",
+        "final_image": "origin_image/slide_01.png",
+        "final_image_sha256": "775bdd84cc6d9679432c0128eb0e4f1961fc653a65db60ddc1a99014a0c9bd03",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "中文清晰；真实机械臂素材完整；标题、单位、导师和日期准确；风格与样张一致。",
+        "recorded_at": "2026-09-11T12:41:06Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "实习背景、部门职能与项目目标",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_02",
+        "agent_nickname": "slide_02",
+        "prompt": "prompts/slide_02.json",
+        "prompt_sha256": "b2e113d7d99179e9d74d7d21395352f34069cc4273c77552d96a068e65b3211e",
+        "dispatched_at": "2026-09-11T12:39:43Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_02",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907a-ee4b-7930-96cb-39c9a2542303/exec-8a478589-dc49-471d-a2b5-2daf6e679db7.png",
+        "selected_source_sha256": "c1e915404ebe6ea71e13d65cb191fa1df9c752e9d8fff76cb808f4878a711355",
+        "final_image": "origin_image/slide_02.png",
+        "final_image_sha256": "c1e915404ebe6ea71e13d65cb191fa1df9c752e9d8fff76cb808f4878a711355",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "修正为多GPU VAE编码适配；部门、时间线、项目目标和团队/个人边界准确；中文与布局通过。",
+        "recorded_at": "2026-09-11T12:43:43Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "一线生产流程与核心痛点",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        },
+        {
+          "path": "conversation://uploaded_image_1",
+          "role": "strict input asset: user-uploaded four-view real robot workspace montage",
+          "fidelity": "preserve all four camera views; do not replace or redraw the workspace"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_03",
+        "agent_nickname": "slide_03",
+        "prompt": "prompts/slide_03.json",
+        "prompt_sha256": "cf20663df9541cb2d69a24fc3a0bbf8fc7901066fcdc0a48f695019b50ffcee2",
+        "dispatched_at": "2026-09-11T12:39:43Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_03",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907a-cbac-7f61-8574-6af8ce92a77e/exec-0f1d980f-02a2-4960-a662-833f1937decb.png",
+        "selected_source_sha256": "f89f7b09245434699c06fb9a2402ada48c59e896d722060b0204655700b70a62",
+        "final_image": "origin_image/slide_03.png",
+        "final_image_sha256": "f89f7b09245434699c06fb9a2402ada48c59e896d722060b0204655700b70a62",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "真实四视角素材完整；生产链路、异常轨迹、Schema和动作语义痛点清晰；中文与版式通过。",
+        "recorded_at": "2026-09-11T12:41:55Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "总体改善方案：从原始数据到可验证模型",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_04",
+        "agent_nickname": "slide_04",
+        "prompt": "prompts/slide_04.json",
+        "prompt_sha256": "57d6539efcd380e6d3b8055dac114db2d1c6ce351ed8d9c5526b6ec703be11d8",
+        "dispatched_at": "2026-09-11T12:42:26Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_04",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907d-602e-7c82-b2bd-3746020a30fa/exec-414f4eb5-9a0c-43a9-8f52-c138c028ee57.png",
+        "selected_source_sha256": "59e0331f1dbde79ae0c735d1dca14dc4c4a27318a0821a2141663586544d3ccd",
+        "final_image": "origin_image/slide_04.png",
+        "final_image_sha256": "59e0331f1dbde79ae0c735d1dca14dc4c4a27318a0821a2141663586544d3ccd",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "四层闭环和原则条完整；Action已准确写为动作预测；中文、层级和风格通过。",
+        "recorded_at": "2026-09-11T12:45:47Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "数据治理与转换工程改善",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_05",
+        "agent_nickname": "slide_05",
+        "prompt": "prompts/slide_05.json",
+        "prompt_sha256": "4a8f00a34ac269afb4b0aff51f4d683a254a2a305a8e783a330b9211c03c698d",
+        "dispatched_at": "2026-09-11T12:42:27Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_05",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907d-81ed-79d3-9f2d-79715b9746f8/exec-ab519dc7-d921-4956-aebc-3a5165bdf16e.png",
+        "selected_source_sha256": "9321ad6fe0c173b490ccad4a77ca1134f1c1d2638e063c8711864e2966532f15",
+        "final_image": "origin_image/slide_05.png",
+        "final_image_sha256": "9321ad6fe0c173b490ccad4a77ca1134f1c1d2638e063c8711864e2966532f15",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "所有规模与吞吐数字准确；Schema漏斗和转换流水线清晰；未虚构单卡加速比。",
+        "recorded_at": "2026-09-11T12:44:20Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "Cosmos Policy 离线训练架构",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "accepted",
+      "dispatch": null,
+      "result": {
+        "final_image": "origin_image/slide_06.png",
+        "accepted_sample": true
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_07",
+      "number": 7,
+      "title": "受控实验设计与分层评测",
+      "job": "prompts/slide_07.json",
+      "out": "origin_image/slide_07.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_07",
+        "agent_nickname": "slide_07",
+        "prompt": "prompts/slide_07.json",
+        "prompt_sha256": "43e545f0a58e6c2822182ca95298558eab33cf33a2eb2ae580accc52fb22b915",
+        "dispatched_at": "2026-09-11T12:44:48Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_07",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907f-92c0-7a72-ab9d-ca87b85cbdf6/exec-18f184da-0a5d-4006-bbcd-76c5ec7aa702.png",
+        "selected_source_sha256": "30310c15f944fa21841c96d089f0b57158dc0378462f29d2e9e3fa60ce999a95",
+        "final_image": "origin_image/slide_07.png",
+        "final_image_sha256": "30310c15f944fa21841c96d089f0b57158dc0378462f29d2e9e3fa60ce999a95",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "2×2实验矩阵、控制变量、四层指标和评测边界准确；中文清晰。",
+        "recorded_at": "2026-09-11T12:47:21Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_08",
+      "number": 8,
+      "title": "动作结果：Euler 与 rotation-6D 各有优势",
+      "job": "prompts/slide_08.json",
+      "out": "origin_image/slide_08.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        },
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig2_translation_2x2.png",
+          "role": "strict input asset: main 2x2 translation error evidence chart",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        },
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig10_left_arm_curve.png",
+          "role": "strict input asset: checkpoint validation curve",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_08",
+        "agent_nickname": "slide_08",
+        "prompt": "prompts/slide_08.json",
+        "prompt_sha256": "0fd57b07ab1596909b8af0e21a7157fc56fc9274a557af257680a89e27fea3ee",
+        "dispatched_at": "2026-09-11T12:44:48Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_08",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a0907f-ae84-79a0-9ce1-5f16a6f8dfad/exec-a743d0fe-8d8a-49c4-a283-c9a7f3190a14.png",
+        "selected_source_sha256": "823b72cc886302e677c520a1a78fe2b80ba17e3a28753afe4278d8fee1282f7e",
+        "final_image": "origin_image/slide_08.png",
+        "final_image_sha256": "823b72cc886302e677c520a1a78fe2b80ba17e3a28753afe4278d8fee1282f7e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "两张实验图完整可读，关键数值、控制尺度和未收敛边界准确；中文与风格通过。",
+        "recorded_at": "2026-09-11T12:47:21Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_09",
+      "number": 9,
+      "title": "World 与 Value：视觉改善和多目标权衡",
+      "job": "prompts/slide_09.json",
+      "out": "origin_image/slide_09.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        },
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig8_future_cameras_psnr.png",
+          "role": "strict input asset: future camera PSNR chart",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        },
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/compare/fig9_value_spearman.png",
+          "role": "strict input asset: Value Spearman chart",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        },
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/figures/rgb_examples/rotation6d_20d_policy_2000_0804_am_success_0804_095314_row750.png",
+          "role": "strict input asset: 6D-P GT, prediction and error visual example",
+          "fidelity": "preserve GT, prediction, error and camera row relationships; do not redraw"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_09",
+        "agent_nickname": "slide_09",
+        "prompt": "prompts/slide_09.json",
+        "prompt_sha256": "0db91ecf5d5a99eedc9016359be0314a1e619f5dff14000320bdba7692ed023a",
+        "dispatched_at": "2026-09-11T12:47:47Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_09",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a09082-43f2-72d0-99dc-1ab73e448802/exec-6f519358-f011-41cc-a6c4-14690da76153.png",
+        "selected_source_sha256": "470be652ce511f638a2577e2b7def2c15b1bf084b5ab6722c17fe1a2be4e17f5",
+        "final_image": "origin_image/slide_09.png",
+        "final_image_sha256": "470be652ce511f638a2577e2b7def2c15b1bf084b5ab6722c17fe1a2be4e17f5",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "PSNR、Spearman和RGB证据图完整；数值、GT action边界和样本量准确；中文与风格通过。",
+        "recorded_at": "2026-09-11T12:51:56Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_10",
+      "number": 10,
+      "title": "项目贡献、核心结论与未来实验",
+      "job": "prompts/slide_10.json",
+      "out": "origin_image/slide_10.png",
+      "input_images": [
+        {
+          "path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/mingbo_result/cosmos_production_internship_ppt/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_10",
+        "agent_nickname": "slide_10",
+        "prompt": "prompts/slide_10.json",
+        "prompt_sha256": "7bdca75e6f9e80990760ab03127e7988a940a2096929dd3fe97485771fe4304d",
+        "dispatched_at": "2026-09-11T12:47:47Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_10",
+        "backend_used": "built-in image tool",
+        "selected_source": "/root/.codex/generated_images/01a09082-628c-7481-82c7-de010644ea17/exec-0d1afe86-102b-459d-8b4b-cd6fa75b292d.png",
+        "selected_source_sha256": "8c8b99f77cc136d6de60f8ac7f4941337a264eb5ee82f2efaa805f2f03f7c7fb",
+        "final_image": "origin_image/slide_10.png",
+        "final_image_sha256": "8c8b99f77cc136d6de60f8ac7f4941337a264eb5ee82f2efaa805f2f03f7c7fb",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "个人贡献准确限定为四层离线评测；实机闭环仅列为P2；结论、路线图和中文通过。",
+        "recorded_at": "2026-09-11T12:54:30Z"
+      },
+      "blocker": null
+    }
+  ],
+  "updated_at": "2026-09-11T12:54:30Z"
+}

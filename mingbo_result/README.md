@@ -5,6 +5,9 @@ Cosmos 离线公平对比（`action_representation_20260903`）的对外整理�
 | 文件 | 内容 |
 | --- | --- |
 | [PRODUCTION_INTERNSHIP_REPORT.md](PRODUCTION_INTERNSHIP_REPORT.md) | 按课程模板整理的生产实习总结报告正文与精简附录 |
+| [PRODUCTION_INTERNSHIP_REPORT.docx](PRODUCTION_INTERNSHIP_REPORT.docx) | A4、宋体小四、1.15倍行距的正式Word报告，含目录、页码、图表与题注 |
+| [generate_word_report.py](generate_word_report.py) | 从Markdown正文可重复生成Word报告的排版脚本 |
+| [cosmos_production_internship_ppt/](cosmos_production_internship_ppt/) | 10页生产实习学术汇报PPT、逐页图片、大纲与演讲备注 |
 | [DATA_CONVERT.md](DATA_CONVERT.md) | HDF5→Cosmos 转换实现；对照 `collect_data_cosmos.py`；改进点 |
 | [CODE.md](CODE.md) | 离线训练：实现了什么、亮点、已优化、还能优化 |
 | [RESULTS.md](RESULTS.md) | 结果、分析、展望（优化目标 / 实验方向） |

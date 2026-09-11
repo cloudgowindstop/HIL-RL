@@ -1,0 +1,314 @@
+{
+  "deck_name": "cosmos_production_internship_ppt",
+  "language": "Chinese",
+  "goal": "面向生产实习答辩，清晰说明机器人数据治理、Cosmos数据转换、离线训练、受控实验结果、个人贡献与后续计划。",
+  "deck_context": {
+    "source_summary": "葛铭博在北京人形机器人创新中心具身智能部完成10周生产实习，在团队采集系统、控制代码和Cosmos Policy基础能力上，个人开发数据下载与Schema治理、HDF5到Cosmos转换、多GPU VAE、离线DDP训练、多目标mask、监控、2×2实验和多层评测。",
+    "core_claim": "项目把真实机器人生产数据转化为可训练、可扩展、可复现、可解释的Cosmos Policy离线中训练闭环。动作表示没有单一赢家；有限预算下Joint存在目标竞争，但改善Value排序。",
+    "canonical_terms": [
+      "Cosmos-Predict2-2B-Video2World",
+      "Euler 14D",
+      "rotation-6D 20D",
+      "Policy-only",
+      "Policy/World/Value Joint",
+      "EDM",
+      "Lazy Parquet",
+      "DistributedSampler"
+    ],
+    "factual_boundaries": [
+      "当前是Predict2 EDM微调，不是Cosmos 3 rectified-flow mid-training",
+      "ID训练未完成，只能作为未来方向",
+      "RGB评测使用GT action，不代表实机闭环成功率",
+      "主实验为单任务、单seed、2000 steps、约0.93 epoch"
+    ]
+  },
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 3,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "Slide 6 approved outline prompt with single-machine multi-GPU wording correction",
+    "size": "16:9 landscape, built-in output 1536x864",
+    "quality": "built-in default",
+    "approved_sample_path": "origin_image/slide_06.png",
+    "input_context_preparation": "For local required images, inspect with view_image before generation; for user-uploaded conversation images, use the smallest num_last_images_to_include that includes the target and approved sample.",
+    "handoff_rule": "Use the built-in image_gen backend in generate mode. Use the approved sample only as style reference. Return a blocker if the backend or required source image is unavailable."
+  },
+  "style": {
+    "name": "简约科研答辩风",
+    "visual_direction": "正式中文科研答辩，证据优先、结构严谨、简约克制；页面布局随封面、流程、架构、数据证据和总结角色变化，不重复同一模板。",
+    "color_palette": "白色#FFFFFF与浅灰#F5F7FA背景，深学术蓝#003F8F为主色，研究蓝#0B5CAD和浅蓝#EAF2FF为辅助，暗红#B5121B只强调关键结论。",
+    "typography": "清晰的中文无衬线字体；标题粗体左对齐或封面居左，正文投影可读；英文术语和数字保持准确。",
+    "texture_and_finish": "平面化、轻边框、少量浅阴影、充分留白，不使用重渐变、商业海报、卡通、虚构Logo或装饰性照片。",
+    "deck_consistency": "匹配已批准Slide 6的配色、字体气质、信息密度和技术图示语言，但根据页面语义改变构图。"
+  },
+  "approved_style_reference": {
+    "path": "origin_image/slide_06.png",
+    "role": "approved sample slide style reference",
+    "fidelity": "match palette, typography mood, density and finish only; do not copy the architecture layout"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "面向具身智能的机器人数据治理与 Cosmos Policy 离线中训练实践",
+      "role": "cover",
+      "intent": "用真实机械臂建立生产实践与具身智能主题。",
+      "key_points": [
+        "《工业工程生产实践》总结汇报",
+        "葛铭博｜2023010345",
+        "北京人形机器人创新中心有限公司｜具身智能部",
+        "企业导师：Chris Ren、Linda Zhao",
+        "2026.07.01—09.04"
+      ],
+      "required_images": [
+        {
+          "path": "conversation://uploaded_image_3",
+          "role": "strict input asset: user-uploaded real single-arm robot photograph; use as the right-side hero visual",
+          "fidelity": "preserve the real robot and workbench; do not replace it with a generated robot"
+        }
+      ],
+      "local_context": "封面应突出真实生产设备，不需要摘要或复杂图表。",
+      "layout": {
+        "composition": "左侧约55%为标题与身份信息，右侧约45%为机械臂实拍；使用干净的斜切或矩形裁切，不遮挡机器人主体。"
+      },
+      "visual_elements": {
+        "main_visual": "用户上传的真实机械臂照片",
+        "supporting_elements": "极淡的数据节点线和latent网格，只作背景"
+      },
+      "constraints": ["保持封面文字稀疏", "不虚构公司Logo", "不修改机械臂外观"]
+    },
+    {
+      "number": 2,
+      "title": "实习背景、部门职能与项目目标",
+      "role": "timeline",
+      "intent": "说明个人工作在生产数据、训练和验证链路中的位置。",
+      "key_points": [
+        "具身智能部：具身智能系统、VLA、RL、WAM等模型研发",
+        "项目目标：可靠数据—可复现训练—可解释评测",
+        "第1—2周：理论学习、代码熟悉与bug修复",
+        "第3—6周：数据治理、转换重构、多GPU VAE",
+        "第7—10周：离线DDP、2×2实验与评测总结"
+      ],
+      "local_context": "团队提供采集系统、控制代码、Cosmos基础能力、数据和计算平台；本人完成后续模块开发和实验。",
+      "layout": {
+        "composition": "左侧部门职能和项目目标，右侧为四阶段水平或折线时间轴，底部一条个人/团队边界说明。"
+      },
+      "visual_elements": {
+        "main_visual": "10周四阶段时间轴",
+        "supporting_elements": "部门—个人任务—交付物的简洁关系线"
+      },
+      "constraints": ["最多五个主信息点", "突出10周阶段变化"]
+    },
+    {
+      "number": 3,
+      "title": "一线生产流程与核心痛点",
+      "role": "problem framing",
+      "intent": "从真实多视角采集说明数据为何不能直接训练。",
+      "key_points": [
+        "采集字段：双臂EE、joint、gripper、头部/腕部相机、时间戳",
+        "字段与Schema不统一",
+        "全零pose、长度不一致、相机缺帧",
+        "master/puppet、绝对/相对、当前/下一时刻语义易混淆",
+        "上万文件与TiB数据带来恢复、内存和审计压力"
+      ],
+      "required_images": [
+        {
+          "path": "conversation://uploaded_image_1",
+          "role": "strict input asset: user-uploaded four-view real robot workspace montage",
+          "fidelity": "preserve all four camera views; do not replace or redraw the workspace"
+        }
+      ],
+      "local_context": "生产链路是机器人采集→BOS→HDF5→模型数据→训练；痛点应落到流程节点。",
+      "layout": {
+        "composition": "左侧大图展示四视角现场，右侧竖向生产链路；四个暗红风险标记连接到相应节点。"
+      },
+      "visual_elements": {
+        "main_visual": "用户上传四视角现场图与生产链路",
+        "supporting_elements": "结构化风险标签，不使用卡通警告图标"
+      },
+      "constraints": ["真实图片必须清晰可见", "痛点文字简短", "不生成替代现场图"]
+    },
+    {
+      "number": 4,
+      "title": "总体改善方案：从原始数据到可验证模型",
+      "role": "process",
+      "intent": "展示数据治理、数据生产、训练和评测的完整闭环。",
+      "key_points": [
+        "数据治理：追踪、Schema识别、质量分级、事务搬运",
+        "数据生产：动作/状态、图像预处理、多GPU VAE、latent注入",
+        "模型训练：Lazy Parquet、DDP、多目标mask、EDM",
+        "效果验证：Action、World、Value、RGB四层指标",
+        "原则：原始只读、过程可恢复、变量受控、结论有边界"
+      ],
+      "local_context": "四层必须按从左到右的数据流连接，并从评测结果以反馈箭头回到数据和实验设计。",
+      "layout": {
+        "composition": "全宽四段式闭环流程图；每段一个主色模块、三到四个子步骤，底部为原则条。"
+      },
+      "visual_elements": {
+        "main_visual": "BOS/HDF5→Cosmos latent→离线训练→评测报告的闭环",
+        "supporting_elements": "单向主箭头与一条细反馈箭头"
+      },
+      "constraints": ["流程必须从左到右", "不写代码路径", "突出完整闭环"]
+    },
+    {
+      "number": 5,
+      "title": "数据治理与转换工程改善",
+      "role": "data evidence",
+      "intent": "用规模、可靠性和吞吐证明工程改善已经落地。",
+      "key_points": [
+        "11,015个物理HDF5｜13种Schema｜8个严重异常隔离",
+        "增量下载3,068个HDF5｜约1.53 TiB｜307条搬运全部verified",
+        "转换4组任务｜325 episodes｜436,360帧",
+        "Euler 14D与rotation-6D 20D，通过数值round-trip核验",
+        "8卡VAE流式编码，有效吞吐约29.4帧/秒"
+      ],
+      "local_context": "不要声称8卡相对单卡固定加速倍数，因为没有同条件单卡基线。",
+      "layout": {
+        "composition": "上方五张紧凑KPI卡；下方左侧Schema质量漏斗，右侧HDF5→动作/图像→VAE→Parquet转换流程。"
+      },
+      "visual_elements": {
+        "main_visual": "数据治理漏斗与转换流水线",
+        "supporting_elements": "KPI数字使用深蓝，异常隔离使用少量暗红"
+      },
+      "constraints": ["数字必须准确", "不显示虚构加速比", "避免五张同质大卡片挤满页面"]
+    },
+    {
+      "number": 6,
+      "title": "Cosmos Policy 离线训练架构",
+      "role": "architecture",
+      "intent": "解释9-slot latent、统一mask和单机多卡DDP。",
+      "key_points": [
+        "9-slot latent统一组织当前状态、action chunk、未来状态与value",
+        "Policy、World、Value、ID共享同一2B网络",
+        "EDM加权去噪：训练sigma随机，验证噪声固定",
+        "Lazy Parquet + DistributedSampler + 每rank独立DataLoader",
+        "DDP + BF16 + 梯度累积，有效batch 128"
+      ],
+      "local_context": "本页已经是用户批准的样张，文件存在，不要重新生成。",
+      "layout": {"composition": "复用已批准sample image"},
+      "visual_elements": {"main_visual": "已批准9-slot架构图"},
+      "constraints": ["不得重新生成"],
+      "sample_approved": true
+    },
+    {
+      "number": 7,
+      "title": "受控实验设计与分层评测",
+      "role": "experiment design",
+      "intent": "说明2×2比较的公平性与四层指标。",
+      "key_points": [
+        "2×2：Euler/rotation-6D × Policy-only/Joint",
+        "相同221 episodes、177/44 train/validation",
+        "同一基座、seed 42、有效batch 128、学习率1e-4",
+        "每组2000 steps，共256,000 row-samples，约0.93 epoch",
+        "Action、World latent、Value、RGB四层评测"
+      ],
+      "local_context": "固定噪声probe不是全量验证；RGB评测给定GT action；主实验单任务、单seed。",
+      "layout": {
+        "composition": "左侧2×2实验矩阵，右侧四层阶梯或金字塔指标；底部单独列出三条评测边界。"
+      },
+      "visual_elements": {
+        "main_visual": "2×2矩阵与四层指标体系",
+        "supporting_elements": "公平控制变量环绕矩阵，不使用天平等泛化插画"
+      },
+      "constraints": ["2×2标签准确", "评测边界必须可见", "不把validation说成全量"]
+    },
+    {
+      "number": 8,
+      "title": "动作结果：Euler 与 rotation-6D 各有优势",
+      "role": "data evidence",
+      "intent": "用原始图表说明动作表示权衡和训练预算影响。",
+      "key_points": [
+        "左臂：E-P 0.0281 vs 6D-P 0.0494，Euler低43.1%",
+        "右臂：0.0162 vs 0.0154，差异很小",
+        "夹爪接近饱和，主要差异来自更困难的左臂",
+        "同表示下Policy-only总体优于Joint",
+        "step 2000仍在改善：阶段性比较，不是收敛上限"
+      ],
+      "required_images": [
+        {
+          "path": "../figures/compare/fig2_translation_2x2.png",
+          "role": "strict input asset: main 2x2 translation error evidence chart",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        },
+        {
+          "path": "../figures/compare/fig10_left_arm_curve.png",
+          "role": "strict input asset: checkpoint validation curve",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        }
+      ],
+      "local_context": "translation MAE是控制尺度，不能标为米。不同维数的raw loss不能直接比较。",
+      "layout": {
+        "composition": "左侧约62%放两张原始图，上大下小；右侧约38%放三条结论和一个红色边界提示。"
+      },
+      "visual_elements": {
+        "main_visual": "两张严格输入实验图",
+        "supporting_elements": "对E-P和6D-P关键数字做外围标注，不覆盖图表"
+      },
+      "source_image_rules": "原图是证据，不允许重绘、改轴、改颜色或修改任何数值。",
+      "constraints": ["原图必须清晰可读", "不把MAE写成米", "不声称已经收敛"]
+    },
+    {
+      "number": 9,
+      "title": "World 与 Value：视觉改善和多目标权衡",
+      "role": "data evidence",
+      "intent": "展示未来图像改善以及Value排序与标定的区别。",
+      "key_points": [
+        "Base→微调：future-camera PSNR约7.4→18.8—19.8 dB",
+        "6D-P最佳：PSNR 19.82 dB，SSIM 0.735",
+        "Joint Value Spearman更高：E-J 0.879，6D-J 0.866",
+        "Value MAE未同步改善：排序与数值标定是不同目标",
+        "RGB给定GT action，仅代表World/FD预测"
+      ],
+      "required_images": [
+        {
+          "path": "../figures/compare/fig8_future_cameras_psnr.png",
+          "role": "strict input asset: future camera PSNR chart",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        },
+        {
+          "path": "../figures/compare/fig9_value_spearman.png",
+          "role": "strict input asset: Value Spearman chart",
+          "fidelity": "preserve all data, axes, labels, legends, colors and values; do not redraw"
+        },
+        {
+          "path": "../figures/rgb_examples/rotation6d_20d_policy_2000_0804_am_success_0804_095314_row750.png",
+          "role": "strict input asset: 6D-P GT, prediction and error visual example",
+          "fidelity": "preserve GT, prediction, error and camera row relationships; do not redraw"
+        }
+      ],
+      "local_context": "Spearman评估样本进度排序，MAE评估绝对数值误差；当前Spearman n=80，RGB sample_count=16。",
+      "layout": {
+        "composition": "上方两张原始指标图并列；下方左侧放RGB三联图，右侧解释Spearman与MAE的差异并给出边界。"
+      },
+      "visual_elements": {
+        "main_visual": "三张严格输入证据图",
+        "supporting_elements": "蓝色视觉改善结论、暗红色GT action边界提示"
+      },
+      "source_image_rules": "所有原图保持内容不变，不合成新数据，不重绘图表。",
+      "constraints": ["三张原图均需可辨认", "不要声称Joint全面更优", "注明GT action和样本量"]
+    },
+    {
+      "number": 10,
+      "title": "项目贡献、核心结论与未来实验",
+      "role": "summary",
+      "intent": "用个人贡献、研究结论和P0/P1/P2路线结束汇报。",
+      "key_points": [
+        "贡献：数据治理→转换→DDP训练→四层评测完整闭环",
+        "结论：动作表示存在任务相关权衡",
+        "结论：有限预算下Joint存在目标竞争，但改善Value排序",
+        "P0：ID消融；按相同Policy更新次数重做Joint",
+        "P1/P2：3 seeds、多任务、损失与时间采样、Noisy History、实机闭环"
+      ],
+      "local_context": "个人工作是在团队已有采集系统、控制代码和Cosmos基础能力上完成。ID无结果。",
+      "layout": {
+        "composition": "左侧三项个人贡献，中间两条核心结论，右侧P0/P1/P2纵向路线图；底部结束语。"
+      },
+      "visual_elements": {
+        "main_visual": "贡献—结论—未来的三段式收束",
+        "supporting_elements": "P0/P1/P2细箭头和一条深蓝结束语"
+      },
+      "constraints": ["不展示ID结果", "不声称基础模型原创", "结论保持克制"]
+    }
+  ]
+}
