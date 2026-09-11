@@ -1,0 +1,46 @@
+[basic]
+station_type = "ur_sg"
+
+[home_pose]
+robot = [
+    3.92,
+    -1.56,
+    -1.56,
+    -1.56,
+    1.56,
+    3.14,
+]
+
+[xlinker.single.robot]
+port = "/dev/serial/by-id/usb-1a86_USB_Single_Serial_58FA082045-if00"
+joint_ids = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+]
+joint_signs = [
+    1,
+    1,
+    -1,
+    1,
+    1,
+    1,
+]
+joint_offsets = [
+    -2.3323298845383613,
+    3.184485654370894,
+    0.1151070203711202,
+    -1.457340209771056,
+    3.1707967498393175,
+    -3.1599417502425133,
+]
+gripper = [
+    119.00390625,
+    49.04296875,
+]
+joint_limits = []
+gripper_limits = []

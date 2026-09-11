@@ -1,0 +1,165 @@
+Tienyi trajectory master[t] vs puppet[t+1] inspection
+=====================================================
+
+Source HDF5
+-----------
+/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_raw/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm/0803_173020/data/trajectory.hdf5
+
+Aligned episode length: 1432
+Compared pairs: t=0..1430 (1431 pairs)
+
+Important semantic finding
+--------------------------
+The HDF5 does NOT contain master end-effector Cartesian poses.
+
+Missing datasets:
+  master/end_effector_left_pose_align/data   expected shape (1432, 7)
+  master/end_effector_right_pose_align/data  expected shape (1432, 7)
+
+Therefore the following direct Cartesian-pose comparison cannot be computed:
+  master_pose[t] versus puppet_pose[t+1]
+
+The datasets named end_effector_*_position_align under master have shape
+(1432, 1). They are scalar gripper positions, not XYZ positions and not
+[x,y,z,qx,qy,qz,qw] poses.
+
+Master aligned data that actually exists
+----------------------------------------
+  master/arm_left_position_align/data
+    shape=(1432, 7), dtype=float64, meaning=left arm joint positions
+  master/arm_right_position_align/data
+    shape=(1432, 7), dtype=float64, meaning=right arm joint positions
+  master/end_effector_left_position_align/data
+    shape=(1432, 1), dtype=float64, meaning=left gripper position
+  master/end_effector_right_position_align/data
+    shape=(1432, 1), dtype=float64, meaning=right gripper position
+
+Puppet aligned end-effector data that exists
+--------------------------------------------
+  puppet/end_effector_left_pose_align/data
+    shape=(1432, 7), dtype=float32, meaning=[x,y,z,qx,qy,qz,qw]
+  puppet/end_effector_right_pose_align/data
+    shape=(1432, 7), dtype=float32, meaning=[x,y,z,qx,qy,qz,qw]
+  puppet/end_effector_left_position_align/data
+    shape=(1432, 1), dtype=float32, meaning=left gripper position
+  puppet/end_effector_right_position_align/data
+    shape=(1432, 1), dtype=float32, meaning=right gripper position
+
+Directly comparable scalar gripper values
+------------------------------------------
+Definition:
+  error[t] = master_gripper[t] - puppet_gripper[t+1]
+
+Left gripper:
+  master range             = [0.0973431964, 0.7692313958]
+  puppet range             = [0.0980392173, 0.7294117808]
+  mean absolute error      = 0.0121275147
+  root mean squared error  = 0.0299250616
+  median absolute error    = 0.0005432742
+  95th percentile abs err  = 0.0546730148
+  maximum absolute error   = 0.2530921774
+  fraction abs err <= 0.05 = 94.6191%
+
+Left first ten pairs: t, master[t], puppet[t+1], error
+  0  0.0980141070  0.0980392173  -0.0000251103
+  1  0.0979718079  0.0980392173  -0.0000674094
+  2  0.0979600582  0.0980392173  -0.0000791591
+  3  0.0979800327  0.0980392173  -0.0000591845
+  4  0.0979530083  0.0980392173  -0.0000862090
+  5  0.0979624081  0.0980392173  -0.0000768092
+  6  0.0979588832  0.0980392173  -0.0000803341
+  7  0.0980035322  0.0980392173  -0.0000356850
+  8  0.0979859076  0.0980392173  -0.0000533097
+  9  0.0979483084  0.0980392173  -0.0000909089
+
+Left maximum-error pair:
+  t=356, master[t]=0.4488686247, puppet[t+1]=0.7019608021
+  error=-0.2530921774
+
+Right gripper:
+  master range             = [0.0485000253, 0.9954222925]
+  puppet range             = [0.0117647061, 0.8980392218]
+  mean absolute error      = 0.0620993740
+  root mean squared error  = 0.0750990066
+  median absolute error    = 0.0477072238
+  95th percentile abs err  = 0.1106759767
+  maximum absolute error   = 0.3782201625
+  fraction abs err <= 0.05 = 53.3194%
+
+Right first ten pairs: t, master[t], puppet[t+1], error
+  0  0.0503756012  0.0980392173  -0.0476636160
+  1  0.0503905777  0.0980392173  -0.0476486396
+  2  0.0503469699  0.0980392173  -0.0476922474
+  3  0.0503372792  0.0980392173  -0.0477019381
+  4  0.0503284696  0.0980392173  -0.0477107477
+  5  0.0503249457  0.0980392173  -0.0477142716
+  6  0.0503769227  0.0980392173  -0.0476622946
+  7  0.0503769227  0.0980392173  -0.0476622946
+  8  0.0503716369  0.0980392173  -0.0476675804
+  9  0.0503852919  0.0980392173  -0.0476539254
+
+Right maximum-error pair:
+  t=903, master[t]=0.5002112173, puppet[t+1]=0.8784313798
+  error=-0.3782201625
+
+Joint-space comparison (reference only; not an end-effector pose comparison)
+----------------------------------------------------------------------------
+Definition:
+  joint_error[t] = master_joint[t] - puppet_joint[t+1]
+
+Left arm:
+  per-joint mean absolute error (rad):
+    [0.00676518, 0.00752424, 0.00676744, 0.03118685,
+     0.00674851, 0.00454130, 0.02060827]
+  all-channel RMSE = 0.01661613 rad
+  maximum absolute joint error = 0.08738709 rad
+  maximum location = t=397, joint index=6
+
+Right arm:
+  per-joint mean absolute error (rad):
+    [0.00978969, 0.00504685, 0.00688731, 0.03220922,
+     0.00470077, 0.00370160, 0.01971305]
+  all-channel RMSE = 0.01623047 rad
+  maximum absolute joint error = 0.06456391 rad
+  maximum location = t=398, joint index=3
+
+For reference, same-frame master[t] vs puppet[t] joint RMSE is:
+  left  = 0.01804729 rad
+  right = 0.01695943 rad
+
+The t+1 comparison is slightly closer in joint space than the same-frame
+comparison, but the difference is small. This alone does not prove that the
+correct action timing is exactly one aligned frame.
+
+Puppet end-effector motion from t to t+1
+----------------------------------------
+This measures only puppet motion; it is not master-vs-puppet pose error.
+
+Left:
+  mean translation step = 0.00070144 m
+  p95 translation step  = 0.00281196 m
+  max translation step  = 0.01143771 m
+  mean rotation step    = 0.17386716 deg
+  p95 rotation step     = 0.78226086 deg
+  max rotation step     = 3.01262213 deg
+
+Right:
+  mean translation step = 0.00096574 m
+  p95 translation step  = 0.00336354 m
+  max translation step  = 0.00555319 m
+  mean rotation step    = 0.18081911 deg
+  p95 rotation step     = 0.55826983 deg
+  max rotation step     = 1.00006974 deg
+
+Conclusion
+----------
+1. Puppet has left/right 7D Cartesian end-effector poses.
+2. Master does not have left/right Cartesian end-effector poses.
+3. Master has 7D joint positions and scalar gripper positions.
+4. Direct master[t] vs puppet[t+1] Cartesian end-effector comparison is impossible
+   without applying the correct FK to master joints.
+5. Left gripper generally follows closely except during transitions; right gripper
+   has a visible systematic/temporal difference and cannot be described as close
+   over the full episode using a 0.05 threshold.
+6. Joint-space master[t] and puppet[t+1] are relatively close, but FK is still
+   required before making any claim about Cartesian position or rotation error.

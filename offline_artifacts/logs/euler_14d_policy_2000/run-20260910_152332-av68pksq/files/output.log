@@ -1,0 +1,449 @@
+[MONITOR] WandB run=E-P-2000 url=https://wandb.ai/cloudgowindstop-tsinghua-university/cosmos-offline-compare-2000/runs/av68pksq
+[TRAIN] epoch=0 step=0 batches=34358 skip=0 accum=16
+[TRAIN] step=5 loss=0.747428
+[TRAIN] step=10 loss=0.714031
+[TRAIN] step=15 loss=0.561107
+[TRAIN] step=20 loss=0.496054
+[TRAIN] step=25 loss=0.433480
+[TRAIN] step=30 loss=0.333524
+[TRAIN] step=35 loss=0.218822
+[TRAIN] step=40 loss=0.134207
+[TRAIN] step=45 loss=0.111105
+[TRAIN] step=50 loss=0.100829
+[TRAIN] step=55 loss=0.101348
+[TRAIN] step=60 loss=0.091327
+[TRAIN] step=65 loss=0.095712
+[TRAIN] step=70 loss=0.079983
+[TRAIN] step=75 loss=0.080313
+[TRAIN] step=80 loss=0.086370
+[TRAIN] step=85 loss=0.066643
+[TRAIN] step=90 loss=0.065598
+[TRAIN] step=95 loss=0.071510
+[TRAIN] step=100 loss=0.063312
+[TRAIN] step=105 loss=0.058360
+[TRAIN] step=110 loss=0.059371
+[TRAIN] step=115 loss=0.058185
+[TRAIN] step=120 loss=0.047661
+[TRAIN] step=125 loss=0.049177
+[TRAIN] step=130 loss=0.050069
+[TRAIN] step=135 loss=0.052536
+[TRAIN] step=140 loss=0.050220
+[TRAIN] step=145 loss=0.044478
+[TRAIN] step=150 loss=0.048732
+[TRAIN] step=155 loss=0.050831
+[TRAIN] step=160 loss=0.046218
+[TRAIN] step=165 loss=0.046030
+[TRAIN] step=170 loss=0.041186
+[TRAIN] step=175 loss=0.046357
+[TRAIN] step=180 loss=0.047427
+[TRAIN] step=185 loss=0.043000
+[TRAIN] step=190 loss=0.061222
+[TRAIN] step=195 loss=0.048646
+[TRAIN] step=200 loss=0.039366
+[TRAIN] step=205 loss=0.041318
+[TRAIN] step=210 loss=0.044358
+[TRAIN] step=215 loss=0.039272
+[TRAIN] step=220 loss=0.044375
+[TRAIN] step=225 loss=0.044113
+[TRAIN] step=230 loss=0.043098
+[TRAIN] step=235 loss=0.041378
+[TRAIN] step=240 loss=0.046598
+[TRAIN] step=245 loss=0.038867
+[TRAIN] step=250 loss=0.041667
+[TRAIN] step=255 loss=0.034851
+[TRAIN] step=260 loss=0.039411
+[TRAIN] step=265 loss=0.037130
+[TRAIN] step=270 loss=0.038618
+[TRAIN] step=275 loss=0.039000
+[TRAIN] step=280 loss=0.036914
+[TRAIN] step=285 loss=0.037706
+[TRAIN] step=290 loss=0.036105
+[TRAIN] step=295 loss=0.040172
+[TRAIN] step=300 loss=0.043405
+[TRAIN] step=305 loss=0.035230
+[TRAIN] step=310 loss=0.036454
+[TRAIN] step=315 loss=0.040300
+[TRAIN] step=320 loss=0.034273
+[TRAIN] step=325 loss=0.037594
+[TRAIN] step=330 loss=0.037767
+[TRAIN] step=335 loss=0.043573
+[TRAIN] step=340 loss=0.036357
+[TRAIN] step=345 loss=0.037488
+[TRAIN] step=350 loss=0.031583
+[TRAIN] step=355 loss=0.042842
+[TRAIN] step=360 loss=0.043471
+[TRAIN] step=365 loss=0.043002
+[TRAIN] step=370 loss=0.035265
+[TRAIN] step=375 loss=0.033123
+[TRAIN] step=380 loss=0.036325
+[TRAIN] step=385 loss=0.038545
+[TRAIN] step=390 loss=0.033571
+[TRAIN] step=395 loss=0.037101
+[TRAIN] step=400 loss=0.039741
+[TRAIN] step=405 loss=0.038476
+[TRAIN] step=410 loss=0.033191
+[TRAIN] step=415 loss=0.039114
+[TRAIN] step=420 loss=0.046663
+[TRAIN] step=425 loss=0.045600
+[TRAIN] step=430 loss=0.032401
+[TRAIN] step=435 loss=0.035651
+[TRAIN] step=440 loss=0.034929
+[TRAIN] step=445 loss=0.038347
+[TRAIN] step=450 loss=0.031029
+[TRAIN] step=455 loss=0.035435
+[TRAIN] step=460 loss=0.041933
+[TRAIN] step=465 loss=0.028853
+[TRAIN] step=470 loss=0.035272
+[TRAIN] step=475 loss=0.035458
+[TRAIN] step=480 loss=0.034909
+[TRAIN] step=485 loss=0.030657
+[TRAIN] step=490 loss=0.034966
+[TRAIN] step=495 loss=0.033022
+[TRAIN] step=500 loss=0.033073
+[EVAL] condition=1/1 step=500 sigma=0.5 objective=policy ablation=normal batches=40
+[EVAL] condition=1/1 batch=10/40 rate=2.31 batch/s elapsed=4.3s ETA=13.0s
+[EVAL] condition=1/1 batch=20/40 rate=3.55 batch/s elapsed=5.6s ETA=5.6s
+[EVAL] condition=1/1 batch=30/40 rate=4.33 batch/s elapsed=6.9s ETA=2.3s
+[EVAL] condition=1/1 batch=40/40 rate=4.86 batch/s elapsed=8.2s ETA=0.0s
+[EVAL] condition=1/1 complete loss=0.067131 elapsed=8.2s
+[VAL] epoch=0 loss=0.067131 elapsed=8.2s
+[TRAIN] step=505 loss=0.029698
+[TRAIN] step=510 loss=0.033540
+[TRAIN] step=515 loss=0.029539
+[TRAIN] step=520 loss=0.034359
+[TRAIN] step=525 loss=0.029698
+[TRAIN] step=530 loss=0.041277
+[TRAIN] step=535 loss=0.037896
+[TRAIN] step=540 loss=0.028620
+[TRAIN] step=545 loss=0.032023
+[TRAIN] step=550 loss=0.032152
+[TRAIN] step=555 loss=0.040863
+[TRAIN] step=560 loss=0.038362
+[TRAIN] step=565 loss=0.036190
+[TRAIN] step=570 loss=0.035253
+[TRAIN] step=575 loss=0.036977
+[TRAIN] step=580 loss=0.033616
+[TRAIN] step=585 loss=0.041307
+[TRAIN] step=590 loss=0.037332
+[TRAIN] step=595 loss=0.033565
+[TRAIN] step=600 loss=0.033451
+[TRAIN] step=605 loss=0.044330
+[TRAIN] step=610 loss=0.031025
+[TRAIN] step=615 loss=0.029684
+[TRAIN] step=620 loss=0.030881
+[TRAIN] step=625 loss=0.041692
+[TRAIN] step=630 loss=0.027980
+[TRAIN] step=635 loss=0.027025
+[TRAIN] step=640 loss=0.034822
+[TRAIN] step=645 loss=0.036907
+[TRAIN] step=650 loss=0.030851
+[TRAIN] step=655 loss=0.033183
+[TRAIN] step=660 loss=0.026442
+[TRAIN] step=665 loss=0.032900
+[TRAIN] step=670 loss=0.031740
+[TRAIN] step=675 loss=0.027288
+[TRAIN] step=680 loss=0.318736
+[TRAIN] step=685 loss=0.139394
+[TRAIN] step=690 loss=0.093069
+[TRAIN] step=695 loss=0.062319
+[TRAIN] step=700 loss=0.053512
+[TRAIN] step=705 loss=0.061596
+[TRAIN] step=710 loss=0.047604
+[TRAIN] step=715 loss=0.045379
+[TRAIN] step=720 loss=0.050941
+[TRAIN] step=725 loss=0.046858
+[TRAIN] step=730 loss=0.042902
+[TRAIN] step=735 loss=0.036706
+[TRAIN] step=740 loss=0.053799
+[TRAIN] step=745 loss=0.035914
+[TRAIN] step=750 loss=0.033852
+[TRAIN] step=755 loss=0.029950
+[TRAIN] step=760 loss=0.032781
+[TRAIN] step=765 loss=0.037923
+[TRAIN] step=770 loss=0.035232
+[TRAIN] step=775 loss=0.034037
+[TRAIN] step=780 loss=0.036075
+[TRAIN] step=785 loss=0.031866
+[TRAIN] step=790 loss=0.034835
+[TRAIN] step=795 loss=0.029998
+[TRAIN] step=800 loss=0.032236
+[TRAIN] step=805 loss=0.030442
+[TRAIN] step=810 loss=0.030849
+[TRAIN] step=815 loss=0.034561
+[TRAIN] step=820 loss=0.028188
+[TRAIN] step=825 loss=0.025759
+[TRAIN] step=830 loss=0.028364
+[TRAIN] step=835 loss=0.035001
+[TRAIN] step=840 loss=0.033691
+[TRAIN] step=845 loss=0.035322
+[TRAIN] step=850 loss=0.030458
+[TRAIN] step=855 loss=0.031301
+[TRAIN] step=860 loss=0.033268
+[TRAIN] step=865 loss=0.029536
+[TRAIN] step=870 loss=0.033657
+[TRAIN] step=875 loss=0.028066
+[TRAIN] step=880 loss=0.028856
+[TRAIN] step=885 loss=0.029661
+[TRAIN] step=890 loss=0.027928
+[TRAIN] step=895 loss=0.035108
+[TRAIN] step=900 loss=0.032652
+[TRAIN] step=905 loss=0.033929
+[TRAIN] step=910 loss=0.027832
+[TRAIN] step=915 loss=0.032959
+[TRAIN] step=920 loss=0.026531
+[TRAIN] step=925 loss=0.029853
+[TRAIN] step=930 loss=0.036753
+[TRAIN] step=935 loss=0.032922
+[TRAIN] step=940 loss=0.030306
+[TRAIN] step=945 loss=0.026360
+[TRAIN] step=950 loss=0.027448
+[TRAIN] step=955 loss=0.025716
+[TRAIN] step=960 loss=0.027801
+[TRAIN] step=965 loss=0.030472
+[TRAIN] step=970 loss=0.032368
+[TRAIN] step=975 loss=0.029728
+[TRAIN] step=980 loss=0.033225
+[TRAIN] step=985 loss=0.030689
+[TRAIN] step=990 loss=0.030054
+[TRAIN] step=995 loss=0.030591
+[TRAIN] step=1000 loss=0.029356
+[EVAL] condition=1/1 step=1000 sigma=0.5 objective=policy ablation=normal batches=40
+[EVAL] condition=1/1 batch=10/40 rate=6.02 batch/s elapsed=1.7s ETA=5.0s
+[EVAL] condition=1/1 batch=20/40 rate=6.76 batch/s elapsed=3.0s ETA=3.0s
+[EVAL] condition=1/1 batch=30/40 rate=7.05 batch/s elapsed=4.3s ETA=1.4s
+[EVAL] condition=1/1 batch=40/40 rate=7.20 batch/s elapsed=5.6s ETA=0.0s
+[EVAL] condition=1/1 complete loss=0.083050 elapsed=5.6s
+[VAL] epoch=0 loss=0.083050 elapsed=5.6s
+[TRAIN] step=1005 loss=0.031928
+[TRAIN] step=1010 loss=0.033881
+[TRAIN] step=1015 loss=0.033675
+[TRAIN] step=1020 loss=0.030112
+[TRAIN] step=1025 loss=0.038752
+[TRAIN] step=1030 loss=0.039988
+[TRAIN] step=1035 loss=0.030797
+[TRAIN] step=1040 loss=0.033731
+[TRAIN] step=1045 loss=0.029913
+[TRAIN] step=1050 loss=0.036764
+[TRAIN] step=1055 loss=0.033395
+[TRAIN] step=1060 loss=0.028105
+[TRAIN] step=1065 loss=0.031099
+[TRAIN] step=1070 loss=0.030355
+[TRAIN] step=1075 loss=0.035070
+[TRAIN] step=1080 loss=0.027680
+[TRAIN] step=1085 loss=0.032141
+[TRAIN] step=1090 loss=0.032975
+[TRAIN] step=1095 loss=0.031201
+[TRAIN] step=1100 loss=0.030687
+[TRAIN] step=1105 loss=0.030365
+[TRAIN] step=1110 loss=0.028752
+[TRAIN] step=1115 loss=0.028843
+[TRAIN] step=1120 loss=0.033856
+[TRAIN] step=1125 loss=0.026186
+[TRAIN] step=1130 loss=0.028538
+[TRAIN] step=1135 loss=0.031204
+[TRAIN] step=1140 loss=0.027328
+[TRAIN] step=1145 loss=0.029919
+[TRAIN] step=1150 loss=0.027835
+[TRAIN] step=1155 loss=0.029913
+[TRAIN] step=1160 loss=0.029277
+[TRAIN] step=1165 loss=0.029262
+[TRAIN] step=1170 loss=0.036159
+[TRAIN] step=1175 loss=0.032839
+[TRAIN] step=1180 loss=0.035070
+[TRAIN] step=1185 loss=0.032066
+[TRAIN] step=1190 loss=0.029543
+[TRAIN] step=1195 loss=0.027732
+[TRAIN] step=1200 loss=0.027765
+[TRAIN] step=1205 loss=0.025476
+[TRAIN] step=1210 loss=0.030162
+[TRAIN] step=1215 loss=0.032514
+[TRAIN] step=1220 loss=0.027362
+[TRAIN] step=1225 loss=0.023922
+[TRAIN] step=1230 loss=0.025842
+[TRAIN] step=1235 loss=0.026018
+[TRAIN] step=1240 loss=0.028379
+[TRAIN] step=1245 loss=0.029490
+[TRAIN] step=1250 loss=0.026436
+[TRAIN] step=1255 loss=0.029562
+[TRAIN] step=1260 loss=0.030238
+[TRAIN] step=1265 loss=0.028531
+[TRAIN] step=1270 loss=0.028249
+[TRAIN] step=1275 loss=0.029237
+[TRAIN] step=1280 loss=0.028981
+[TRAIN] step=1285 loss=0.033051
+[TRAIN] step=1290 loss=0.029755
+[TRAIN] step=1295 loss=0.028833
+[TRAIN] step=1300 loss=0.028548
+[TRAIN] step=1305 loss=0.034921
+[TRAIN] step=1310 loss=0.026899
+[TRAIN] step=1315 loss=0.029250
+[TRAIN] step=1320 loss=0.028439
+[TRAIN] step=1325 loss=0.040328
+[TRAIN] step=1330 loss=0.037911
+[TRAIN] step=1335 loss=0.028809
+[TRAIN] step=1340 loss=0.028386
+[TRAIN] step=1345 loss=0.028730
+[TRAIN] step=1350 loss=0.029994
+[TRAIN] step=1355 loss=0.028443
+[TRAIN] step=1360 loss=0.026970
+[TRAIN] step=1365 loss=0.025869
+[TRAIN] step=1370 loss=0.027086
+[TRAIN] step=1375 loss=0.030129
+[TRAIN] step=1380 loss=0.029739
+[TRAIN] step=1385 loss=0.029993
+[TRAIN] step=1390 loss=0.024093
+[TRAIN] step=1395 loss=0.029280
+[TRAIN] step=1400 loss=0.035005
+[TRAIN] step=1405 loss=0.030206
+[TRAIN] step=1410 loss=0.046161
+[TRAIN] step=1415 loss=0.032581
+[TRAIN] step=1420 loss=0.026069
+[TRAIN] step=1425 loss=0.028095
+[TRAIN] step=1430 loss=0.032497
+[TRAIN] step=1435 loss=0.031400
+[TRAIN] step=1440 loss=0.029673
+[TRAIN] step=1445 loss=0.023636
+[TRAIN] step=1450 loss=0.026885
+[TRAIN] step=1455 loss=0.029918
+[TRAIN] step=1460 loss=0.030076
+[TRAIN] step=1465 loss=0.025858
+[TRAIN] step=1470 loss=0.029750
+[TRAIN] step=1475 loss=0.026939
+[TRAIN] step=1480 loss=0.028643
+[TRAIN] step=1485 loss=0.024776
+[TRAIN] step=1490 loss=0.028252
+[TRAIN] step=1495 loss=0.028261
+[TRAIN] step=1500 loss=0.028707
+[EVAL] condition=1/1 step=1500 sigma=0.5 objective=policy ablation=normal batches=40
+[EVAL] condition=1/1 batch=10/40 rate=6.09 batch/s elapsed=1.6s ETA=4.9s
+[EVAL] condition=1/1 batch=20/40 rate=6.84 batch/s elapsed=2.9s ETA=2.9s
+[EVAL] condition=1/1 batch=30/40 rate=7.14 batch/s elapsed=4.2s ETA=1.4s
+[EVAL] condition=1/1 batch=40/40 rate=7.27 batch/s elapsed=5.5s ETA=0.0s
+[EVAL] condition=1/1 complete loss=0.063811 elapsed=5.5s
+[VAL] epoch=0 loss=0.063811 elapsed=5.5s
+[TRAIN] step=1505 loss=0.025530
+[TRAIN] step=1510 loss=0.031573
+[TRAIN] step=1515 loss=0.025344
+[TRAIN] step=1520 loss=0.030946
+[TRAIN] step=1525 loss=0.024664
+[TRAIN] step=1530 loss=0.029615
+[TRAIN] step=1535 loss=0.026575
+[TRAIN] step=1540 loss=0.028581
+[TRAIN] step=1545 loss=0.027604
+[TRAIN] step=1550 loss=0.033927
+[TRAIN] step=1555 loss=0.028598
+[TRAIN] step=1560 loss=0.027474
+[TRAIN] step=1565 loss=0.025073
+[TRAIN] step=1570 loss=0.029063
+[TRAIN] step=1575 loss=0.029909
+[TRAIN] step=1580 loss=0.028199
+[TRAIN] step=1585 loss=0.029282
+[TRAIN] step=1590 loss=0.026695
+[TRAIN] step=1595 loss=0.025832
+[TRAIN] step=1600 loss=0.028766
+[TRAIN] step=1605 loss=0.025894
+[TRAIN] step=1610 loss=0.032060
+[TRAIN] step=1615 loss=0.035648
+[TRAIN] step=1620 loss=0.035036
+[TRAIN] step=1625 loss=0.027246
+[TRAIN] step=1630 loss=0.025578
+[TRAIN] step=1635 loss=0.025859
+[TRAIN] step=1640 loss=0.026531
+[TRAIN] step=1645 loss=0.024876
+[TRAIN] step=1650 loss=0.030355
+[TRAIN] step=1655 loss=0.035291
+[TRAIN] step=1660 loss=0.032946
+[TRAIN] step=1665 loss=0.029713
+[TRAIN] step=1670 loss=0.037691
+[TRAIN] step=1675 loss=0.027648
+[TRAIN] step=1680 loss=0.027877
+[TRAIN] step=1685 loss=0.026858
+[TRAIN] step=1690 loss=0.023145
+[TRAIN] step=1695 loss=0.026517
+[TRAIN] step=1700 loss=0.025519
+[TRAIN] step=1705 loss=0.025107
+[TRAIN] step=1710 loss=0.025365
+[TRAIN] step=1715 loss=0.026166
+[TRAIN] step=1720 loss=0.029491
+[TRAIN] step=1725 loss=0.026881
+[TRAIN] step=1730 loss=0.027596
+[TRAIN] step=1735 loss=0.024969
+[TRAIN] step=1740 loss=0.029473
+[TRAIN] step=1745 loss=0.024626
+[TRAIN] step=1750 loss=0.027321
+[TRAIN] step=1755 loss=0.029520
+[TRAIN] step=1760 loss=0.031164
+[TRAIN] step=1765 loss=0.025555
+[TRAIN] step=1770 loss=0.026136
+[TRAIN] step=1775 loss=0.027565
+[TRAIN] step=1780 loss=0.029670
+[TRAIN] step=1785 loss=0.029417
+[TRAIN] step=1790 loss=0.030468
+[TRAIN] step=1795 loss=0.025973
+[TRAIN] step=1800 loss=0.026816
+[TRAIN] step=1805 loss=0.025689
+[TRAIN] step=1810 loss=0.026708
+[TRAIN] step=1815 loss=0.029009
+[TRAIN] step=1820 loss=0.027676
+[TRAIN] step=1825 loss=0.026838
+[TRAIN] step=1830 loss=0.027763
+[TRAIN] step=1835 loss=0.023661
+[TRAIN] step=1840 loss=0.027655
+[TRAIN] step=1845 loss=0.034193
+[TRAIN] step=1850 loss=0.028694
+[TRAIN] step=1855 loss=0.027451
+[TRAIN] step=1860 loss=0.029034
+[TRAIN] step=1865 loss=0.025541
+[TRAIN] step=1870 loss=0.027096
+[TRAIN] step=1875 loss=0.023629
+[TRAIN] step=1880 loss=0.028957
+[TRAIN] step=1885 loss=0.027245
+[TRAIN] step=1890 loss=0.024038
+[TRAIN] step=1895 loss=0.028663
+[TRAIN] step=1900 loss=0.023822
+[TRAIN] step=1905 loss=0.027520
+[TRAIN] step=1910 loss=0.025781
+[TRAIN] step=1915 loss=0.023415
+[TRAIN] step=1920 loss=0.023597
+[TRAIN] step=1925 loss=0.023564
+[TRAIN] step=1930 loss=0.022180
+[TRAIN] step=1935 loss=0.023293
+[TRAIN] step=1940 loss=0.023705
+[TRAIN] step=1945 loss=0.023288
+[TRAIN] step=1950 loss=0.025982
+[TRAIN] step=1955 loss=0.026127
+[TRAIN] step=1960 loss=0.026182
+[TRAIN] step=1965 loss=0.026602
+[TRAIN] step=1970 loss=0.023545
+[TRAIN] step=1975 loss=0.024357
+[TRAIN] step=1980 loss=0.028796
+[TRAIN] step=1985 loss=0.029579
+[TRAIN] step=1990 loss=0.034841
+[TRAIN] step=1995 loss=0.028412
+[TRAIN] step=2000 loss=0.024887
+[EVAL] condition=1/1 step=2000 sigma=0.5 objective=policy ablation=normal batches=40
+[EVAL] condition=1/1 batch=10/40 rate=6.19 batch/s elapsed=1.6s ETA=4.8s
+[EVAL] condition=1/1 batch=20/40 rate=6.88 batch/s elapsed=2.9s ETA=2.9s
+[EVAL] condition=1/1 batch=30/40 rate=7.12 batch/s elapsed=4.2s ETA=1.4s
+[EVAL] condition=1/1 batch=40/40 rate=7.23 batch/s elapsed=5.5s ETA=0.0s
+[EVAL] condition=1/1 complete loss=0.062880 elapsed=5.5s
+[VAL] epoch=0 loss=0.062880 elapsed=5.5s
+[EVAL] condition=1/3 step=2000 sigma=0.5 objective=policy ablation=normal batches=40
+[EVAL] condition=1/3 batch=10/40 rate=6.02 batch/s elapsed=1.7s ETA=5.0s
+[EVAL] condition=1/3 batch=20/40 rate=6.74 batch/s elapsed=3.0s ETA=3.0s
+[EVAL] condition=1/3 batch=30/40 rate=7.04 batch/s elapsed=4.3s ETA=1.4s
+[EVAL] condition=1/3 batch=40/40 rate=7.20 batch/s elapsed=5.6s ETA=0.0s
+[EVAL] condition=1/3 complete loss=0.062880 elapsed=5.6s
+[EVAL] condition=2/3 step=2000 sigma=0.5 objective=world ablation=normal batches=40
+[EVAL] condition=2/3 batch=10/40 rate=5.02 batch/s elapsed=2.0s ETA=6.0s
+[EVAL] condition=2/3 batch=20/40 rate=6.25 batch/s elapsed=3.2s ETA=3.2s
+[EVAL] condition=2/3 batch=30/40 rate=6.79 batch/s elapsed=4.4s ETA=1.5s
+[EVAL] condition=2/3 batch=40/40 rate=7.12 batch/s elapsed=5.6s ETA=0.0s
+[EVAL] condition=2/3 complete loss=0.078663 elapsed=5.6s
+[EVAL] condition=3/3 step=2000 sigma=0.5 objective=value ablation=normal batches=40
+[EVAL] condition=3/3 batch=10/40 rate=6.20 batch/s elapsed=1.6s ETA=4.8s
+[EVAL] condition=3/3 batch=20/40 rate=7.09 batch/s elapsed=2.8s ETA=2.8s
+[EVAL] condition=3/3 batch=30/40 rate=7.44 batch/s elapsed=4.0s ETA=1.3s
+[EVAL] condition=3/3 batch=40/40 rate=7.63 batch/s elapsed=5.2s ETA=0.0s
+[EVAL] condition=3/3 complete loss=0.007394 elapsed=5.2s
+[VAL] epoch=0 loss=0.049646 elapsed=16.4s

@@ -1,0 +1,5 @@
+run,folder,n,value_spearman,value_scalar_mae_same_run
+E-P,value_spearman_2000/euler_14d_policy,80,0.7890924439633399,0.007165039004758
+E-J,value_spearman_2000/euler_14d_joint,80,0.8789338589772133,0.007844485715031624
+6D-P,value_spearman_2000/rotation6d_20d_policy,80,0.8162499858533783,0.006331653846427798
+6D-J,value_spearman_2000/rotation6d_20d_joint,80,0.8664744429094055,0.010425560222938658

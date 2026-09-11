@@ -1,0 +1,11 @@
+{
+  "sample_count": 16,
+  "metrics": {
+    "future_wrist_psnr": 18.219765305519104,
+    "future_wrist_ssim": 0.6532550491392612,
+    "future_primary_psnr": 20.624616622924805,
+    "future_primary_ssim": 0.7988514862954617,
+    "future_cameras_psnr": 19.422190964221954,
+    "future_cameras_ssim": 0.7260532677173615
+  }
+}

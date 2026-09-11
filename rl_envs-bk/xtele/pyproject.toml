@@ -1,0 +1,48 @@
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[project]
+authors = [
+  {name = "Jacob Ji", email = "jacob.ji@x-humanoid.com"}
+]
+classifiers = [
+  'Development Status :: 4 - Beta',
+  'Intended Audience :: Developers',
+  'Topic :: Scientific/Engineering :: Artificial Intelligence',
+  'License :: OSI Approved :: MIT License',
+  'Programming Language :: Python :: 3.9'
+]
+dependencies = [
+  "pin==2.7.0",
+  "cmeel-boost==1.83.0",
+  "numpy==1.26.0",
+  "pynput==1.7.7",
+  "pyserial==3.5",
+  "pyyaml==6.0.2",
+  "rospkg==1.6.0",
+  "tomli==2.2.1",
+  "tomli_w==1.2.0",
+  "tomlkit"
+]
+description = "xtele"
+keywords = [
+  'artificial intelligence',
+  'robotic system'
+]
+name = "xtele"
+# readme = "README.md"
+requires-python = ">= 3.9"
+version = "1.12"
+
+[project.urls]
+
+[tool.hatch.build.targets.wheel]
+packages = ["xtele"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.rye]
+dev-dependencies = []
+managed = true

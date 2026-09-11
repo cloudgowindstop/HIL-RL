@@ -1,0 +1,31 @@
+# World RGB visualization against the frozen 6D visualization subset.
+model:
+  experiment: cosmos_predict2_2b_480p_our_dataset
+  config_file: cosmos_policy/config/config.py
+  initialization: predict2_base
+  checkpoint_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+  tokenizer_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/tokenizer/tokenizer.pth
+  precision: bfloat16
+  strict_checkpoint: false
+
+data:
+  root: /media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/cosmos_rotation_6d
+  t5_embeddings_path: /media/jushen/mingbo-ge/HIL-RL-Project/t5_embeddings_by_task/back_handle_installation_20260803_pm/t5_embeddings.pkl
+  statistics_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos_data_6drotation_monitor_20260819/back_handle_20260803_pm_success/dataset_statistics.json
+  action_encoding: cosmos_rotation_6d
+  action_dimension: 20
+  action_includes_gripper: true
+  number_of_arms: 2
+  chunk_size: 16
+
+training:
+  seed: 42
+  learning_rate: 1.0e-4
+  batch_size_per_rank: 1
+
+evaluation:
+  noise_seed: 20260820
+  visualization_samples: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/experiments/action_representation_20260903/visualization_samples_cosmos_rotation_6d.json
+
+runtime:
+  output_dir: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/action_representation_20260903/visualize/rotation6d_base

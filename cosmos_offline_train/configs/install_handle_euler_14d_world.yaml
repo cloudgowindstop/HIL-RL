@@ -1,0 +1,78 @@
+# Full World-only training on the 209-train / 11-validation legacy Euler split.
+
+model:
+  experiment: cosmos_predict2_2b_480p_our_dataset
+  config_file: cosmos_policy/config/config.py
+  initialization: pretrained_checkpoint
+  checkpoint_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+  tokenizer_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/tokenizer/tokenizer.pth
+  precision: bfloat16
+  strict_checkpoint: false
+
+data:
+  root: /media/jushen/mingbo-ge/install_handle
+  layout: pre_split
+  train_directory: train
+  val_directory: eval
+  train_manifest: /media/jushen/mingbo-ge/install_handle/manifests/train.json
+  val_manifest: /media/jushen/mingbo-ge/install_handle/manifests/val.json
+  test_manifest: null
+  t5_embeddings_path: /media/jushen/mingbo-ge/HIL-RL-Project/t5_embeddings_by_task/back_handle_installation_20260803_pm/t5_embeddings.pkl
+  statistics_path: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_cosmos/back_handle_20260803_pm_memory_test/dataset_statistics.json
+  action_encoding: legacy_euler
+  action_dimension: 14
+  rotation_scale: 0.06
+  action_includes_gripper: true
+  number_of_arms: 2
+  chunk_size: 16
+  workers_per_rank: 4
+  prefetch_factor: 2
+  pin_memory: true
+  persistent_workers: true
+
+training:
+  seed: 42
+  # 4 GPUs x 1 sample/rank x 32 micro-batches = 128 samples/update.
+  epochs: 14
+  max_steps: 10000
+  batch_size_per_rank: 1
+  gradient_accumulation_steps: 32
+  learning_rate: 1.0e-4
+  validation_every_epochs: 1
+  validation_every_steps: 1
+  checkpoint_every_steps: 5000
+  log_every_steps: 10
+  gradient_clip_norm: 10.0
+
+objectives:
+  training_mode: custom_mix
+  policy_probability: 0.0
+  world_probability: 1.0
+  value_probability: 0.0
+  inverse_dynamics_probability: 0.0
+
+split:
+  create_if_missing: false
+  overwrite: false
+  max_episodes: 0
+
+evaluation:
+  noise_seed: 20260825
+  sigma_values: [0.1, 0.5, 0.9]
+  objectives: [policy, world, value, inverse_dynamics]
+  inverse_condition_ablations: [normal]
+  max_validation_batches: null
+  # A fixed World probe is logged after every optimizer update.
+  step_validation_max_batches: 1
+  step_validation_sigma_values: [0.5]
+  step_validation_objectives: [world]
+  progress_every_batches: 10
+  cache_episodes: 1
+  bootstrap_samples: 100
+
+runtime:
+  output_dir: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/install_handle_euler_14d_world
+  smoke_output_dir: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/install_handle_euler_14d_world_smoke
+  smoke_test: false
+  smoke_max_train_steps: 20
+  smoke_max_validation_batches: 1

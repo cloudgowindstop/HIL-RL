@@ -1,0 +1,73 @@
+  raw:     /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail
+  cosmos:  /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_cosmos_back_handle/back_handle_20260803_pm_failure
+  task:    Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle.
+  action:  legacy_euler (puppet_next_frame)
+  outcome: failure
+[WARNING] official stats range exceeded; normalization is not clipped:
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_172504/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_172632/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_173305/data/trajectory.hdf5: actions below=[2] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_173305/data/trajectory.hdf5: proprio below=[6, 11] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_173400/data/trajectory.hdf5: proprio below=[6, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_174042/data/trajectory.hdf5: proprio below=[14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_174142/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_190437/data/trajectory.hdf5: proprio below=[4, 5, 14] above=[]
+{
+  "episode_count": 8,
+  "robot_type": "dual",
+  "action_dimension": 14,
+  "proprio_dimension": 16,
+  "cameras": [
+    "camera_head",
+    "camera_left",
+    "camera_right"
+  ],
+  "action_source": "puppet_next_frame",
+  "action_encoding": "legacy_euler",
+  "episode_outcome": "failure",
+  "source_fps": 30,
+  "cosmos_conditioning_fps": 16,
+  "fk": null
+}
+{
+  "episode": "/media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail/0803_172504/data/trajectory.hdf5",
+  "shape": [
+    933,
+    14
+  ],
+  "finite": true,
+  "minimum": [
+    -0.21653473377227783,
+    -0.18841643631458282,
+    -0.3453497588634491,
+    -0.30033835768699646,
+    -0.3496001958847046,
+    -0.2009778618812561,
+    0.09803921729326248,
+    -0.37647274136543274,
+    -0.2420898824930191,
+    -0.14808155596256256,
+    -0.26170897483825684,
+    -0.23002679646015167,
+    -0.16338400542736053,
+    0.0117647061124444
+  ],
+  "maximum": [
+    0.22291633486747742,
+    0.22632065415382385,
+    0.32818087935447693,
+    0.34043222665786743,
+    0.604181706905365,
+    0.19949129223823547,
+    0.8941176533699036,
+    0.30248329043388367,
+    0.10911337286233902,
+    0.25087878108024597,
+    0.37017005681991577,
+    0.24226807057857513,
+    0.2398335188627243,
+    0.7921568751335144
+  ],
+  "last_action_is_padding": true
+}
+  ✅ 预检通过

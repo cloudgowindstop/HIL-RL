@@ -1,0 +1,34 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.11.10
+    hooks:
+      # Run the linter.
+      - id: ruff
+        types_or: [ python, pyi ]
+        args: [ --fix , --exclude=xtele/equipment/dynamixel/dynamixel_sdk/*, --exclude=xtele/equipment/noitom/noitom_sdk/*]
+      # Run the formatter.
+      - id: ruff-format
+        types_or: [ python, pyi ]
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.7.2
+    hooks:
+      - id: commitizen
+      - id: commitizen-branch
+        stages: [ pre-push ]
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: v2.14.0
+    hooks:
+      - id: pretty-format-toml
+        args: ["--autofix"]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+      - id: fix-encoding-pragma
+        args: ["--remove"]
+      - id: mixed-line-ending
+        args: ["--fix=lf"]

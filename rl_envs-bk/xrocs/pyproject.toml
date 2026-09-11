@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xrocs"
+version = "0.1.0"
+description = "UR station driver and utilities (ROS2, Robotiq, Orbbec camera)"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "loguru",
+    "tomli",
+    "scipy",
+    "ur-rtde",
+    "tqdm",
+]
+
+[project.optional-dependencies]
+ros2 = [
+    "rclpy",
+    "sensor_msgs",
+    "cv_bridge",
+    "message_filters",
+]
+
+# When installing from xrocs/ dir: current dir contains the "xrocs" package
+[tool.setuptools]
+package-dir = {xrocs = "."}
+packages = ["xrocs", "xrocs.core"]

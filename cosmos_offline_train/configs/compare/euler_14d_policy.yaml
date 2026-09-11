@@ -1,0 +1,89 @@
+# E-P: Euler 14D policy_only. 4 GPU DDP, effective batch 128.
+# 4 × 2 × 16 = 128 samples/update; max_steps is optimizer updates.
+# Train from scratch to 2000 (~0.93 epoch). New output_dir; do not overwrite the 1000-step run.
+#
+# CONFIG=.../configs/compare/euler_14d_policy.yaml \
+# bash /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/run.sh train 0,1,2,3
+model:
+  experiment: cosmos_predict2_2b_480p_our_dataset
+  config_file: cosmos_policy/config/config.py
+  initialization: predict2_base
+  checkpoint_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+  tokenizer_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/tokenizer/tokenizer.pth
+  precision: bfloat16
+  strict_checkpoint: false
+
+data:
+  root: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos_data_3drpy
+  layout: unified
+  train_manifest: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/experiments/action_representation_20260903/manifests/legacy_euler/train.json
+  val_manifest: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/experiments/action_representation_20260903/manifests/legacy_euler/val.json
+  test_manifest: null
+  t5_embeddings_path: /media/jushen/mingbo-ge/HIL-RL-Project/t5_embeddings_by_task/back_handle_installation_20260803_pm/t5_embeddings.pkl
+  statistics_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos_data_3drpy/back_handle_20260803_pm_success/dataset_statistics.json
+  action_encoding: legacy_euler
+  action_dimension: 14
+  rotation_scale: 0.06
+  action_includes_gripper: true
+  number_of_arms: 2
+  chunk_size: 16
+  workers_per_rank: 4
+  prefetch_factor: 2
+  pin_memory: true
+  persistent_workers: true
+
+training:
+  seed: 42
+  epochs: 20
+  max_steps: 2000
+  batch_size_per_rank: 2
+  gradient_accumulation_steps: 16
+  learning_rate: 1.0e-4
+  validation_every_epochs: 0
+  validation_every_steps: 500
+  checkpoint_every_steps: 500
+  log_every_steps: 5
+  gradient_clip_norm: 10.0
+  save_every_epochs: false
+  validate_at_end: true
+  checkpoint_at_end: true
+
+objectives:
+  training_mode: policy_only
+  policy_auxiliary_targets: true
+
+split:
+  create_if_missing: false
+  overwrite: false
+  seed: 42
+  max_episodes: 221
+  ratios: [0.8, 0.2, 0.0]
+
+evaluation:
+  protocol: fixed_suite
+  compare_group: action_representation_20260903
+  compare_name: E-P
+  noise_seed: 20260820
+  sigma_values: [0.5]
+  max_validation_batches: 40
+  step_validation_max_batches: 40
+  step_validation_objectives: [policy]
+  step_validation_sigma_values: [0.5]
+  objectives: [policy, world, value]
+  inverse_condition_ablations: [normal]
+  visualization_samples: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/experiments/action_representation_20260903/visualization_samples_legacy_euler.json
+
+monitoring:
+  prometheus_enabled: true
+  host: 0.0.0.0
+  port: 8000
+  path: /metrics
+  wandb_enabled: true
+  wandb_project: cosmos-offline-compare-2000
+  wandb_name: E-P-2000
+  wandb_mode: online
+
+runtime:
+  output_dir: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/action_representation_20260903/euler_14d_policy_2000
+  smoke_test: false
+  plot_after_training: true

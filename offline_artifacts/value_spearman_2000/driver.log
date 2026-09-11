@@ -1,0 +1,9 @@
+[2026-09-11 11:32:03] START euler_14d_policy
+[2026-09-11 11:33:52] DONE euler_14d_policy rc=0
+[2026-09-11 11:33:52] START euler_14d_joint
+[2026-09-11 11:35:40] DONE euler_14d_joint rc=0
+[2026-09-11 11:35:40] START rotation6d_20d_policy
+[2026-09-11 11:37:25] DONE rotation6d_20d_policy rc=0
+[2026-09-11 11:37:25] START rotation6d_20d_joint
+[2026-09-11 11:39:08] DONE rotation6d_20d_joint rc=0
+[2026-09-11 11:39:08] ALL VALUE SPEARMAN 2000 DONE

@@ -1,0 +1,39 @@
+{
+  "robot": "tienyi_prod2_dual_arm",
+  "left": {
+    "urdf_path": "/REPLACE/WITH/OFFICIAL/TIENYI_PROD2.urdf",
+    "base_link": "REPLACE_LEFT_BASE_LINK",
+    "end_effector_link": "REPLACE_LEFT_FLANGE_OR_TOOL_LINK",
+    "joint_units": "radians",
+    "joint_names": [
+      "REPLACE_LEFT_JOINT_1",
+      "REPLACE_LEFT_JOINT_2",
+      "REPLACE_LEFT_JOINT_3",
+      "REPLACE_LEFT_JOINT_4",
+      "REPLACE_LEFT_JOINT_5",
+      "REPLACE_LEFT_JOINT_6",
+      "REPLACE_LEFT_JOINT_7"
+    ],
+    "joint_signs": [1, 1, 1, 1, 1, 1, 1],
+    "joint_offsets": [0, 0, 0, 0, 0, 0, 0],
+    "tcp_transform": [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+  },
+  "right": {
+    "urdf_path": "/REPLACE/WITH/OFFICIAL/TIENYI_PROD2.urdf",
+    "base_link": "REPLACE_RIGHT_BASE_LINK",
+    "end_effector_link": "REPLACE_RIGHT_FLANGE_OR_TOOL_LINK",
+    "joint_units": "radians",
+    "joint_names": [
+      "REPLACE_RIGHT_JOINT_1",
+      "REPLACE_RIGHT_JOINT_2",
+      "REPLACE_RIGHT_JOINT_3",
+      "REPLACE_RIGHT_JOINT_4",
+      "REPLACE_RIGHT_JOINT_5",
+      "REPLACE_RIGHT_JOINT_6",
+      "REPLACE_RIGHT_JOINT_7"
+    ],
+    "joint_signs": [1, 1, 1, 1, 1, 1, 1],
+    "joint_offsets": [0, 0, 0, 0, 0, 0, 0],
+    "tcp_transform": [[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]]
+  }
+}

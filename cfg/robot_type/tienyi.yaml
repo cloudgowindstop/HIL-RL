@@ -1,0 +1,75 @@
+robot_config:
+  robot_type: tienyi
+  robot_identify: robot
+  gripper_identify: ["left", "right"]
+
+  hz: 10
+  joint_dim: 7
+  gripper_dim: 1
+  dual_arm: true
+  # 不使用左/右臂时置 true；若 free_left 或 free_right 为 true，则 dual_arm 必须为 false
+  free_left: false
+  free_right: false
+  # free 臂是否需要同构臂操控：true=第一次可同构摆 free 臂；false=直接走到 reset_joint/reset_hands
+  free_arm_teleop: true
+
+  # image_crop: {
+  #     "head": [[230,380],[80,230]],
+  #     "left": [[180,480],[200,500]],
+  #     "right": [[180,450],[230,450]]
+  #   }
+  image_crop: {
+    "head": [[100,480],[0,640]],
+    "left": [[0,480],[144,624]],
+    "right": [[0,480],[144,624]]
+  }
+  action_scale: [0.02, 0.06, 1.0]
+  image_keys: ["head","left","right"]
+  # [x,y,z,roll,pitch,yaw]；不含 gripper（见 fix_gripper）；由 task / 全局 config 覆盖
+  pose_action_mask: [1, 1, 1, 1, 1, 1]
+
+  proprio_keys: ["tcp_pose", "gripper_pose"]
+
+  image_resize:
+    # "head": [128, 128, 3]
+    # "right": [128, 128, 3]
+    # "left": [128, 128, 3]
+    "head": [224, 224, 3]
+    "right": [112, 224, 3]
+    "left": [112, 224, 3]
+
+  bgr2rgb: true
+
+  target_pose: ${target_pose}
+  abs_pose_limit_low: ${abs_pose_limit_low}
+  abs_pose_limit_high: ${abs_pose_limit_high}
+  # 末端力/力矩安全盒 [Fx,Fy,Fz,Tx,Ty,Tz]；task yaml 配置后启用 ForceIntervention
+  # ee_force_limit_low: ${ee_force_limit_low}
+  # ee_force_limit_high: ${ee_force_limit_high}
+  reset_joint: ${reset_joint}
+  # 可选：task 未定义时为 null（不锁定 hand）
+  reset_hands: ${reset_hands}
+
+  # true: robot.ros2controller；false: 直接 pub /endposetarget_*、/jointspace_commands_*
+  use_ros2controller: ${oc.select:use_ros2controller,true}
+
+  # false: tcp_pose/currpos 每步读真机；true: pose 模式用指令位姿（算出来的 next_pose）
+  use_cmd_pose: true
+
+  random_reset: false
+  random_xy_range: 0.02
+  random_rz_range: 0.05
+  gripper_sleep: 0.6
+  max_episode_length: ${max_episode_length}
+  control_mode: ${control_mode}
+  classifier_cfg: ${classifier_cfg}
+  gripper_penalty: ${gripper_penalty}
+  close_gripper: ${close_gripper}
+  fix_gripper: ${fix_gripper}
+  ego_mode: ${ego_mode}
+
+  absolute_action: false
+  intervention_mode: ${intervention_mode}
+  replay_trajectory: ${replay_trajectory}
+  joint_trajectory_file: ${joint_trajectory_file}
+  action_trajectory_file: ${action_trajectory_file}

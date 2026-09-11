@@ -1,0 +1,49 @@
+task_name: insert_usb
+
+
+# abs_pose_limit_low: [0.5845,  -0.20959,  0.40307, -3.14156, -0.14725, -0.1215 ]
+# abs_pose_limit_high: [0.6673,  -0.00643,  0.56593,   3.1415,   0.31587,  0.23937]
+# abs_pose_limit_low: [ 0.61617, -0.13091,  0.39379, -3.14145, -0.11459, -0.06785]
+# abs_pose_limit_high: [ 0.6779, -0.01115,  0.49653,  3.14153,  0.18388,  0.15519]
+
+abs_pose_limit_low: [ 0.60901, -0.15295,  0.38778, -3.14059, -0.09044,  0.04013]
+abs_pose_limit_high: [ 0.67698, -0.03254,  0.51134,  3.14155,  0.14668,  0.29638]
+
+
+# reset_joint: [-0.430447 , 0.516946 , 0.525393 , -1.229498 , -0.246238 , 1.685771 , 0.152009]
+reset_joint: [ 0.0391 ,  0.35801, -0.05436, -1.6409,   0.04237,  1.87316, -0.04928]
+
+"dataset": {
+    # "repo_id": "lerobot/RoboMIND",
+    "repo_id": silri,
+    "use_imagenet_stats": false,
+    "root": "../../../offline_dataset/insert_usb_franka_1028" 
+    # "root": "/home/eai/Dev/linda/HIL-RL-Project/lerobot_data_0914/franka01_Plug_into_socket" 
+}
+
+gripper_penalty: -0.2
+# intervene_penalty: -0.2
+classifier_cfg:
+    classifier_keys: ["right"]
+    pretrained_encoder_path: ../resnet10_params.pkl
+    checkpoint_path: classifier/checkpoints/000500
+    dataset_path: offline_dataset/insert_usb_franka_1028
+    reward_pos: 10.0
+    reward_neg: -0.05
+    require_train: true 
+    task_name: ${task_name}
+    algorithm: hil-serl
+    target_hz: 10
+    batch_size: 128
+    enable_stacking: false
+    load_classifier: ${load_classifier}
+
+close_gripper: true
+fix_gripper: true
+enable_rotation: true
+max_episode_length: 120
+max_train_time: 2400
+
+resume_model: false
+resume_path: None
+

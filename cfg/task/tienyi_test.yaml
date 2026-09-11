@@ -1,0 +1,144 @@
+task_name: tienyi_test
+
+
+abs_pose_limit_high: 
+    left: [ 0.25572,  0.36436,  0.09487,  1.74237, -0.05505, -1.60255]
+abs_pose_limit_low: 
+    left: [ 0.22121,  0.20986,  0.01442,  1.35066, -0.05505, -1.60255]
+
+# 末端力/力矩上下限 [Fx, Fy, Fz, Tx, Ty, Tz]（与 abs_pose_limit 同样按臂配置）
+# 超出范围 → EndEffectorForceInterventionWrapper 打开人类干预
+ee_force_limit_low:
+    left: [5.040800, -10.648432, -20.559650, -8.664154, -0.887820, 0.210514]
+ee_force_limit_high:
+    left: [15.542197, 33.262402, -10.376415, 0.837376, 1.407586, 0.318591]
+
+reset_joint: 
+    left: [ 0.40615,  0.52906, -0.17617, -1.62252, -0.93374,  0.07111, 0.43235]
+    right: [-0.63591, -0.01747,  1.13349, -0.92909,  1.01995, -0.26376, -0.06514]
+
+
+reset_hands:
+    right: [ 0.2 ]
+
+# ---------------------------------------------------------------------------
+# 多子目标：每个子目标独立 policy + 独立 classifier + 独立 offline dataset
+# use_subgoals=true 时，episode 内按 classifier 成功推进阶段（不 reset 机械臂）
+#   sg0: 软管从瓶子取出并靠近电机 → reward_pos，切换到 sg1 policy
+#   sg1: 软管插入电机孔 → reward_pos，episode 成功结束
+# 各子目标可覆盖：hz / max_episode_length / action_scale / abs_pose_limit_*
+# ---------------------------------------------------------------------------
+use_subgoals: true
+subgoals_num: 2
+subgoals:
+  - name: near_motor
+    # 该子目标内的控制频率、最大步数、动作缩放（切换阶段时写入 env.unwrapped）
+    hz: 10
+    max_episode_length: 500
+    action_scale: [0.02, 0.06, 1.0]  # [pos, rot, gripper]
+    abs_pose_limit_high:
+      left: [ 0.25572,  0.36436,  0.08222,  1.74237, -0.05505, -1.60255]
+    abs_pose_limit_low:
+      left: [ 0.20121,  0.25059,  0.01442,  1.45066, -0.05505, -1.60255]
+
+    dataset:
+      repo_id: silri
+      use_imagenet_stats: false
+      root: "offline_dataset/insert_tube_sg0"
+    classifier_cfg:
+      classifier_keys: ["right"]
+      pretrained_encoder_path: ../resnet10_params.pkl
+      checkpoint_path: classifier/sg0/checkpoints/last
+      dataset_path: offline_dataset/insert_tube_sg0
+      reward_pos: 10.0
+      reward_neg: -0.05
+      require_train: true
+      task_name: insert_tube_sg0
+      algorithm: hil-serl
+      batch_size: 128
+      enable_stacking: false
+      load_classifier: ${load_classifier}
+  - name: insert_motor
+    hz: 4
+    max_episode_length: 1000
+    action_scale: [0.01, 0.03, 1.0] # 插入阶段用更小步长
+    abs_pose_limit_high:
+      left: [ 0.25572,  0.26659,  0.09487,  1.74237, -0.05505, -1.60255]
+    abs_pose_limit_low:
+      left: [ 0.20121,  0.18986,  0.02442,  1.45066, -0.05505, -1.60255]
+    dataset:
+      repo_id: silri
+      use_imagenet_stats: false
+      root: "offline_dataset/insert_tube_sg1"
+    classifier_cfg:
+      classifier_keys: ["right"]
+      pretrained_encoder_path: ../resnet10_params.pkl
+      checkpoint_path: classifier/sg1/checkpoints/last
+      dataset_path: offline_dataset/insert_tube_sg1
+      reward_pos: 10.0
+      reward_neg: -0.05
+      require_train: true
+      task_name: insert_tube_sg1
+      algorithm: hil-serl
+      batch_size: 128
+      enable_stacking: false
+      load_classifier: ${load_classifier}
+
+# 兼容单子目标代码路径：默认对齐 sg0
+"dataset": {
+    "repo_id": silri,
+    "use_imagenet_stats": false,
+    "root": "offline_dataset/insert_tube_sg0"
+}
+
+
+gripper_penalty: -0.5
+
+classifier_cfg:
+    classifier_keys: ["right"]
+    pretrained_encoder_path: ../resnet10_params.pkl
+    checkpoint_path: classifier/sg0/checkpoints/last
+    dataset_path: offline_dataset/insert_tube_sg0
+    reward_pos: 10.0
+    reward_neg: -0.05
+    require_train: true 
+    task_name: insert_tube_sg0
+    algorithm: hil-serl
+    # target_hz: 40
+    batch_size: 128
+    enable_stacking: false
+    load_classifier: ${load_classifier}
+
+close_gripper: true
+fix_gripper: true
+# 整局安全上限（建议 ≥ 各子目标 max_episode_length 之和）；子目标超时由 subgoals[i].max_episode_length 控制
+max_episode_length: 150
+max_train_time: 7200
+
+replay_trajectory: false
+joint_trajectory_file: null
+action_trajectory_file: null
+# joint_trajectory_file: "/home/eai/Dev/linda/HIL-RL/experiments/wear_scarf/joint_trajectory_episode.npy"
+# action_trajectory_file: "/home/eai/Dev/linda/HIL-RL/experiments/wear_scarf/action_trajectory_episode.npy"
+
+# resume_path: "/home/eai/Dev/linda/HIL-RL/experiments/wear_scarf/exp_local/2026.01.28/policy_type=rlif_lag_dualarm,robot_type@_global_=tienkung,task@_global_=wear_scarf"
+# 多子目标时可为 list，按 subgoal 顺序加载，例如:
+# load_path: [".../sg0/pretrained_model", ".../sg1/pretrained_model"]
+# 非 resume 时导入历史 online/offline buffer（含 sg0/sg1）
+import_dataset_path: null
+import_dataset_offline_path: null
+test_model: false   
+async_eval: false
+quantile_level: 0.1
+use_gripper: true
+# false = 策略仅用图像，不含 observation.state
+use_state: true
+robot_config:
+    dual_arm: false
+    free_right: true
+    free_arm_teleop: ${free_arm_teleop}
+    image_keys: ["head","left","right"]
+    # 默认/回退；use_subgoals=true 时以各 subgoals[i].action_scale 为准
+    action_scale: [0.005, 0.015, 1.0]
+    # 仅允许 xyz + roll；pitch/yaw 冻结（gripper 由 fix_gripper 控制）
+    pose_action_mask: [1, 1, 1, 1, 0, 0]

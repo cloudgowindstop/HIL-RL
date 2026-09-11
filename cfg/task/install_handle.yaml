@@ -1,0 +1,77 @@
+task_name: install_handle
+
+
+# abs_pose_limit_low: [0.5845,  -0.20959,  0.40307, -3.14156, -0.14725, -0.1215 ]
+# abs_pose_limit_high: [0.6673,  -0.00643,  0.56593,   3.1415,   0.31587,  0.23937]
+# abs_pose_limit_low: [ 0.61617, -0.13091,  0.39379, -3.14145, -0.11459, -0.06785]
+# abs_pose_limit_high: [ 0.6779, -0.01115,  0.49653,  3.14153,  0.18388,  0.15519]
+abs_pose_limit_low:  {"left":[0.18669261,  0.13373752,  0.05767717,  1.15868876, -0.09799063, -2.67558779, 0.22345042], "right":[-0.30261388,  0.02928322, -1.81623611, -0.12563853,  1.24626038]}
+abs_pose_limit_high: {"left":[0.37609375, 0.30568594,  0.18720189, 1.86652633, 0.11141018, -1.58862978, 0.30783886], "right":[-0.08489989, 0.11275445, -1.40855527, 0.11867483, 2.06949256]}
+
+
+
+# reset_joint: [-0.430447 , 0.516946 , 0.525393 , -1.229498 , -0.246238 , 1.685771 , 0.152009]
+# reset_joint: [ 0.0391 ,  0.35801, -0.05436, -1.6409,   0.04237,  1.87316, -0.04928]
+reset_joint: {"left":[0.55569, 0.07864, -0.06692, -2.09652, -1.41522, 0.00118, 0.08376], "right":[0.47194, 0.06853, -0.07442, -1.99406, 1.52775, -0.03271, -0.10646]}
+
+"dataset": {
+    # "repo_id": "lerobot/RoboMIND",
+    "repo_id": silri,
+    "use_imagenet_stats": false,
+    # "root": "/home/eai/Dev/hermine/HIL-RL-Project/HIL-RL/experiments/pick_toy/offline_dataset",
+    # "root": "/media/HIL-RL-Project/HIL-RL/experiments/pick_toy/offline_dataset",
+    # todo: this dataset is only for debugging
+    # "root": "/media/jushen/linda-zhao/HIL-RL-Project/cosmos_data/install_handle",
+    # "root": "/media/jushen/linda-zhao/HIL-RL-Project/cosmos_data/install_handle_split/train"
+    "root": "/home/ubuntu/Dev/hermine/HIL-RL-Project/HIL-RL/experiments/install_handle/offline_dataset/install_handle",
+    # "root": "/media/jushen/linda-zhao/HIL-RL-Project/cosmos_data/back_handle_20260804_am_success",
+    # "root": "/home/eai/Dev/linda/HIL-RL-Project/lerobot_data_0914/franka01_Plug_into_socket" 
+}
+reset_hands: None
+
+gripper_penalty: -0.2
+# intervene_penalty: -0.2
+classifier_cfg:
+    classifier_keys: ["right"]
+    pretrained_encoder_path: ../resnet10_params.pkl
+    checkpoint_path: classifier/checkpoints/000500
+    dataset_path: offline_dataset/insert_usb_franka_1028
+    reward_pos: 10.0
+    reward_neg: -0.05
+    require_train: true 
+    task_name: ${task_name}
+    algorithm: hil-serl
+    target_hz: 10
+    batch_size: 128
+    enable_stacking: false
+    load_classifier: ${load_classifier}
+
+close_gripper: false
+fix_gripper: false
+enable_rotation: true
+max_episode_length: 1500
+max_train_time: 10800
+
+resume_model: false
+resume_path: None
+load_path: null
+
+replay_trajectory: false
+joint_trajectory_file: null
+action_trajectory_file: null
+
+task_description: "Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle."
+t5_text_embeddings_path: "/home/ubuntu/Dev/hermine/HIL-RL-Project/HIL-RL/experiments/install_handle/t5_embeddings.pkl"
+dataset_stats_path: "/home/ubuntu/Dev/hermine/HIL-RL-Project/HIL-RL/experiments/install_handle/dataset_statistics.json"
+
+# task_description: "Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle."
+# t5_text_embeddings_path: "/rl_dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm/t5_embeddings.pkl"
+# dataset_stats_path: "/rl_dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm/dataset_statistics.json"
+
+# task_description: "pick up the gray plush toy on pink plate and lift it"
+# t5_text_embeddings_path: "/home/eai/Dev/hermine/HIL-RL-Project/dataset/pick_toy/demo_data/t5_embeddings.pkl"
+# dataset_stats_path: "/home/eai/Dev/hermine/HIL-RL-Project/dataset/pick_toy/demo_data/dataset_statistics.json"
+
+# task_description: "Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle."
+# t5_text_embeddings_path: "/media/jushen/linda-zhao/HIL-RL-Project/HIL-RL/experiments/install_handle/t5_embeddings.pkl"
+# dataset_stats_path: "/media/jushen/linda-zhao/HIL-RL-Project/HIL-RL/experiments/install_handle/dataset_statistics.json"

@@ -1,0 +1,26 @@
+.history
+.history/
+__pycache__
+__pycache__/
+*/__pycache__
+*/__pycache__/
+experiments/
+experiments
+outputs/
+outputs
+save_frames/
+save_frames
+.DS_Store
+*/.DS_Store
+
+# datasets and weights — do not upload
+dataset_raw/
+dataset_cosmos/
+dataset_lerobot/
+picture_crop/
+*.pt
+*.wandb
+.venv/
+.cache/
+*.pyc
+

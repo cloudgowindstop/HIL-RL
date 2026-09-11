@@ -1,0 +1,212 @@
+{
+  "defaults": [
+    "/experiment/Stage-c_pt_4-Index-102-Size-2B-Res-480-Fps-16-Note-HQ_V5_from_26",
+    {
+      "override /data_train": "mock"
+    },
+    {
+      "override /model": "policy_fsdp"
+    },
+    {
+      "override /tokenizer": "policy_wan2pt1_tokenizer"
+    },
+    {
+      "override /callbacks": [
+        "basic",
+        "long",
+        "cluster_speed",
+        "wandb",
+        "wandb_callback_actions"
+      ]
+    },
+    "_self_"
+  ],
+  "trainer": {
+    "callbacks": {
+      "every_n_sample_reg": {
+        "every_n": 100000,
+        "save_s3": false,
+        "use_negative_prompt": false,
+        "guidance": [
+          0
+        ],
+        "num_sampling_step": 9
+      }
+    },
+    "run_validation": false,
+    "logging_iter": 5,
+    "max_iter": 1000000,
+    "straggler_detection": {
+      "enabled": false
+    }
+  },
+  "optimizer": {
+    "lr": 0.0001
+  },
+  "scheduler": {
+    "cycle_lengths": [
+      30000,
+      100000000000000
+    ],
+    "warm_up_steps": [
+      1000,
+      0
+    ],
+    "f_start": [
+      1e-06,
+      0.06
+    ],
+    "f_max": [
+      1.0,
+      0.06
+    ],
+    "f_min": [
+      0.3,
+      0.06
+    ]
+  },
+  "model": {
+    "_target_": "cosmos_policy.models.policy_video2world_model.CosmosPolicyVideo2WorldModel",
+    "config": {
+      "net": {
+        "_target_": "cosmos_policy._src.predict2.networks.minimal_v1_lvg_dit.MinimalV1LVGDiT",
+        "max_img_h": 240,
+        "max_img_w": 240,
+        "max_frames": 128,
+        "in_channels": 16,
+        "out_channels": 16,
+        "patch_spatial": 2,
+        "patch_temporal": 1,
+        "model_channels": 2048,
+        "num_blocks": 28,
+        "num_heads": 16,
+        "concat_padding_mask": true,
+        "pos_emb_cls": "rope3d",
+        "pos_emb_learnable": true,
+        "pos_emb_interpolation": "crop",
+        "use_adaln_lora": true,
+        "adaln_lora_dim": 256,
+        "atten_backend": "minimal_a2a",
+        "extra_per_block_abs_pos_emb": false,
+        "rope_h_extrapolation_ratio": 1.0,
+        "rope_w_extrapolation_ratio": 1.0,
+        "rope_t_extrapolation_ratio": 1.0,
+        "sac_config": {
+          "_target_": "cosmos_policy._src.predict2.networks.minimal_v4_dit.SACConfig",
+          "mode": "mm_only",
+          "every_n_blocks": 1
+        }
+      },
+      "conditioner": {
+        "text": {
+          "dropout_rate": 0.0
+        }
+      },
+      "state_t": 9,
+      "min_num_conditional_frames": 4,
+      "max_num_conditional_frames": 4,
+      "sigma_conditional": 0.0,
+      "conditioning_strategy": "frame_replace",
+      "denoise_replace_gt_frames": true,
+      "tokenizer": {
+        "chunk_duration": 33
+      },
+      "ema": {
+        "enabled": false
+      },
+      "input_data_key": "video",
+      "sde": {
+        "_target_": "cosmos_policy.modules.hybrid_edm_sde.HybridEDMSDE",
+        "hybrid_sigma_distribution": true,
+        "p_mean": 1.3862943611198906,
+        "p_std": 1.2,
+        "sigma_max": 200,
+        "sigma_min": 0.01,
+        "uniform_lower": 1.0,
+        "uniform_upper": 85.0
+      },
+      "adjust_video_noise": true,
+      "resize_online": true,
+      "resolution": "224",
+      "high_sigma_strategy": "none"
+    }
+  },
+  "model_parallel": {
+    "context_parallel_size": 1
+  },
+  "checkpoint": {
+    "load_path": "/home/eai/Dev/hermine/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt",
+    "load_training_state": false,
+    "strict_resume": false,
+    "save_iter": 1000,
+    "load_ema_to_reg": true,
+    "load_from_object_store": {
+      "enabled": false
+    },
+    "save_to_object_store": {
+      "enabled": false
+    }
+  },
+  "dataloader_train": {
+    "_target_": "torch.utils.data.DataLoader",
+    "num_workers": 12,
+    "persistent_workers": true,
+    "pin_memory": true,
+    "dataset": {
+      "_target_": "cosmos_policy.datasets.libero_dataset.LIBERODataset",
+      "data_dir": "./LIBERO-Cosmos-Policy/success_only",
+      "t5_text_embeddings_path": "./LIBERO-Cosmos-Policy/success_only/t5_embeddings.pkl",
+      "chunk_size": 16,
+      "use_image_aug": true,
+      "use_wrist_images": true,
+      "use_proprio": true,
+      "normalize_proprio": true,
+      "normalize_actions": true,
+      "num_duplicates_per_image": 4,
+      "use_stronger_image_aug": true,
+      "rollout_data_dir": "./LIBERO-Cosmos-Policy/all_episodes",
+      "demonstration_sampling_prob": 0.5,
+      "success_rollout_sampling_prob": 0.5,
+      "return_value_function_returns": true,
+      "gamma": 0.99
+    },
+    "sampler": {
+      "_target_": "torch.utils.data.distributed.DistributedSampler",
+      "dataset": {
+        "_target_": "cosmos_policy.datasets.libero_dataset.LIBERODataset",
+        "data_dir": "./LIBERO-Cosmos-Policy/success_only",
+        "t5_text_embeddings_path": "./LIBERO-Cosmos-Policy/success_only/t5_embeddings.pkl",
+        "chunk_size": 16,
+        "use_image_aug": true,
+        "use_wrist_images": true,
+        "use_proprio": true,
+        "normalize_proprio": true,
+        "normalize_actions": true,
+        "num_duplicates_per_image": 4,
+        "use_stronger_image_aug": true,
+        "rollout_data_dir": "./LIBERO-Cosmos-Policy/all_episodes",
+        "demonstration_sampling_prob": 0.5,
+        "success_rollout_sampling_prob": 0.5,
+        "return_value_function_returns": true,
+        "gamma": 0.99
+      },
+      "num_replicas": {
+        "_target_": "megatron.core.parallel_state.get_data_parallel_world_size"
+      },
+      "rank": {
+        "_target_": "megatron.core.parallel_state.get_data_parallel_rank"
+      },
+      "shuffle": true,
+      "seed": 0
+    },
+    "pin_memory_device": "",
+    "timeout": 0,
+    "batch_size": 1,
+    "drop_last": true
+  },
+  "job": {
+    "group": "cosmos_v2_finetune",
+    "name": "cosmos_predict2_2b_480p_libero"
+  },
+  "upload_reproducible_setup": false
+}

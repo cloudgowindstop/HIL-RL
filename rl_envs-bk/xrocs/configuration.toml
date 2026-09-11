@@ -1,0 +1,28 @@
+[basic]
+station_type = "UR"
+
+[config.hand.single]
+enable = true
+type = "Robotiq2f85Ur"
+ip = "172.168.1.3"
+
+[config.robot.single]
+enable = true
+ip = "172.168.1.3"
+
+[config.camera.right]
+enable = true
+type = "OrbbecCameraRos2"
+camera_name = "right_camera"
+use_compress_rgb = true
+use_compress_depth = true
+
+[config.camera.wrist]
+enable = true
+type = "OrbbecCameraRos2"
+camera_name = "wrist_camera"
+use_compress_rgb = true
+use_compress_depth = true
+
+[config.basic]
+control_rate_hz = 100.0

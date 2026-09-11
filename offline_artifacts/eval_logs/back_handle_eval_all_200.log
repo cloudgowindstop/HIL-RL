@@ -1,0 +1,1197 @@
+2026-08-21 13:35:31.611441: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2026-08-21 13:35:32.015084: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-08-21 13:35:32.015142: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-08-21 13:35:32.072336: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-08-21 13:35:32.200142: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
+AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
+AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
+AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
+2026-08-21 13:35:34.446683: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+AttributeError: 'MessageFactory' object has no attribute 'GetPrototype'
+[PREFLIGHT] root=/media/jushen/mingbo-ge/HIL-RL-Project/cosmos_data_6drotation_monitor_20260819
+[PREFLIGHT] datasets=4
+[PREFLIGHT] raw_episodes=0
+[PREFLIGHT] episodes=325
+[PREFLIGHT] parquet_files=325
+[PREFLIGHT] status=PASS
+[08-21 13:35:44|CRITICAL|cosmos-policy/cosmos_policy/_src/predict2/checkpointer/dcp.py:188:<module>] for the back comptiable pytorch! New DefaultLoadPlanner class is created.
+[MODEL] experiment=cosmos_predict2_2b_480p_our_dataset
+[MODEL] checkpoint=/media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+[MODEL] tokenizer=/media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/tokenizer/tokenizer.pth
+[MODEL] checkpoint_sha256=fbc4f05d948078539cb5d7a8e59b6f40f940e4836b5b8a31dcab03e3e807a6f0
+-----------------------> in load_model_from_checkpoint()----------------------->
+[08-21 13:35:47|CRITICAL|cosmos-policy/cosmos_policy/_src/imaginaire/utils/config_helper.py:201:import_all_modules_from_package] Reloading all modules from package cosmos_policy._src.predict2.configs.video2world.experiment
+[08-21 13:35:47|INFO|cosmos-policy/cosmos_policy/_src/predict2/datasets/augmentor_provider.py:94:augmentor_register] registering video_basic_augmentor_v1...
+[08-21 13:35:47|INFO|cosmos-policy/cosmos_policy/_src/predict2/datasets/augmentor_provider.py:94:augmentor_register] registering video_basic_augmentor_v2...
+[08-21 13:35:47|INFO|cosmos-policy/cosmos_policy/_src/predict2/datasets/augmentor_provider.py:94:augmentor_register] registering noframedrop_nocameramove_video_augmentor_v1...
+[08-21 13:35:47|INFO|cosmos-policy/cosmos_policy/_src/predict2/datasets/augmentor_provider.py:94:augmentor_register] registering nocameramove_video_augmentor_v1...
+[08-21 13:35:47|INFO|cosmos-policy/cosmos_policy/_src/predict2/datasets/augmentor_provider.py:94:augmentor_register] registering image_basic_augmentor...
+[08-21 13:35:47|INFO|cosmos-policy/cosmos_policy/_src/predict2/datasets/augmentor_provider.py:94:augmentor_register] registering image_basic_augmentor_without_embeddings...
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_face
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_crowded
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_high_motion
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_robotics
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_av
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_physical_ai
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_4k_cooldown
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_face_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_crowded_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_high_motion_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_robotics_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_av_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_physical_ai_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_4k_cooldown_only2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_face_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_crowded_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_high_motion_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_robotics_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_av_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_physical_ai_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_4k_cooldown_high_sigma
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_face_high_sigma2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_crowded_high_sigma2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-1-Size-2B-Res-720-Fps-16-Note-rf_robotics_high_sigma2
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/_src/predict2/configs/video2world/experiment/specialized_model/SFT_2B_RF.py:853:<module>] Storing Stage-c_pt_4-Index-2-Size-2B-Res-720-Fps-16-Note-rf_with_edm_ckpt
+[08-21 13:35:51|CRITICAL|cosmos-policy/cosmos_policy/_src/imaginaire/utils/config_helper.py:201:import_all_modules_from_package] Reloading all modules from package cosmos_policy.config.experiment
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_our_dataset
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_our_dataset__inference_only
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_libero
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_libero__inference_only
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_robocasa_50_demos_per_task
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_robocasa_50_demos_per_task__inference
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_aloha_185_demos_4_tasks_mixture_foldshirt15_candiesinbowl45_candyinbag45_eggplantchickenonplate80
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_aloha_185_demos_4_tasks_mixture_foldshirt15_candiesinbowl45_candyinbag45_eggplantchickenonplate80__inference_only
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_aloha_185_demos_4_tasks_mixture_foldshirt15_candiesinbowl45_candyinbag45_eggplantchickenonplate80__resumeFrom50K_648_rollouts_Vsprime_value_func
+[08-21 13:35:51|INFO|cosmos-policy/cosmos_policy/config/experiment/cosmos_policy_experiment_configs.py:717:register_configs] Registering experiment: cosmos_predict2_2b_480p_aloha_185_demos_4_tasks_mixture_foldshirt15_candiesinbowl45_candyinbag45_eggplantchickenonplate80__resumeFrom50K_648_rollouts_Vsprime_value_func__inference_only
+[08-21 13:35:53|INFO|cosmos-policy/cosmos_policy/_src/predict2/utils/model_loader.py:97:load_model_from_checkpoint] Overriding config checkpoint path with: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/misc.py:152:set_random_seed] Using random seed 0.
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/predict2/utils/model_loader.py:117:load_model_from_checkpoint] Loading model from /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+[08-21 13:35:54|WARNING|cosmos-policy/cosmos_policy/_src/predict2/models/text2world_model.py:145:__init__] DiffusionModel: precision torch.bfloat16
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/tokenizers_cosmos/wan2pt1.py:176:_policy_video_vae] loading /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/tokenizer/tokenizer.pth
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/timer.py:143:_log] Time spent on DiffusionModel: set_up_tokenizer: 0.84 s
+[08-21 13:35:54|CRITICAL|cosmos-policy/cosmos_policy/_src/predict2/models/text2world_model.py:173:__init__] Using mean loss reduce with loss scale 10.0
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/predict2/conditioner.py:434:__init__] Initialized embedder #0-fps: 
+ ReMapkey 
+	input key: fps
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: fps 
+	Dtype: None
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/predict2/conditioner.py:434:__init__] Initialized embedder #1-padding_mask: 
+ ReMapkey 
+	input key: padding_mask
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: padding_mask 
+	Dtype: None
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/predict2/conditioner.py:434:__init__] Initialized embedder #2-text: 
+ TextAttr 
+	input key: ['t5_text_embeddings']
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: [crossattn_emb]
+[08-21 13:35:54|INFO|cosmos-policy/cosmos_policy/_src/predict2/conditioner.py:434:__init__] Initialized embedder #3-use_video_condition: 
+ BooleanFlag 
+	input key: fps
+	Param count: 0 
+	Trainable: None
+	Dropout rate: 0.0
+	Output key: use_video_condition 
+	 This is a boolean flag
+========================== in set_up_model =========================
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1807:enable_selective_checkpoint] Enable selective checkpoint with predict2_2b_720, for every 1 blocks. Total blocks: 28
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 0
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 1
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 2
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 3
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 4
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 5
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 6
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 7
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 8
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 9
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 10
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 11
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 12
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 13
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 14
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 15
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 16
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 17
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 18
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 19
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 20
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 21
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 22
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 23
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 24
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 25
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 26
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/networks/minimal_v4_dit.py:1813:enable_selective_checkpoint] Enable selective checkpoint for block 27
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/timer.py:143:_log] Time spent on meta to cuda and broadcast model states: 0.18 s
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/timer.py:143:_log] Time spent on Creating PyTorch model: 0.70 s
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/timer.py:143:_log] Time spent on Creating PyTorch model and ema if enabled: 0.71 s
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/timer.py:143:_log] Time spent on DiffusionModel: set_up_model: 0.71 s
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/imaginaire/utils/timer.py:143:_log] Time spent on instantiate model: 1.58 s
+================================== before load_model_state_dict_from_checkpoint ==================================
+-----------------------> in load_model_state_dict_from_checkpoint()----------------------->
+[08-21 13:35:55|INFO|cosmos-policy/cosmos_policy/_src/predict2/utils/model_loader.py:245:load_model_state_dict_from_checkpoint] Loading model cached locally from /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+[08-21 13:36:00|CRITICAL|cosmos-policy/cosmos_policy/_src/predict2/models/text2world_model.py:939:load_state_dict] load model in non-strict mode
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.0.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.0.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.0.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.0.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.1.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.1.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.1.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.1.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.2.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.2.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.2.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.2.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.3.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.3.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.3.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.3.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.4.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.4.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.4.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.4.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.5.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.5.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.5.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.5.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.6.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.6.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.6.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.6.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.7.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.7.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.7.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.7.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.8.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.8.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.8.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.8.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.9.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.9.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.9.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.9.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.10.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.10.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.10.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.10.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.11.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.11.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.11.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.11.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.12.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.12.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.12.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.12.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.13.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.13.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.13.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.13.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.14.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.14.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.14.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.14.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.15.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.15.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.15.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.15.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.16.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.16.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.16.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.16.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.17.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.17.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.17.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.17.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.18.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.18.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.18.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.18.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.19.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.19.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.19.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.19.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.20.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.20.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.20.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.20.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.21.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.21.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.21.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.21.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.22.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.22.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.22.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.22.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.23.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.23.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.23.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.23.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.24.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.24.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.24.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.24.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.25.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.25.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.25.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.25.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.26.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.26.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.26.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.26.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.27.self_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.27.self_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.27.cross_attn.q_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key blocks.27.cross_attn.k_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|WARNING|cosmos-policy/cosmos_policy/_src/imaginaire/utils/checkpointer.py:456:non_strict_load_model] Skipping key t_embedding_norm._extra_state introduced by TransformerEngine for FP8 in the checkpoint.
+[08-21 13:36:00|CRITICAL|cosmos-policy/cosmos_policy/_src/predict2/models/text2world_model.py:940:load_state_dict] [RANK 0] _IncompatibleKeys(missing_keys=[], unexpected_keys=[], incorrect_shapes=[])
+cmd_args:  /media/jushen/mingbo-ge/hil-rl-project/hil-rl/cosmos_offline_train/evaluation/runner.py evaluate-suite --config /media/jushen/mingbo-ge/hil-rl-project/hil-rl/cosmos_offline_train/configs/back_handle_inverse_dynamics_6d.yaml --base --checkpoint step_000020000=/media/jushen/mingbo-ge/hil-rl-project/train_outputs/back_handle_joint_6d/checkpoints/step_000020000.pt --objectives policy world value inverse_dynamics --inverse-ablations normal current_only future_only future_shuffle --max-batches 200 --output-dir /media/jushen/mingbo-ge/hil-rl-project/train_outputs/back_handle_eval_all_200
+Using LIBERO constants:
+  NUM_ACTIONS_CHUNK = 16
+  ACTION_DIM = 7
+  PROPRIO_DIM = 8
+If needed, manually set the correct constants in `projects/cosmos/cosmos_policy/constants.py`!
+Loaded T5 text embeddings from /media/jushen/mingbo-ge/HIL-RL-Project/t5_embeddings_by_task/back_handle_installation_20260803_pm/t5_embeddings.pkl onto device cuda:0
+[SUITE] model=1/2 name=base step=0 source=Base
+[EVAL] condition=1/21 step=0 sigma=0.1 objective=policy ablation=normal batches=200
+[EVAL] condition=1/21 batch=10/200 rate=2.33 batch/s elapsed=4.3s ETA=81.6s
+[EVAL] condition=1/21 batch=20/200 rate=2.87 batch/s elapsed=7.0s ETA=62.7s
+[EVAL] condition=1/21 batch=30/200 rate=2.66 batch/s elapsed=11.3s ETA=63.9s
+[EVAL] condition=1/21 batch=40/200 rate=2.73 batch/s elapsed=14.6s ETA=58.6s
+[EVAL] condition=1/21 batch=50/200 rate=2.78 batch/s elapsed=18.0s ETA=54.0s
+[EVAL] condition=1/21 batch=60/200 rate=2.74 batch/s elapsed=21.9s ETA=51.1s
+[EVAL] condition=1/21 batch=70/200 rate=2.75 batch/s elapsed=25.5s ETA=47.3s
+[EVAL] condition=1/21 batch=80/200 rate=2.79 batch/s elapsed=28.7s ETA=43.0s
+[EVAL] condition=1/21 batch=90/200 rate=2.74 batch/s elapsed=32.9s ETA=40.2s
+[EVAL] condition=1/21 batch=100/200 rate=2.74 batch/s elapsed=36.5s ETA=36.5s
+[EVAL] condition=1/21 batch=110/200 rate=2.75 batch/s elapsed=40.0s ETA=32.7s
+[EVAL] condition=1/21 batch=120/200 rate=2.70 batch/s elapsed=44.5s ETA=29.7s
+[EVAL] condition=1/21 batch=130/200 rate=2.70 batch/s elapsed=48.1s ETA=25.9s
+[EVAL] condition=1/21 batch=140/200 rate=2.72 batch/s elapsed=51.5s ETA=22.1s
+[EVAL] condition=1/21 batch=150/200 rate=2.70 batch/s elapsed=55.5s ETA=18.5s
+[EVAL] condition=1/21 batch=160/200 rate=2.73 batch/s elapsed=58.7s ETA=14.7s
+[EVAL] condition=1/21 batch=170/200 rate=2.75 batch/s elapsed=61.8s ETA=10.9s
+[EVAL] condition=1/21 batch=180/200 rate=2.73 batch/s elapsed=65.8s ETA=7.3s
+[EVAL] condition=1/21 batch=190/200 rate=2.75 batch/s elapsed=69.1s ETA=3.6s
+[EVAL] condition=1/21 batch=200/200 rate=2.77 batch/s elapsed=72.3s ETA=0.0s
+[EVAL] condition=1/21 complete loss=1.654596 elapsed=72.3s
+[EVAL] condition=2/21 step=0 sigma=0.1 objective=world ablation=normal batches=200
+[EVAL] condition=2/21 batch=10/200 rate=3.38 batch/s elapsed=3.0s ETA=56.2s
+[EVAL] condition=2/21 batch=20/200 rate=3.66 batch/s elapsed=5.5s ETA=49.2s
+[EVAL] condition=2/21 batch=30/200 rate=3.19 batch/s elapsed=9.4s ETA=53.3s
+[EVAL] condition=2/21 batch=40/200 rate=3.16 batch/s elapsed=12.7s ETA=50.7s
+[EVAL] condition=2/21 batch=50/200 rate=3.17 batch/s elapsed=15.8s ETA=47.4s
+[EVAL] condition=2/21 batch=60/200 rate=3.08 batch/s elapsed=19.5s ETA=45.5s
+[EVAL] condition=2/21 batch=70/200 rate=3.06 batch/s elapsed=22.9s ETA=42.5s
+[EVAL] condition=2/21 batch=80/200 rate=3.07 batch/s elapsed=26.0s ETA=39.1s
+[EVAL] condition=2/21 batch=90/200 rate=3.00 batch/s elapsed=30.0s ETA=36.7s
+[EVAL] condition=2/21 batch=100/200 rate=3.00 batch/s elapsed=33.4s ETA=33.4s
+[EVAL] condition=2/21 batch=110/200 rate=3.01 batch/s elapsed=36.5s ETA=29.9s
+[EVAL] condition=2/21 batch=120/200 rate=2.97 batch/s elapsed=40.5s ETA=27.0s
+[EVAL] condition=2/21 batch=130/200 rate=2.96 batch/s elapsed=44.0s ETA=23.7s
+[EVAL] condition=2/21 batch=140/200 rate=2.96 batch/s elapsed=47.3s ETA=20.3s
+[EVAL] condition=2/21 batch=150/200 rate=2.94 batch/s elapsed=51.0s ETA=17.0s
+[EVAL] condition=2/21 batch=160/200 rate=2.95 batch/s elapsed=54.2s ETA=13.6s
+[EVAL] condition=2/21 batch=170/200 rate=2.96 batch/s elapsed=57.4s ETA=10.1s
+[EVAL] condition=2/21 batch=180/200 rate=2.93 batch/s elapsed=61.5s ETA=6.8s
+[EVAL] condition=2/21 batch=190/200 rate=2.93 batch/s elapsed=64.7s ETA=3.4s
+[EVAL] condition=2/21 batch=200/200 rate=2.94 batch/s elapsed=67.9s ETA=0.0s
+[EVAL] condition=2/21 complete loss=1.375804 elapsed=67.9s
+[EVAL] condition=3/21 step=0 sigma=0.1 objective=value ablation=normal batches=200
+[EVAL] condition=3/21 batch=10/200 rate=3.31 batch/s elapsed=3.0s ETA=57.3s
+[EVAL] condition=3/21 batch=20/200 rate=3.56 batch/s elapsed=5.6s ETA=50.5s
+[EVAL] condition=3/21 batch=30/200 rate=3.14 batch/s elapsed=9.6s ETA=54.1s
+[EVAL] condition=3/21 batch=40/200 rate=3.13 batch/s elapsed=12.8s ETA=51.1s
+[EVAL] condition=3/21 batch=50/200 rate=3.12 batch/s elapsed=16.0s ETA=48.0s
+[EVAL] condition=3/21 batch=60/200 rate=3.05 batch/s elapsed=19.7s ETA=45.9s
+[EVAL] condition=3/21 batch=70/200 rate=3.03 batch/s elapsed=23.1s ETA=42.9s
+[EVAL] condition=3/21 batch=80/200 rate=3.04 batch/s elapsed=26.3s ETA=39.4s
+[EVAL] condition=3/21 batch=90/200 rate=2.97 batch/s elapsed=30.3s ETA=37.0s
+[EVAL] condition=3/21 batch=100/200 rate=2.97 batch/s elapsed=33.6s ETA=33.6s
+[EVAL] condition=3/21 batch=110/200 rate=2.98 batch/s elapsed=36.9s ETA=30.2s
+[EVAL] condition=3/21 batch=120/200 rate=2.94 batch/s elapsed=40.9s ETA=27.2s
+[EVAL] condition=3/21 batch=130/200 rate=2.92 batch/s elapsed=44.4s ETA=23.9s
+[EVAL] condition=3/21 batch=140/200 rate=2.91 batch/s elapsed=48.1s ETA=20.6s
+[EVAL] condition=3/21 batch=150/200 rate=2.89 batch/s elapsed=51.9s ETA=17.3s
+[EVAL] condition=3/21 batch=160/200 rate=2.91 batch/s elapsed=55.0s ETA=13.8s
+[EVAL] condition=3/21 batch=170/200 rate=2.93 batch/s elapsed=58.0s ETA=10.2s
+[EVAL] condition=3/21 batch=180/200 rate=2.91 batch/s elapsed=61.9s ETA=6.9s
+[EVAL] condition=3/21 batch=190/200 rate=2.92 batch/s elapsed=65.1s ETA=3.4s
+[EVAL] condition=3/21 batch=200/200 rate=2.93 batch/s elapsed=68.2s ETA=0.0s
+[EVAL] condition=3/21 complete loss=1.196591 elapsed=68.2s
+[EVAL] condition=4/21 step=0 sigma=0.1 objective=inverse_dynamics ablation=normal batches=200
+[EVAL] condition=4/21 batch=10/200 rate=3.30 batch/s elapsed=3.0s ETA=57.5s
+[EVAL] condition=4/21 batch=20/200 rate=3.58 batch/s elapsed=5.6s ETA=50.3s
+[EVAL] condition=4/21 batch=30/200 rate=3.11 batch/s elapsed=9.6s ETA=54.7s
+[EVAL] condition=4/21 batch=40/200 rate=3.07 batch/s elapsed=13.1s ETA=52.2s
+[EVAL] condition=4/21 batch=50/200 rate=3.05 batch/s elapsed=16.4s ETA=49.2s
+[EVAL] condition=4/21 batch=60/200 rate=2.99 batch/s elapsed=20.1s ETA=46.9s
+[EVAL] condition=4/21 batch=70/200 rate=2.98 batch/s elapsed=23.5s ETA=43.6s
+[EVAL] condition=4/21 batch=80/200 rate=2.99 batch/s elapsed=26.7s ETA=40.1s
+[EVAL] condition=4/21 batch=90/200 rate=2.93 batch/s elapsed=30.7s ETA=37.5s
+[EVAL] condition=4/21 batch=100/200 rate=2.94 batch/s elapsed=34.1s ETA=34.1s
+[EVAL] condition=4/21 batch=110/200 rate=2.95 batch/s elapsed=37.3s ETA=30.5s
+[EVAL] condition=4/21 batch=120/200 rate=2.91 batch/s elapsed=41.3s ETA=27.5s
+[EVAL] condition=4/21 batch=130/200 rate=2.90 batch/s elapsed=44.9s ETA=24.2s
+[EVAL] condition=4/21 batch=140/200 rate=2.90 batch/s elapsed=48.4s ETA=20.7s
+[EVAL] condition=4/21 batch=150/200 rate=2.88 batch/s elapsed=52.2s ETA=17.4s
+[EVAL] condition=4/21 batch=160/200 rate=2.89 batch/s elapsed=55.4s ETA=13.8s
+[EVAL] condition=4/21 batch=170/200 rate=2.90 batch/s elapsed=58.7s ETA=10.4s
+[EVAL] condition=4/21 batch=180/200 rate=2.87 batch/s elapsed=62.8s ETA=7.0s
+[EVAL] condition=4/21 batch=190/200 rate=2.87 batch/s elapsed=66.2s ETA=3.5s
+[EVAL] condition=4/21 batch=200/200 rate=2.88 batch/s elapsed=69.4s ETA=0.0s
+[EVAL] condition=4/21 complete loss=2.094628 elapsed=69.4s
+[EVAL] condition=5/21 step=0 sigma=0.1 objective=inverse_dynamics ablation=current_only batches=200
+[EVAL] condition=5/21 batch=10/200 rate=3.24 batch/s elapsed=3.1s ETA=58.6s
+[EVAL] condition=5/21 batch=20/200 rate=3.48 batch/s elapsed=5.7s ETA=51.7s
+[EVAL] condition=5/21 batch=30/200 rate=3.11 batch/s elapsed=9.6s ETA=54.7s
+[EVAL] condition=5/21 batch=40/200 rate=3.10 batch/s elapsed=12.9s ETA=51.6s
+[EVAL] condition=5/21 batch=50/200 rate=3.08 batch/s elapsed=16.2s ETA=48.7s
+[EVAL] condition=5/21 batch=60/200 rate=3.00 batch/s elapsed=20.0s ETA=46.7s
+[EVAL] condition=5/21 batch=70/200 rate=2.99 batch/s elapsed=23.4s ETA=43.5s
+[EVAL] condition=5/21 batch=80/200 rate=2.99 batch/s elapsed=26.7s ETA=40.1s
+[EVAL] condition=5/21 batch=90/200 rate=2.93 batch/s elapsed=30.7s ETA=37.5s
+[EVAL] condition=5/21 batch=100/200 rate=2.92 batch/s elapsed=34.2s ETA=34.2s
+[EVAL] condition=5/21 batch=110/200 rate=2.92 batch/s elapsed=37.6s ETA=30.8s
+[EVAL] condition=5/21 batch=120/200 rate=2.88 batch/s elapsed=41.7s ETA=27.8s
+[EVAL] condition=5/21 batch=130/200 rate=2.87 batch/s elapsed=45.3s ETA=24.4s
+[EVAL] condition=5/21 batch=140/200 rate=2.87 batch/s elapsed=48.7s ETA=20.9s
+[EVAL] condition=5/21 batch=150/200 rate=2.83 batch/s elapsed=52.9s ETA=17.6s
+[EVAL] condition=5/21 batch=160/200 rate=2.85 batch/s elapsed=56.1s ETA=14.0s
+[EVAL] condition=5/21 batch=170/200 rate=2.86 batch/s elapsed=59.4s ETA=10.5s
+[EVAL] condition=5/21 batch=180/200 rate=2.84 batch/s elapsed=63.4s ETA=7.0s
+[EVAL] condition=5/21 batch=190/200 rate=2.85 batch/s elapsed=66.6s ETA=3.5s
+[EVAL] condition=5/21 batch=200/200 rate=2.86 batch/s elapsed=69.9s ETA=0.0s
+[EVAL] condition=5/21 complete loss=2.462078 elapsed=69.9s
+[EVAL] condition=6/21 step=0 sigma=0.1 objective=inverse_dynamics ablation=future_only batches=200
+[EVAL] condition=6/21 batch=10/200 rate=2.84 batch/s elapsed=3.5s ETA=67.0s
+[EVAL] condition=6/21 batch=20/200 rate=3.24 batch/s elapsed=6.2s ETA=55.5s
+[EVAL] condition=6/21 batch=30/200 rate=2.94 batch/s elapsed=10.2s ETA=57.8s
+[EVAL] condition=6/21 batch=40/200 rate=2.94 batch/s elapsed=13.6s ETA=54.4s
+[EVAL] condition=6/21 batch=50/200 rate=2.97 batch/s elapsed=16.9s ETA=50.6s
+[EVAL] condition=6/21 batch=60/200 rate=2.91 batch/s elapsed=20.6s ETA=48.2s
+[EVAL] condition=6/21 batch=70/200 rate=2.90 batch/s elapsed=24.2s ETA=44.9s
+[EVAL] condition=6/21 batch=80/200 rate=2.91 batch/s elapsed=27.5s ETA=41.3s
+[EVAL] condition=6/21 batch=90/200 rate=2.85 batch/s elapsed=31.6s ETA=38.6s
+[EVAL] condition=6/21 batch=100/200 rate=2.86 batch/s elapsed=35.0s ETA=35.0s
+[EVAL] condition=6/21 batch=110/200 rate=2.87 batch/s elapsed=38.4s ETA=31.4s
+[EVAL] condition=6/21 batch=120/200 rate=2.83 batch/s elapsed=42.5s ETA=28.3s
+[EVAL] condition=6/21 batch=130/200 rate=2.80 batch/s elapsed=46.4s ETA=25.0s
+[EVAL] condition=6/21 batch=140/200 rate=2.81 batch/s elapsed=49.9s ETA=21.4s
+[EVAL] condition=6/21 batch=150/200 rate=2.79 batch/s elapsed=53.8s ETA=17.9s
+[EVAL] condition=6/21 batch=160/200 rate=2.81 batch/s elapsed=57.0s ETA=14.3s
+[EVAL] condition=6/21 batch=170/200 rate=2.82 batch/s elapsed=60.2s ETA=10.6s
+[EVAL] condition=6/21 batch=180/200 rate=2.81 batch/s elapsed=64.1s ETA=7.1s
+[EVAL] condition=6/21 batch=190/200 rate=2.82 batch/s elapsed=67.3s ETA=3.5s
+[EVAL] condition=6/21 batch=200/200 rate=2.84 batch/s elapsed=70.5s ETA=0.0s
+[EVAL] condition=6/21 complete loss=2.378731 elapsed=70.5s
+[EVAL] condition=7/21 step=0 sigma=0.1 objective=inverse_dynamics ablation=future_shuffle batches=200
+[EVAL] condition=7/21 batch=10/200 rate=1.85 batch/s elapsed=5.4s ETA=102.5s
+[EVAL] condition=7/21 batch=20/200 rate=2.03 batch/s elapsed=9.9s ETA=88.9s
+[EVAL] condition=7/21 batch=30/200 rate=1.76 batch/s elapsed=17.1s ETA=96.8s
+[EVAL] condition=7/21 batch=40/200 rate=1.77 batch/s elapsed=22.6s ETA=90.6s
+[EVAL] condition=7/21 batch=50/200 rate=1.75 batch/s elapsed=28.5s ETA=85.6s
+[EVAL] condition=7/21 batch=60/200 rate=1.70 batch/s elapsed=35.3s ETA=82.4s
+[EVAL] condition=7/21 batch=70/200 rate=1.69 batch/s elapsed=41.4s ETA=76.8s
+[EVAL] condition=7/21 batch=80/200 rate=1.71 batch/s elapsed=46.9s ETA=70.3s
+[EVAL] condition=7/21 batch=90/200 rate=1.66 batch/s elapsed=54.2s ETA=66.2s
+[EVAL] condition=7/21 batch=100/200 rate=1.67 batch/s elapsed=59.9s ETA=59.9s
+[EVAL] condition=7/21 batch=110/200 rate=1.67 batch/s elapsed=66.0s ETA=54.0s
+[EVAL] condition=7/21 batch=120/200 rate=1.64 batch/s elapsed=73.2s ETA=48.8s
+[EVAL] condition=7/21 batch=130/200 rate=1.64 batch/s elapsed=79.3s ETA=42.7s
+[EVAL] condition=7/21 batch=140/200 rate=1.66 batch/s elapsed=84.3s ETA=36.1s
+[EVAL] condition=7/21 batch=150/200 rate=1.64 batch/s elapsed=91.5s ETA=30.5s
+[EVAL] condition=7/21 batch=160/200 rate=1.65 batch/s elapsed=97.0s ETA=24.3s
+[EVAL] condition=7/21 batch=170/200 rate=1.67 batch/s elapsed=102.1s ETA=18.0s
+[EVAL] condition=7/21 batch=180/200 rate=1.65 batch/s elapsed=109.3s ETA=12.1s
+[EVAL] condition=7/21 batch=190/200 rate=1.65 batch/s elapsed=114.9s ETA=6.0s
+[EVAL] condition=7/21 batch=200/200 rate=1.66 batch/s elapsed=120.6s ETA=0.0s
+[EVAL] condition=7/21 complete loss=2.080204 elapsed=120.6s
+[EVAL] condition=8/21 step=0 sigma=0.5 objective=policy ablation=normal batches=200
+[EVAL] condition=8/21 batch=10/200 rate=3.24 batch/s elapsed=3.1s ETA=58.7s
+[EVAL] condition=8/21 batch=20/200 rate=3.53 batch/s elapsed=5.7s ETA=51.0s
+[EVAL] condition=8/21 batch=30/200 rate=3.09 batch/s elapsed=9.7s ETA=54.9s
+[EVAL] condition=8/21 batch=40/200 rate=3.07 batch/s elapsed=13.0s ETA=52.2s
+[EVAL] condition=8/21 batch=50/200 rate=2.98 batch/s elapsed=16.8s ETA=50.3s
+[EVAL] condition=8/21 batch=60/200 rate=2.94 batch/s elapsed=20.4s ETA=47.6s
+[EVAL] condition=8/21 batch=70/200 rate=2.95 batch/s elapsed=23.8s ETA=44.1s
+[EVAL] condition=8/21 batch=80/200 rate=2.96 batch/s elapsed=27.0s ETA=40.5s
+[EVAL] condition=8/21 batch=90/200 rate=2.91 batch/s elapsed=31.0s ETA=37.9s
+[EVAL] condition=8/21 batch=100/200 rate=2.92 batch/s elapsed=34.3s ETA=34.3s
+[EVAL] condition=8/21 batch=110/200 rate=2.93 batch/s elapsed=37.5s ETA=30.7s
+[EVAL] condition=8/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=8/21 batch=130/200 rate=2.90 batch/s elapsed=44.9s ETA=24.2s
+[EVAL] condition=8/21 batch=140/200 rate=2.91 batch/s elapsed=48.2s ETA=20.6s
+[EVAL] condition=8/21 batch=150/200 rate=2.89 batch/s elapsed=51.9s ETA=17.3s
+[EVAL] condition=8/21 batch=160/200 rate=2.91 batch/s elapsed=55.0s ETA=13.8s
+[EVAL] condition=8/21 batch=170/200 rate=2.93 batch/s elapsed=58.0s ETA=10.2s
+[EVAL] condition=8/21 batch=180/200 rate=2.91 batch/s elapsed=61.8s ETA=6.9s
+[EVAL] condition=8/21 batch=190/200 rate=2.92 batch/s elapsed=65.0s ETA=3.4s
+[EVAL] condition=8/21 batch=200/200 rate=2.94 batch/s elapsed=68.1s ETA=0.0s
+[EVAL] condition=8/21 complete loss=0.866424 elapsed=68.1s
+[EVAL] condition=9/21 step=0 sigma=0.5 objective=world ablation=normal batches=200
+[EVAL] condition=9/21 batch=10/200 rate=2.79 batch/s elapsed=3.6s ETA=68.1s
+[EVAL] condition=9/21 batch=20/200 rate=3.27 batch/s elapsed=6.1s ETA=55.0s
+[EVAL] condition=9/21 batch=30/200 rate=2.99 batch/s elapsed=10.0s ETA=56.9s
+[EVAL] condition=9/21 batch=40/200 rate=3.01 batch/s elapsed=13.3s ETA=53.2s
+[EVAL] condition=9/21 batch=50/200 rate=3.04 batch/s elapsed=16.5s ETA=49.4s
+[EVAL] condition=9/21 batch=60/200 rate=2.98 batch/s elapsed=20.1s ETA=47.0s
+[EVAL] condition=9/21 batch=70/200 rate=2.95 batch/s elapsed=23.7s ETA=44.1s
+[EVAL] condition=9/21 batch=80/200 rate=2.98 batch/s elapsed=26.9s ETA=40.3s
+[EVAL] condition=9/21 batch=90/200 rate=2.91 batch/s elapsed=31.0s ETA=37.8s
+[EVAL] condition=9/21 batch=100/200 rate=2.91 batch/s elapsed=34.4s ETA=34.4s
+[EVAL] condition=9/21 batch=110/200 rate=2.92 batch/s elapsed=37.7s ETA=30.8s
+[EVAL] condition=9/21 batch=120/200 rate=2.88 batch/s elapsed=41.7s ETA=27.8s
+[EVAL] condition=9/21 batch=130/200 rate=2.88 batch/s elapsed=45.1s ETA=24.3s
+[EVAL] condition=9/21 batch=140/200 rate=2.89 batch/s elapsed=48.4s ETA=20.8s
+[EVAL] condition=9/21 batch=150/200 rate=2.87 batch/s elapsed=52.2s ETA=17.4s
+[EVAL] condition=9/21 batch=160/200 rate=2.89 batch/s elapsed=55.3s ETA=13.8s
+[EVAL] condition=9/21 batch=170/200 rate=2.92 batch/s elapsed=58.3s ETA=10.3s
+[EVAL] condition=9/21 batch=180/200 rate=2.90 batch/s elapsed=62.2s ETA=6.9s
+[EVAL] condition=9/21 batch=190/200 rate=2.91 batch/s elapsed=65.2s ETA=3.4s
+[EVAL] condition=9/21 batch=200/200 rate=2.92 batch/s elapsed=68.4s ETA=0.0s
+[EVAL] condition=9/21 complete loss=0.760939 elapsed=68.4s
+[EVAL] condition=10/21 step=0 sigma=0.5 objective=value ablation=normal batches=200
+[EVAL] condition=10/21 batch=10/200 rate=3.34 batch/s elapsed=3.0s ETA=56.9s
+[EVAL] condition=10/21 batch=20/200 rate=3.66 batch/s elapsed=5.5s ETA=49.1s
+[EVAL] condition=10/21 batch=30/200 rate=3.21 batch/s elapsed=9.3s ETA=53.0s
+[EVAL] condition=10/21 batch=40/200 rate=3.17 batch/s elapsed=12.6s ETA=50.4s
+[EVAL] condition=10/21 batch=50/200 rate=3.16 batch/s elapsed=15.8s ETA=47.5s
+[EVAL] condition=10/21 batch=60/200 rate=3.07 batch/s elapsed=19.6s ETA=45.6s
+[EVAL] condition=10/21 batch=70/200 rate=3.05 batch/s elapsed=22.9s ETA=42.6s
+[EVAL] condition=10/21 batch=80/200 rate=3.06 batch/s elapsed=26.1s ETA=39.2s
+[EVAL] condition=10/21 batch=90/200 rate=3.00 batch/s elapsed=30.0s ETA=36.7s
+[EVAL] condition=10/21 batch=100/200 rate=3.01 batch/s elapsed=33.3s ETA=33.3s
+[EVAL] condition=10/21 batch=110/200 rate=3.02 batch/s elapsed=36.5s ETA=29.8s
+[EVAL] condition=10/21 batch=120/200 rate=2.96 batch/s elapsed=40.5s ETA=27.0s
+[EVAL] condition=10/21 batch=130/200 rate=2.96 batch/s elapsed=44.0s ETA=23.7s
+[EVAL] condition=10/21 batch=140/200 rate=2.96 batch/s elapsed=47.3s ETA=20.3s
+[EVAL] condition=10/21 batch=150/200 rate=2.94 batch/s elapsed=51.0s ETA=17.0s
+[EVAL] condition=10/21 batch=160/200 rate=2.96 batch/s elapsed=54.1s ETA=13.5s
+[EVAL] condition=10/21 batch=170/200 rate=2.98 batch/s elapsed=57.0s ETA=10.1s
+[EVAL] condition=10/21 batch=180/200 rate=2.96 batch/s elapsed=60.9s ETA=6.8s
+[EVAL] condition=10/21 batch=190/200 rate=2.97 batch/s elapsed=64.0s ETA=3.4s
+[EVAL] condition=10/21 batch=200/200 rate=2.98 batch/s elapsed=67.1s ETA=0.0s
+[EVAL] condition=10/21 complete loss=0.854679 elapsed=67.1s
+[EVAL] condition=11/21 step=0 sigma=0.5 objective=inverse_dynamics ablation=normal batches=200
+[EVAL] condition=11/21 batch=10/200 rate=3.33 batch/s elapsed=3.0s ETA=57.1s
+[EVAL] condition=11/21 batch=20/200 rate=3.63 batch/s elapsed=5.5s ETA=49.6s
+[EVAL] condition=11/21 batch=30/200 rate=3.19 batch/s elapsed=9.4s ETA=53.3s
+[EVAL] condition=11/21 batch=40/200 rate=3.14 batch/s elapsed=12.7s ETA=51.0s
+[EVAL] condition=11/21 batch=50/200 rate=3.13 batch/s elapsed=16.0s ETA=48.0s
+[EVAL] condition=11/21 batch=60/200 rate=3.05 batch/s elapsed=19.7s ETA=45.9s
+[EVAL] condition=11/21 batch=70/200 rate=3.03 batch/s elapsed=23.1s ETA=42.9s
+[EVAL] condition=11/21 batch=80/200 rate=3.04 batch/s elapsed=26.3s ETA=39.5s
+[EVAL] condition=11/21 batch=90/200 rate=2.97 batch/s elapsed=30.3s ETA=37.1s
+[EVAL] condition=11/21 batch=100/200 rate=2.97 batch/s elapsed=33.6s ETA=33.6s
+[EVAL] condition=11/21 batch=110/200 rate=2.98 batch/s elapsed=36.9s ETA=30.2s
+[EVAL] condition=11/21 batch=120/200 rate=2.94 batch/s elapsed=40.8s ETA=27.2s
+[EVAL] condition=11/21 batch=130/200 rate=2.94 batch/s elapsed=44.3s ETA=23.8s
+[EVAL] condition=11/21 batch=140/200 rate=2.93 batch/s elapsed=47.8s ETA=20.5s
+[EVAL] condition=11/21 batch=150/200 rate=2.90 batch/s elapsed=51.6s ETA=17.2s
+[EVAL] condition=11/21 batch=160/200 rate=2.92 batch/s elapsed=54.8s ETA=13.7s
+[EVAL] condition=11/21 batch=170/200 rate=2.94 batch/s elapsed=57.9s ETA=10.2s
+[EVAL] condition=11/21 batch=180/200 rate=2.91 batch/s elapsed=61.8s ETA=6.9s
+[EVAL] condition=11/21 batch=190/200 rate=2.92 batch/s elapsed=65.0s ETA=3.4s
+[EVAL] condition=11/21 batch=200/200 rate=2.93 batch/s elapsed=68.4s ETA=0.0s
+[EVAL] condition=11/21 complete loss=1.582130 elapsed=68.4s
+[EVAL] condition=12/21 step=0 sigma=0.5 objective=inverse_dynamics ablation=current_only batches=200
+[EVAL] condition=12/21 batch=10/200 rate=3.25 batch/s elapsed=3.1s ETA=58.4s
+[EVAL] condition=12/21 batch=20/200 rate=3.48 batch/s elapsed=5.7s ETA=51.6s
+[EVAL] condition=12/21 batch=30/200 rate=3.10 batch/s elapsed=9.7s ETA=54.9s
+[EVAL] condition=12/21 batch=40/200 rate=3.07 batch/s elapsed=13.0s ETA=52.2s
+[EVAL] condition=12/21 batch=50/200 rate=3.06 batch/s elapsed=16.4s ETA=49.1s
+[EVAL] condition=12/21 batch=60/200 rate=2.99 batch/s elapsed=20.1s ETA=46.8s
+[EVAL] condition=12/21 batch=70/200 rate=2.96 batch/s elapsed=23.6s ETA=43.9s
+[EVAL] condition=12/21 batch=80/200 rate=2.97 batch/s elapsed=26.9s ETA=40.3s
+[EVAL] condition=12/21 batch=90/200 rate=2.92 batch/s elapsed=30.8s ETA=37.7s
+[EVAL] condition=12/21 batch=100/200 rate=2.93 batch/s elapsed=34.2s ETA=34.2s
+[EVAL] condition=12/21 batch=110/200 rate=2.94 batch/s elapsed=37.5s ETA=30.7s
+[EVAL] condition=12/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=12/21 batch=130/200 rate=2.89 batch/s elapsed=44.9s ETA=24.2s
+[EVAL] condition=12/21 batch=140/200 rate=2.90 batch/s elapsed=48.3s ETA=20.7s
+[EVAL] condition=12/21 batch=150/200 rate=2.88 batch/s elapsed=52.1s ETA=17.4s
+[EVAL] condition=12/21 batch=160/200 rate=2.89 batch/s elapsed=55.4s ETA=13.8s
+[EVAL] condition=12/21 batch=170/200 rate=2.91 batch/s elapsed=58.5s ETA=10.3s
+[EVAL] condition=12/21 batch=180/200 rate=2.89 batch/s elapsed=62.4s ETA=6.9s
+[EVAL] condition=12/21 batch=190/200 rate=2.90 batch/s elapsed=65.6s ETA=3.5s
+[EVAL] condition=12/21 batch=200/200 rate=2.91 batch/s elapsed=68.8s ETA=0.0s
+[EVAL] condition=12/21 complete loss=1.481336 elapsed=68.8s
+[EVAL] condition=13/21 step=0 sigma=0.5 objective=inverse_dynamics ablation=future_only batches=200
+[EVAL] condition=13/21 batch=10/200 rate=3.32 batch/s elapsed=3.0s ETA=57.3s
+[EVAL] condition=13/21 batch=20/200 rate=3.56 batch/s elapsed=5.6s ETA=50.6s
+[EVAL] condition=13/21 batch=30/200 rate=3.14 batch/s elapsed=9.6s ETA=54.2s
+[EVAL] condition=13/21 batch=40/200 rate=3.12 batch/s elapsed=12.8s ETA=51.2s
+[EVAL] condition=13/21 batch=50/200 rate=3.13 batch/s elapsed=16.0s ETA=48.0s
+[EVAL] condition=13/21 batch=60/200 rate=3.05 batch/s elapsed=19.7s ETA=46.0s
+[EVAL] condition=13/21 batch=70/200 rate=3.04 batch/s elapsed=23.1s ETA=42.8s
+[EVAL] condition=13/21 batch=80/200 rate=3.04 batch/s elapsed=26.3s ETA=39.4s
+[EVAL] condition=13/21 batch=90/200 rate=2.98 batch/s elapsed=30.2s ETA=37.0s
+[EVAL] condition=13/21 batch=100/200 rate=2.97 batch/s elapsed=33.6s ETA=33.6s
+[EVAL] condition=13/21 batch=110/200 rate=2.94 batch/s elapsed=37.4s ETA=30.6s
+[EVAL] condition=13/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=13/21 batch=130/200 rate=2.89 batch/s elapsed=44.9s ETA=24.2s
+[EVAL] condition=13/21 batch=140/200 rate=2.90 batch/s elapsed=48.3s ETA=20.7s
+[EVAL] condition=13/21 batch=150/200 rate=2.87 batch/s elapsed=52.2s ETA=17.4s
+[EVAL] condition=13/21 batch=160/200 rate=2.89 batch/s elapsed=55.4s ETA=13.8s
+[EVAL] condition=13/21 batch=170/200 rate=2.91 batch/s elapsed=58.5s ETA=10.3s
+[EVAL] condition=13/21 batch=180/200 rate=2.88 batch/s elapsed=62.5s ETA=6.9s
+[EVAL] condition=13/21 batch=190/200 rate=2.90 batch/s elapsed=65.6s ETA=3.5s
+[EVAL] condition=13/21 batch=200/200 rate=2.90 batch/s elapsed=69.0s ETA=0.0s
+[EVAL] condition=13/21 complete loss=1.460416 elapsed=69.0s
+[EVAL] condition=14/21 step=0 sigma=0.5 objective=inverse_dynamics ablation=future_shuffle batches=200
+[EVAL] condition=14/21 batch=10/200 rate=1.88 batch/s elapsed=5.3s ETA=101.3s
+[EVAL] condition=14/21 batch=20/200 rate=2.05 batch/s elapsed=9.8s ETA=87.9s
+[EVAL] condition=14/21 batch=30/200 rate=1.80 batch/s elapsed=16.7s ETA=94.6s
+[EVAL] condition=14/21 batch=40/200 rate=1.80 batch/s elapsed=22.2s ETA=88.7s
+[EVAL] condition=14/21 batch=50/200 rate=1.79 batch/s elapsed=27.9s ETA=83.8s
+[EVAL] condition=14/21 batch=60/200 rate=1.72 batch/s elapsed=34.8s ETA=81.3s
+[EVAL] condition=14/21 batch=70/200 rate=1.71 batch/s elapsed=40.9s ETA=75.9s
+[EVAL] condition=14/21 batch=80/200 rate=1.73 batch/s elapsed=46.3s ETA=69.5s
+[EVAL] condition=14/21 batch=90/200 rate=1.69 batch/s elapsed=53.3s ETA=65.2s
+[EVAL] condition=14/21 batch=100/200 rate=1.69 batch/s elapsed=59.3s ETA=59.3s
+[EVAL] condition=14/21 batch=110/200 rate=1.68 batch/s elapsed=65.6s ETA=53.7s
+[EVAL] condition=14/21 batch=120/200 rate=1.64 batch/s elapsed=73.2s ETA=48.8s
+[EVAL] condition=14/21 batch=130/200 rate=1.64 batch/s elapsed=79.1s ETA=42.6s
+[EVAL] condition=14/21 batch=140/200 rate=1.66 batch/s elapsed=84.3s ETA=36.1s
+[EVAL] condition=14/21 batch=150/200 rate=1.64 batch/s elapsed=91.2s ETA=30.4s
+[EVAL] condition=14/21 batch=160/200 rate=1.65 batch/s elapsed=96.8s ETA=24.2s
+[EVAL] condition=14/21 batch=170/200 rate=1.67 batch/s elapsed=101.7s ETA=17.9s
+[EVAL] condition=14/21 batch=180/200 rate=1.66 batch/s elapsed=108.7s ETA=12.1s
+[EVAL] condition=14/21 batch=190/200 rate=1.66 batch/s elapsed=114.4s ETA=6.0s
+[EVAL] condition=14/21 batch=200/200 rate=1.67 batch/s elapsed=120.0s ETA=0.0s
+[EVAL] condition=14/21 complete loss=1.583748 elapsed=120.0s
+[EVAL] condition=15/21 step=0 sigma=0.9 objective=policy ablation=normal batches=200
+[EVAL] condition=15/21 batch=10/200 rate=3.29 batch/s elapsed=3.0s ETA=57.7s
+[EVAL] condition=15/21 batch=20/200 rate=3.57 batch/s elapsed=5.6s ETA=50.4s
+[EVAL] condition=15/21 batch=30/200 rate=3.13 batch/s elapsed=9.6s ETA=54.4s
+[EVAL] condition=15/21 batch=40/200 rate=3.11 batch/s elapsed=12.9s ETA=51.5s
+[EVAL] condition=15/21 batch=50/200 rate=3.11 batch/s elapsed=16.1s ETA=48.3s
+[EVAL] condition=15/21 batch=60/200 rate=3.03 batch/s elapsed=19.8s ETA=46.2s
+[EVAL] condition=15/21 batch=70/200 rate=3.02 batch/s elapsed=23.2s ETA=43.0s
+[EVAL] condition=15/21 batch=80/200 rate=3.03 batch/s elapsed=26.4s ETA=39.6s
+[EVAL] condition=15/21 batch=90/200 rate=2.92 batch/s elapsed=30.8s ETA=37.7s
+[EVAL] condition=15/21 batch=100/200 rate=2.93 batch/s elapsed=34.2s ETA=34.2s
+[EVAL] condition=15/21 batch=110/200 rate=2.94 batch/s elapsed=37.4s ETA=30.6s
+[EVAL] condition=15/21 batch=120/200 rate=2.91 batch/s elapsed=41.3s ETA=27.5s
+[EVAL] condition=15/21 batch=130/200 rate=2.90 batch/s elapsed=44.8s ETA=24.1s
+[EVAL] condition=15/21 batch=140/200 rate=2.91 batch/s elapsed=48.2s ETA=20.6s
+[EVAL] condition=15/21 batch=150/200 rate=2.88 batch/s elapsed=52.0s ETA=17.3s
+[EVAL] condition=15/21 batch=160/200 rate=2.90 batch/s elapsed=55.1s ETA=13.8s
+[EVAL] condition=15/21 batch=170/200 rate=2.93 batch/s elapsed=58.1s ETA=10.3s
+[EVAL] condition=15/21 batch=180/200 rate=2.91 batch/s elapsed=62.0s ETA=6.9s
+[EVAL] condition=15/21 batch=190/200 rate=2.92 batch/s elapsed=65.0s ETA=3.4s
+[EVAL] condition=15/21 batch=200/200 rate=2.93 batch/s elapsed=68.2s ETA=0.0s
+[EVAL] condition=15/21 complete loss=0.633310 elapsed=68.2s
+[EVAL] condition=16/21 step=0 sigma=0.9 objective=world ablation=normal batches=200
+[EVAL] condition=16/21 batch=10/200 rate=3.40 batch/s elapsed=2.9s ETA=55.9s
+[EVAL] condition=16/21 batch=20/200 rate=3.64 batch/s elapsed=5.5s ETA=49.4s
+[EVAL] condition=16/21 batch=30/200 rate=3.21 batch/s elapsed=9.4s ETA=53.0s
+[EVAL] condition=16/21 batch=40/200 rate=3.18 batch/s elapsed=12.6s ETA=50.3s
+[EVAL] condition=16/21 batch=50/200 rate=3.10 batch/s elapsed=16.1s ETA=48.4s
+[EVAL] condition=16/21 batch=60/200 rate=3.03 batch/s elapsed=19.8s ETA=46.2s
+[EVAL] condition=16/21 batch=70/200 rate=3.03 batch/s elapsed=23.1s ETA=43.0s
+[EVAL] condition=16/21 batch=80/200 rate=3.04 batch/s elapsed=26.3s ETA=39.5s
+[EVAL] condition=16/21 batch=90/200 rate=2.98 batch/s elapsed=30.2s ETA=37.0s
+[EVAL] condition=16/21 batch=100/200 rate=2.99 batch/s elapsed=33.5s ETA=33.5s
+[EVAL] condition=16/21 batch=110/200 rate=2.99 batch/s elapsed=36.8s ETA=30.1s
+[EVAL] condition=16/21 batch=120/200 rate=2.95 batch/s elapsed=40.6s ETA=27.1s
+[EVAL] condition=16/21 batch=130/200 rate=2.95 batch/s elapsed=44.1s ETA=23.7s
+[EVAL] condition=16/21 batch=140/200 rate=2.95 batch/s elapsed=47.4s ETA=20.3s
+[EVAL] condition=16/21 batch=150/200 rate=2.93 batch/s elapsed=51.2s ETA=17.1s
+[EVAL] condition=16/21 batch=160/200 rate=2.95 batch/s elapsed=54.3s ETA=13.6s
+[EVAL] condition=16/21 batch=170/200 rate=2.97 batch/s elapsed=57.3s ETA=10.1s
+[EVAL] condition=16/21 batch=180/200 rate=2.94 batch/s elapsed=61.1s ETA=6.8s
+[EVAL] condition=16/21 batch=190/200 rate=2.96 batch/s elapsed=64.2s ETA=3.4s
+[EVAL] condition=16/21 batch=200/200 rate=2.97 batch/s elapsed=67.4s ETA=0.0s
+[EVAL] condition=16/21 complete loss=0.619358 elapsed=67.4s
+[EVAL] condition=17/21 step=0 sigma=0.9 objective=value ablation=normal batches=200
+[EVAL] condition=17/21 batch=10/200 rate=3.32 batch/s elapsed=3.0s ETA=57.3s
+[EVAL] condition=17/21 batch=20/200 rate=3.55 batch/s elapsed=5.6s ETA=50.7s
+[EVAL] condition=17/21 batch=30/200 rate=3.11 batch/s elapsed=9.7s ETA=54.7s
+[EVAL] condition=17/21 batch=40/200 rate=3.10 batch/s elapsed=12.9s ETA=51.7s
+[EVAL] condition=17/21 batch=50/200 rate=3.10 batch/s elapsed=16.1s ETA=48.4s
+[EVAL] condition=17/21 batch=60/200 rate=3.03 batch/s elapsed=19.8s ETA=46.2s
+[EVAL] condition=17/21 batch=70/200 rate=3.01 batch/s elapsed=23.2s ETA=43.1s
+[EVAL] condition=17/21 batch=80/200 rate=3.00 batch/s elapsed=26.6s ETA=40.0s
+[EVAL] condition=17/21 batch=90/200 rate=2.92 batch/s elapsed=30.8s ETA=37.6s
+[EVAL] condition=17/21 batch=100/200 rate=2.92 batch/s elapsed=34.2s ETA=34.2s
+[EVAL] condition=17/21 batch=110/200 rate=2.93 batch/s elapsed=37.5s ETA=30.7s
+[EVAL] condition=17/21 batch=120/200 rate=2.89 batch/s elapsed=41.5s ETA=27.7s
+[EVAL] condition=17/21 batch=130/200 rate=2.88 batch/s elapsed=45.1s ETA=24.3s
+[EVAL] condition=17/21 batch=140/200 rate=2.89 batch/s elapsed=48.4s ETA=20.7s
+[EVAL] condition=17/21 batch=150/200 rate=2.88 batch/s elapsed=52.1s ETA=17.4s
+[EVAL] condition=17/21 batch=160/200 rate=2.90 batch/s elapsed=55.2s ETA=13.8s
+[EVAL] condition=17/21 batch=170/200 rate=2.92 batch/s elapsed=58.2s ETA=10.3s
+[EVAL] condition=17/21 batch=180/200 rate=2.90 batch/s elapsed=62.1s ETA=6.9s
+[EVAL] condition=17/21 batch=190/200 rate=2.91 batch/s elapsed=65.3s ETA=3.4s
+[EVAL] condition=17/21 batch=200/200 rate=2.92 batch/s elapsed=68.4s ETA=0.0s
+[EVAL] condition=17/21 complete loss=0.758308 elapsed=68.4s
+[EVAL] condition=18/21 step=0 sigma=0.9 objective=inverse_dynamics ablation=normal batches=200
+[EVAL] condition=18/21 batch=10/200 rate=3.29 batch/s elapsed=3.0s ETA=57.8s
+[EVAL] condition=18/21 batch=20/200 rate=3.56 batch/s elapsed=5.6s ETA=50.5s
+[EVAL] condition=18/21 batch=30/200 rate=3.11 batch/s elapsed=9.6s ETA=54.6s
+[EVAL] condition=18/21 batch=40/200 rate=3.08 batch/s elapsed=13.0s ETA=52.0s
+[EVAL] condition=18/21 batch=50/200 rate=3.08 batch/s elapsed=16.3s ETA=48.8s
+[EVAL] condition=18/21 batch=60/200 rate=3.00 batch/s elapsed=20.0s ETA=46.6s
+[EVAL] condition=18/21 batch=70/200 rate=2.99 batch/s elapsed=23.4s ETA=43.4s
+[EVAL] condition=18/21 batch=80/200 rate=3.00 batch/s elapsed=26.7s ETA=40.0s
+[EVAL] condition=18/21 batch=90/200 rate=2.93 batch/s elapsed=30.7s ETA=37.5s
+[EVAL] condition=18/21 batch=100/200 rate=2.94 batch/s elapsed=34.0s ETA=34.0s
+[EVAL] condition=18/21 batch=110/200 rate=2.96 batch/s elapsed=37.2s ETA=30.4s
+[EVAL] condition=18/21 batch=120/200 rate=2.92 batch/s elapsed=41.1s ETA=27.4s
+[EVAL] condition=18/21 batch=130/200 rate=2.91 batch/s elapsed=44.7s ETA=24.1s
+[EVAL] condition=18/21 batch=140/200 rate=2.91 batch/s elapsed=48.0s ETA=20.6s
+[EVAL] condition=18/21 batch=150/200 rate=2.89 batch/s elapsed=51.9s ETA=17.3s
+[EVAL] condition=18/21 batch=160/200 rate=2.91 batch/s elapsed=55.0s ETA=13.7s
+[EVAL] condition=18/21 batch=170/200 rate=2.92 batch/s elapsed=58.1s ETA=10.3s
+[EVAL] condition=18/21 batch=180/200 rate=2.90 batch/s elapsed=62.0s ETA=6.9s
+[EVAL] condition=18/21 batch=190/200 rate=2.91 batch/s elapsed=65.3s ETA=3.4s
+[EVAL] condition=18/21 batch=200/200 rate=2.92 batch/s elapsed=68.5s ETA=0.0s
+[EVAL] condition=18/21 complete loss=1.030711 elapsed=68.5s
+[EVAL] condition=19/21 step=0 sigma=0.9 objective=inverse_dynamics ablation=current_only batches=200
+[EVAL] condition=19/21 batch=10/200 rate=3.28 batch/s elapsed=3.1s ETA=58.0s
+[EVAL] condition=19/21 batch=20/200 rate=3.54 batch/s elapsed=5.7s ETA=50.9s
+[EVAL] condition=19/21 batch=30/200 rate=3.12 batch/s elapsed=9.6s ETA=54.4s
+[EVAL] condition=19/21 batch=40/200 rate=3.08 batch/s elapsed=13.0s ETA=52.0s
+[EVAL] condition=19/21 batch=50/200 rate=3.06 batch/s elapsed=16.3s ETA=49.0s
+[EVAL] condition=19/21 batch=60/200 rate=2.97 batch/s elapsed=20.2s ETA=47.1s
+[EVAL] condition=19/21 batch=70/200 rate=2.96 batch/s elapsed=23.6s ETA=43.9s
+[EVAL] condition=19/21 batch=80/200 rate=2.98 batch/s elapsed=26.8s ETA=40.3s
+[EVAL] condition=19/21 batch=90/200 rate=2.92 batch/s elapsed=30.8s ETA=37.6s
+[EVAL] condition=19/21 batch=100/200 rate=2.93 batch/s elapsed=34.1s ETA=34.1s
+[EVAL] condition=19/21 batch=110/200 rate=2.94 batch/s elapsed=37.4s ETA=30.6s
+[EVAL] condition=19/21 batch=120/200 rate=2.90 batch/s elapsed=41.3s ETA=27.6s
+[EVAL] condition=19/21 batch=130/200 rate=2.89 batch/s elapsed=45.0s ETA=24.2s
+[EVAL] condition=19/21 batch=140/200 rate=2.89 batch/s elapsed=48.4s ETA=20.7s
+[EVAL] condition=19/21 batch=150/200 rate=2.86 batch/s elapsed=52.4s ETA=17.5s
+[EVAL] condition=19/21 batch=160/200 rate=2.88 batch/s elapsed=55.5s ETA=13.9s
+[EVAL] condition=19/21 batch=170/200 rate=2.90 batch/s elapsed=58.6s ETA=10.3s
+[EVAL] condition=19/21 batch=180/200 rate=2.88 batch/s elapsed=62.6s ETA=7.0s
+[EVAL] condition=19/21 batch=190/200 rate=2.89 batch/s elapsed=65.8s ETA=3.5s
+[EVAL] condition=19/21 batch=200/200 rate=2.90 batch/s elapsed=69.0s ETA=0.0s
+[EVAL] condition=19/21 complete loss=1.080582 elapsed=69.0s
+[EVAL] condition=20/21 step=0 sigma=0.9 objective=inverse_dynamics ablation=future_only batches=200
+[EVAL] condition=20/21 batch=10/200 rate=3.23 batch/s elapsed=3.1s ETA=58.8s
+[EVAL] condition=20/21 batch=20/200 rate=3.51 batch/s elapsed=5.7s ETA=51.2s
+[EVAL] condition=20/21 batch=30/200 rate=3.08 batch/s elapsed=9.7s ETA=55.1s
+[EVAL] condition=20/21 batch=40/200 rate=3.05 batch/s elapsed=13.1s ETA=52.4s
+[EVAL] condition=20/21 batch=50/200 rate=3.03 batch/s elapsed=16.5s ETA=49.6s
+[EVAL] condition=20/21 batch=60/200 rate=2.94 batch/s elapsed=20.4s ETA=47.6s
+[EVAL] condition=20/21 batch=70/200 rate=2.92 batch/s elapsed=23.9s ETA=44.5s
+[EVAL] condition=20/21 batch=80/200 rate=2.94 batch/s elapsed=27.2s ETA=40.8s
+[EVAL] condition=20/21 batch=90/200 rate=2.89 batch/s elapsed=31.2s ETA=38.1s
+[EVAL] condition=20/21 batch=100/200 rate=2.88 batch/s elapsed=34.7s ETA=34.7s
+[EVAL] condition=20/21 batch=110/200 rate=2.89 batch/s elapsed=38.1s ETA=31.2s
+[EVAL] condition=20/21 batch=120/200 rate=2.85 batch/s elapsed=42.2s ETA=28.1s
+[EVAL] condition=20/21 batch=130/200 rate=2.83 batch/s elapsed=45.9s ETA=24.7s
+[EVAL] condition=20/21 batch=140/200 rate=2.81 batch/s elapsed=49.7s ETA=21.3s
+[EVAL] condition=20/21 batch=150/200 rate=2.79 batch/s elapsed=53.7s ETA=17.9s
+[EVAL] condition=20/21 batch=160/200 rate=2.81 batch/s elapsed=56.9s ETA=14.2s
+[EVAL] condition=20/21 batch=170/200 rate=2.83 batch/s elapsed=60.0s ETA=10.6s
+[EVAL] condition=20/21 batch=180/200 rate=2.81 batch/s elapsed=64.1s ETA=7.1s
+[EVAL] condition=20/21 batch=190/200 rate=2.82 batch/s elapsed=67.4s ETA=3.5s
+[EVAL] condition=20/21 batch=200/200 rate=2.83 batch/s elapsed=70.8s ETA=0.0s
+[EVAL] condition=20/21 complete loss=1.044241 elapsed=70.8s
+[EVAL] condition=21/21 step=0 sigma=0.9 objective=inverse_dynamics ablation=future_shuffle batches=200
+[EVAL] condition=21/21 batch=10/200 rate=1.77 batch/s elapsed=5.7s ETA=107.5s
+[EVAL] condition=21/21 batch=20/200 rate=1.94 batch/s elapsed=10.3s ETA=93.0s
+[EVAL] condition=21/21 batch=30/200 rate=1.71 batch/s elapsed=17.5s ETA=99.2s
+[EVAL] condition=21/21 batch=40/200 rate=1.73 batch/s elapsed=23.2s ETA=92.7s
+[EVAL] condition=21/21 batch=50/200 rate=1.72 batch/s elapsed=29.1s ETA=87.3s
+[EVAL] condition=21/21 batch=60/200 rate=1.66 batch/s elapsed=36.2s ETA=84.5s
+[EVAL] condition=21/21 batch=70/200 rate=1.66 batch/s elapsed=42.2s ETA=78.5s
+[EVAL] condition=21/21 batch=80/200 rate=1.68 batch/s elapsed=47.7s ETA=71.6s
+[EVAL] condition=21/21 batch=90/200 rate=1.65 batch/s elapsed=54.7s ETA=66.8s
+[EVAL] condition=21/21 batch=100/200 rate=1.66 batch/s elapsed=60.3s ETA=60.3s
+[EVAL] condition=21/21 batch=110/200 rate=1.66 batch/s elapsed=66.4s ETA=54.4s
+[EVAL] condition=21/21 batch=120/200 rate=1.63 batch/s elapsed=73.6s ETA=49.1s
+[EVAL] condition=21/21 batch=130/200 rate=1.62 batch/s elapsed=80.2s ETA=43.2s
+[EVAL] condition=21/21 batch=140/200 rate=1.64 batch/s elapsed=85.2s ETA=36.5s
+[EVAL] condition=21/21 batch=150/200 rate=1.63 batch/s elapsed=92.2s ETA=30.7s
+[EVAL] condition=21/21 batch=160/200 rate=1.64 batch/s elapsed=97.8s ETA=24.5s
+[EVAL] condition=21/21 batch=170/200 rate=1.65 batch/s elapsed=102.8s ETA=18.1s
+[EVAL] condition=21/21 batch=180/200 rate=1.64 batch/s elapsed=109.9s ETA=12.2s
+[EVAL] condition=21/21 batch=190/200 rate=1.64 batch/s elapsed=115.6s ETA=6.1s
+[EVAL] condition=21/21 batch=200/200 rate=1.65 batch/s elapsed=121.5s ETA=0.0s
+[EVAL] condition=21/21 complete loss=1.028749 elapsed=121.5s
+[VAL] epoch=0 loss=1.334646 elapsed=1604.4s
+[VAL] summary=/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_eval_all_200/base/validation_summary_step_000000000.json
+[VAL] episode_summary=/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_eval_all_200/base/validation_episode_summary_step_000000000.json
+[SUITE] model=2/2 name=step_000020000 step=20000 source=/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_joint_6d/checkpoints/step_000020000.pt
+[EVAL] condition=1/21 step=20000 sigma=0.1 objective=policy ablation=normal batches=200
+[EVAL] condition=1/21 batch=10/200 rate=2.88 batch/s elapsed=3.5s ETA=65.9s
+[EVAL] condition=1/21 batch=20/200 rate=3.27 batch/s elapsed=6.1s ETA=55.1s
+[EVAL] condition=1/21 batch=30/200 rate=2.98 batch/s elapsed=10.1s ETA=57.0s
+[EVAL] condition=1/21 batch=40/200 rate=2.94 batch/s elapsed=13.6s ETA=54.3s
+[EVAL] condition=1/21 batch=50/200 rate=2.94 batch/s elapsed=17.0s ETA=51.0s
+[EVAL] condition=1/21 batch=60/200 rate=2.89 batch/s elapsed=20.7s ETA=48.4s
+[EVAL] condition=1/21 batch=70/200 rate=2.89 batch/s elapsed=24.2s ETA=44.9s
+[EVAL] condition=1/21 batch=80/200 rate=2.87 batch/s elapsed=27.9s ETA=41.8s
+[EVAL] condition=1/21 batch=90/200 rate=2.82 batch/s elapsed=31.9s ETA=39.0s
+[EVAL] condition=1/21 batch=100/200 rate=2.83 batch/s elapsed=35.3s ETA=35.3s
+[EVAL] condition=1/21 batch=110/200 rate=2.86 batch/s elapsed=38.5s ETA=31.5s
+[EVAL] condition=1/21 batch=120/200 rate=2.82 batch/s elapsed=42.5s ETA=28.3s
+[EVAL] condition=1/21 batch=130/200 rate=2.82 batch/s elapsed=46.1s ETA=24.8s
+[EVAL] condition=1/21 batch=140/200 rate=2.82 batch/s elapsed=49.6s ETA=21.3s
+[EVAL] condition=1/21 batch=150/200 rate=2.81 batch/s elapsed=53.4s ETA=17.8s
+[EVAL] condition=1/21 batch=160/200 rate=2.83 batch/s elapsed=56.6s ETA=14.1s
+[EVAL] condition=1/21 batch=170/200 rate=2.85 batch/s elapsed=59.6s ETA=10.5s
+[EVAL] condition=1/21 batch=180/200 rate=2.83 batch/s elapsed=63.5s ETA=7.1s
+[EVAL] condition=1/21 batch=190/200 rate=2.85 batch/s elapsed=66.7s ETA=3.5s
+[EVAL] condition=1/21 batch=200/200 rate=2.86 batch/s elapsed=69.9s ETA=0.0s
+[EVAL] condition=1/21 complete loss=0.714913 elapsed=69.9s
+[EVAL] condition=2/21 step=20000 sigma=0.1 objective=world ablation=normal batches=200
+[EVAL] condition=2/21 batch=10/200 rate=3.28 batch/s elapsed=3.0s ETA=57.9s
+[EVAL] condition=2/21 batch=20/200 rate=3.61 batch/s elapsed=5.5s ETA=49.9s
+[EVAL] condition=2/21 batch=30/200 rate=3.18 batch/s elapsed=9.4s ETA=53.5s
+[EVAL] condition=2/21 batch=40/200 rate=3.15 batch/s elapsed=12.7s ETA=50.7s
+[EVAL] condition=2/21 batch=50/200 rate=3.15 batch/s elapsed=15.9s ETA=47.6s
+[EVAL] condition=2/21 batch=60/200 rate=3.07 batch/s elapsed=19.6s ETA=45.7s
+[EVAL] condition=2/21 batch=70/200 rate=3.03 batch/s elapsed=23.1s ETA=42.8s
+[EVAL] condition=2/21 batch=80/200 rate=3.06 batch/s elapsed=26.2s ETA=39.3s
+[EVAL] condition=2/21 batch=90/200 rate=2.99 batch/s elapsed=30.1s ETA=36.7s
+[EVAL] condition=2/21 batch=100/200 rate=3.00 batch/s elapsed=33.4s ETA=33.4s
+[EVAL] condition=2/21 batch=110/200 rate=2.97 batch/s elapsed=37.0s ETA=30.3s
+[EVAL] condition=2/21 batch=120/200 rate=2.94 batch/s elapsed=40.9s ETA=27.3s
+[EVAL] condition=2/21 batch=130/200 rate=2.93 batch/s elapsed=44.4s ETA=23.9s
+[EVAL] condition=2/21 batch=140/200 rate=2.94 batch/s elapsed=47.7s ETA=20.4s
+[EVAL] condition=2/21 batch=150/200 rate=2.91 batch/s elapsed=51.5s ETA=17.2s
+[EVAL] condition=2/21 batch=160/200 rate=2.92 batch/s elapsed=54.7s ETA=13.7s
+[EVAL] condition=2/21 batch=170/200 rate=2.94 batch/s elapsed=57.8s ETA=10.2s
+[EVAL] condition=2/21 batch=180/200 rate=2.92 batch/s elapsed=61.7s ETA=6.9s
+[EVAL] condition=2/21 batch=190/200 rate=2.93 batch/s elapsed=64.8s ETA=3.4s
+[EVAL] condition=2/21 batch=200/200 rate=2.94 batch/s elapsed=67.9s ETA=0.0s
+[EVAL] condition=2/21 complete loss=0.712337 elapsed=67.9s
+[EVAL] condition=3/21 step=20000 sigma=0.1 objective=value ablation=normal batches=200
+[EVAL] condition=3/21 batch=10/200 rate=3.40 batch/s elapsed=2.9s ETA=55.9s
+[EVAL] condition=3/21 batch=20/200 rate=3.63 batch/s elapsed=5.5s ETA=49.6s
+[EVAL] condition=3/21 batch=30/200 rate=3.16 batch/s elapsed=9.5s ETA=53.7s
+[EVAL] condition=3/21 batch=40/200 rate=3.15 batch/s elapsed=12.7s ETA=50.8s
+[EVAL] condition=3/21 batch=50/200 rate=3.13 batch/s elapsed=16.0s ETA=47.9s
+[EVAL] condition=3/21 batch=60/200 rate=3.04 batch/s elapsed=19.7s ETA=46.0s
+[EVAL] condition=3/21 batch=70/200 rate=3.03 batch/s elapsed=23.1s ETA=43.0s
+[EVAL] condition=3/21 batch=80/200 rate=3.03 batch/s elapsed=26.4s ETA=39.6s
+[EVAL] condition=3/21 batch=90/200 rate=2.96 batch/s elapsed=30.4s ETA=37.2s
+[EVAL] condition=3/21 batch=100/200 rate=2.92 batch/s elapsed=34.3s ETA=34.3s
+[EVAL] condition=3/21 batch=110/200 rate=2.93 batch/s elapsed=37.5s ETA=30.7s
+[EVAL] condition=3/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=3/21 batch=130/200 rate=2.89 batch/s elapsed=45.0s ETA=24.2s
+[EVAL] condition=3/21 batch=140/200 rate=2.89 batch/s elapsed=48.5s ETA=20.8s
+[EVAL] condition=3/21 batch=150/200 rate=2.86 batch/s elapsed=52.4s ETA=17.5s
+[EVAL] condition=3/21 batch=160/200 rate=2.88 batch/s elapsed=55.6s ETA=13.9s
+[EVAL] condition=3/21 batch=170/200 rate=2.89 batch/s elapsed=58.8s ETA=10.4s
+[EVAL] condition=3/21 batch=180/200 rate=2.86 batch/s elapsed=62.9s ETA=7.0s
+[EVAL] condition=3/21 batch=190/200 rate=2.88 batch/s elapsed=66.0s ETA=3.5s
+[EVAL] condition=3/21 batch=200/200 rate=2.89 batch/s elapsed=69.2s ETA=0.0s
+[EVAL] condition=3/21 complete loss=0.490158 elapsed=69.2s
+[EVAL] condition=4/21 step=20000 sigma=0.1 objective=inverse_dynamics ablation=normal batches=200
+[EVAL] condition=4/21 batch=10/200 rate=3.22 batch/s elapsed=3.1s ETA=59.1s
+[EVAL] condition=4/21 batch=20/200 rate=3.39 batch/s elapsed=5.9s ETA=53.2s
+[EVAL] condition=4/21 batch=30/200 rate=3.01 batch/s elapsed=10.0s ETA=56.5s
+[EVAL] condition=4/21 batch=40/200 rate=3.00 batch/s elapsed=13.4s ETA=53.4s
+[EVAL] condition=4/21 batch=50/200 rate=2.92 batch/s elapsed=17.1s ETA=51.3s
+[EVAL] condition=4/21 batch=60/200 rate=2.87 batch/s elapsed=20.9s ETA=48.7s
+[EVAL] condition=4/21 batch=70/200 rate=2.87 batch/s elapsed=24.4s ETA=45.3s
+[EVAL] condition=4/21 batch=80/200 rate=2.88 batch/s elapsed=27.8s ETA=41.7s
+[EVAL] condition=4/21 batch=90/200 rate=2.82 batch/s elapsed=31.9s ETA=38.9s
+[EVAL] condition=4/21 batch=100/200 rate=2.82 batch/s elapsed=35.4s ETA=35.4s
+[EVAL] condition=4/21 batch=110/200 rate=2.84 batch/s elapsed=38.7s ETA=31.7s
+[EVAL] condition=4/21 batch=120/200 rate=2.81 batch/s elapsed=42.8s ETA=28.5s
+[EVAL] condition=4/21 batch=130/200 rate=2.80 batch/s elapsed=46.5s ETA=25.0s
+[EVAL] condition=4/21 batch=140/200 rate=2.81 batch/s elapsed=49.9s ETA=21.4s
+[EVAL] condition=4/21 batch=150/200 rate=2.79 batch/s elapsed=53.7s ETA=17.9s
+[EVAL] condition=4/21 batch=160/200 rate=2.81 batch/s elapsed=57.0s ETA=14.2s
+[EVAL] condition=4/21 batch=170/200 rate=2.83 batch/s elapsed=60.1s ETA=10.6s
+[EVAL] condition=4/21 batch=180/200 rate=2.81 batch/s elapsed=64.0s ETA=7.1s
+[EVAL] condition=4/21 batch=190/200 rate=2.83 batch/s elapsed=67.2s ETA=3.5s
+[EVAL] condition=4/21 batch=200/200 rate=2.83 batch/s elapsed=70.6s ETA=0.0s
+[EVAL] condition=4/21 complete loss=0.689283 elapsed=70.6s
+[EVAL] condition=5/21 step=20000 sigma=0.1 objective=inverse_dynamics ablation=current_only batches=200
+[EVAL] condition=5/21 batch=10/200 rate=3.22 batch/s elapsed=3.1s ETA=59.0s
+[EVAL] condition=5/21 batch=20/200 rate=3.50 batch/s elapsed=5.7s ETA=51.5s
+[EVAL] condition=5/21 batch=30/200 rate=3.08 batch/s elapsed=9.7s ETA=55.2s
+[EVAL] condition=5/21 batch=40/200 rate=3.05 batch/s elapsed=13.1s ETA=52.5s
+[EVAL] condition=5/21 batch=50/200 rate=3.04 batch/s elapsed=16.5s ETA=49.4s
+[EVAL] condition=5/21 batch=60/200 rate=2.96 batch/s elapsed=20.3s ETA=47.3s
+[EVAL] condition=5/21 batch=70/200 rate=2.93 batch/s elapsed=23.9s ETA=44.3s
+[EVAL] condition=5/21 batch=80/200 rate=2.95 batch/s elapsed=27.1s ETA=40.7s
+[EVAL] condition=5/21 batch=90/200 rate=2.89 batch/s elapsed=31.1s ETA=38.0s
+[EVAL] condition=5/21 batch=100/200 rate=2.90 batch/s elapsed=34.5s ETA=34.5s
+[EVAL] condition=5/21 batch=110/200 rate=2.90 batch/s elapsed=37.9s ETA=31.0s
+[EVAL] condition=5/21 batch=120/200 rate=2.87 batch/s elapsed=41.9s ETA=27.9s
+[EVAL] condition=5/21 batch=130/200 rate=2.86 batch/s elapsed=45.4s ETA=24.5s
+[EVAL] condition=5/21 batch=140/200 rate=2.87 batch/s elapsed=48.8s ETA=20.9s
+[EVAL] condition=5/21 batch=150/200 rate=2.85 batch/s elapsed=52.6s ETA=17.5s
+[EVAL] condition=5/21 batch=160/200 rate=2.87 batch/s elapsed=55.8s ETA=14.0s
+[EVAL] condition=5/21 batch=170/200 rate=2.88 batch/s elapsed=58.9s ETA=10.4s
+[EVAL] condition=5/21 batch=180/200 rate=2.86 batch/s elapsed=62.9s ETA=7.0s
+[EVAL] condition=5/21 batch=190/200 rate=2.88 batch/s elapsed=66.1s ETA=3.5s
+[EVAL] condition=5/21 batch=200/200 rate=2.89 batch/s elapsed=69.3s ETA=0.0s
+[EVAL] condition=5/21 complete loss=0.738406 elapsed=69.3s
+[EVAL] condition=6/21 step=20000 sigma=0.1 objective=inverse_dynamics ablation=future_only batches=200
+[EVAL] condition=6/21 batch=10/200 rate=3.27 batch/s elapsed=3.1s ETA=58.1s
+[EVAL] condition=6/21 batch=20/200 rate=3.51 batch/s elapsed=5.7s ETA=51.2s
+[EVAL] condition=6/21 batch=30/200 rate=3.10 batch/s elapsed=9.7s ETA=54.8s
+[EVAL] condition=6/21 batch=40/200 rate=3.07 batch/s elapsed=13.0s ETA=52.1s
+[EVAL] condition=6/21 batch=50/200 rate=3.07 batch/s elapsed=16.3s ETA=48.8s
+[EVAL] condition=6/21 batch=60/200 rate=3.01 batch/s elapsed=19.9s ETA=46.5s
+[EVAL] condition=6/21 batch=70/200 rate=2.99 batch/s elapsed=23.4s ETA=43.4s
+[EVAL] condition=6/21 batch=80/200 rate=3.01 batch/s elapsed=26.6s ETA=39.9s
+[EVAL] condition=6/21 batch=90/200 rate=2.94 batch/s elapsed=30.6s ETA=37.4s
+[EVAL] condition=6/21 batch=100/200 rate=2.94 batch/s elapsed=34.0s ETA=34.0s
+[EVAL] condition=6/21 batch=110/200 rate=2.94 batch/s elapsed=37.4s ETA=30.6s
+[EVAL] condition=6/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=6/21 batch=130/200 rate=2.88 batch/s elapsed=45.1s ETA=24.3s
+[EVAL] condition=6/21 batch=140/200 rate=2.88 batch/s elapsed=48.6s ETA=20.8s
+[EVAL] condition=6/21 batch=150/200 rate=2.85 batch/s elapsed=52.7s ETA=17.6s
+[EVAL] condition=6/21 batch=160/200 rate=2.86 batch/s elapsed=56.0s ETA=14.0s
+[EVAL] condition=6/21 batch=170/200 rate=2.88 batch/s elapsed=59.1s ETA=10.4s
+[EVAL] condition=6/21 batch=180/200 rate=2.86 batch/s elapsed=62.9s ETA=7.0s
+[EVAL] condition=6/21 batch=190/200 rate=2.88 batch/s elapsed=66.0s ETA=3.5s
+[EVAL] condition=6/21 batch=200/200 rate=2.89 batch/s elapsed=69.1s ETA=0.0s
+[EVAL] condition=6/21 complete loss=1.782911 elapsed=69.1s
+[EVAL] condition=7/21 step=20000 sigma=0.1 objective=inverse_dynamics ablation=future_shuffle batches=200
+[EVAL] condition=7/21 batch=10/200 rate=1.84 batch/s elapsed=5.4s ETA=103.1s
+[EVAL] condition=7/21 batch=20/200 rate=2.05 batch/s elapsed=9.8s ETA=87.8s
+[EVAL] condition=7/21 batch=30/200 rate=1.81 batch/s elapsed=16.6s ETA=93.9s
+[EVAL] condition=7/21 batch=40/200 rate=1.82 batch/s elapsed=22.0s ETA=87.9s
+[EVAL] condition=7/21 batch=50/200 rate=1.80 batch/s elapsed=27.7s ETA=83.1s
+[EVAL] condition=7/21 batch=60/200 rate=1.72 batch/s elapsed=35.0s ETA=81.6s
+[EVAL] condition=7/21 batch=70/200 rate=1.72 batch/s elapsed=40.7s ETA=75.6s
+[EVAL] condition=7/21 batch=80/200 rate=1.73 batch/s elapsed=46.3s ETA=69.5s
+[EVAL] condition=7/21 batch=90/200 rate=1.69 batch/s elapsed=53.1s ETA=64.9s
+[EVAL] condition=7/21 batch=100/200 rate=1.70 batch/s elapsed=58.7s ETA=58.7s
+[EVAL] condition=7/21 batch=110/200 rate=1.70 batch/s elapsed=64.5s ETA=52.8s
+[EVAL] condition=7/21 batch=120/200 rate=1.68 batch/s elapsed=71.5s ETA=47.7s
+[EVAL] condition=7/21 batch=130/200 rate=1.68 batch/s elapsed=77.4s ETA=41.7s
+[EVAL] condition=7/21 batch=140/200 rate=1.70 batch/s elapsed=82.4s ETA=35.3s
+[EVAL] condition=7/21 batch=150/200 rate=1.68 batch/s elapsed=89.2s ETA=29.7s
+[EVAL] condition=7/21 batch=160/200 rate=1.69 batch/s elapsed=94.6s ETA=23.6s
+[EVAL] condition=7/21 batch=170/200 rate=1.71 batch/s elapsed=99.4s ETA=17.5s
+[EVAL] condition=7/21 batch=180/200 rate=1.69 batch/s elapsed=106.2s ETA=11.8s
+[EVAL] condition=7/21 batch=190/200 rate=1.70 batch/s elapsed=111.8s ETA=5.9s
+[EVAL] condition=7/21 batch=200/200 rate=1.70 batch/s elapsed=117.4s ETA=0.0s
+[EVAL] condition=7/21 complete loss=0.715961 elapsed=117.4s
+[EVAL] condition=8/21 step=20000 sigma=0.5 objective=policy ablation=normal batches=200
+[EVAL] condition=8/21 batch=10/200 rate=3.17 batch/s elapsed=3.2s ETA=60.0s
+[EVAL] condition=8/21 batch=20/200 rate=3.24 batch/s elapsed=6.2s ETA=55.6s
+[EVAL] condition=8/21 batch=30/200 rate=2.99 batch/s elapsed=10.0s ETA=56.9s
+[EVAL] condition=8/21 batch=40/200 rate=3.01 batch/s elapsed=13.3s ETA=53.1s
+[EVAL] condition=8/21 batch=50/200 rate=3.05 batch/s elapsed=16.4s ETA=49.2s
+[EVAL] condition=8/21 batch=60/200 rate=3.00 batch/s elapsed=20.0s ETA=46.6s
+[EVAL] condition=8/21 batch=70/200 rate=3.01 batch/s elapsed=23.3s ETA=43.2s
+[EVAL] condition=8/21 batch=80/200 rate=3.02 batch/s elapsed=26.5s ETA=39.8s
+[EVAL] condition=8/21 batch=90/200 rate=2.97 batch/s elapsed=30.3s ETA=37.1s
+[EVAL] condition=8/21 batch=100/200 rate=2.97 batch/s elapsed=33.7s ETA=33.7s
+[EVAL] condition=8/21 batch=110/200 rate=2.98 batch/s elapsed=36.9s ETA=30.2s
+[EVAL] condition=8/21 batch=120/200 rate=2.95 batch/s elapsed=40.7s ETA=27.2s
+[EVAL] condition=8/21 batch=130/200 rate=2.94 batch/s elapsed=44.2s ETA=23.8s
+[EVAL] condition=8/21 batch=140/200 rate=2.95 batch/s elapsed=47.5s ETA=20.4s
+[EVAL] condition=8/21 batch=150/200 rate=2.93 batch/s elapsed=51.3s ETA=17.1s
+[EVAL] condition=8/21 batch=160/200 rate=2.94 batch/s elapsed=54.4s ETA=13.6s
+[EVAL] condition=8/21 batch=170/200 rate=2.95 batch/s elapsed=57.6s ETA=10.2s
+[EVAL] condition=8/21 batch=180/200 rate=2.92 batch/s elapsed=61.6s ETA=6.8s
+[EVAL] condition=8/21 batch=190/200 rate=2.94 batch/s elapsed=64.7s ETA=3.4s
+[EVAL] condition=8/21 batch=200/200 rate=2.93 batch/s elapsed=68.3s ETA=0.0s
+[EVAL] condition=8/21 complete loss=0.151181 elapsed=68.3s
+[EVAL] condition=9/21 step=20000 sigma=0.5 objective=world ablation=normal batches=200
+[EVAL] condition=9/21 batch=10/200 rate=3.41 batch/s elapsed=2.9s ETA=55.8s
+[EVAL] condition=9/21 batch=20/200 rate=3.70 batch/s elapsed=5.4s ETA=48.6s
+[EVAL] condition=9/21 batch=30/200 rate=3.28 batch/s elapsed=9.2s ETA=51.9s
+[EVAL] condition=9/21 batch=40/200 rate=3.25 batch/s elapsed=12.3s ETA=49.3s
+[EVAL] condition=9/21 batch=50/200 rate=3.24 batch/s elapsed=15.4s ETA=46.3s
+[EVAL] condition=9/21 batch=60/200 rate=3.16 batch/s elapsed=19.0s ETA=44.3s
+[EVAL] condition=9/21 batch=70/200 rate=3.14 batch/s elapsed=22.3s ETA=41.4s
+[EVAL] condition=9/21 batch=80/200 rate=3.16 batch/s elapsed=25.4s ETA=38.0s
+[EVAL] condition=9/21 batch=90/200 rate=3.09 batch/s elapsed=29.2s ETA=35.7s
+[EVAL] condition=9/21 batch=100/200 rate=3.09 batch/s elapsed=32.4s ETA=32.4s
+[EVAL] condition=9/21 batch=110/200 rate=3.09 batch/s elapsed=35.6s ETA=29.1s
+[EVAL] condition=9/21 batch=120/200 rate=3.05 batch/s elapsed=39.4s ETA=26.3s
+[EVAL] condition=9/21 batch=130/200 rate=3.04 batch/s elapsed=42.8s ETA=23.0s
+[EVAL] condition=9/21 batch=140/200 rate=3.04 batch/s elapsed=46.0s ETA=19.7s
+[EVAL] condition=9/21 batch=150/200 rate=3.01 batch/s elapsed=49.8s ETA=16.6s
+[EVAL] condition=9/21 batch=160/200 rate=3.01 batch/s elapsed=53.2s ETA=13.3s
+[EVAL] condition=9/21 batch=170/200 rate=3.02 batch/s elapsed=56.2s ETA=9.9s
+[EVAL] condition=9/21 batch=180/200 rate=3.00 batch/s elapsed=59.9s ETA=6.7s
+[EVAL] condition=9/21 batch=190/200 rate=3.02 batch/s elapsed=62.9s ETA=3.3s
+[EVAL] condition=9/21 batch=200/200 rate=3.03 batch/s elapsed=66.0s ETA=0.0s
+[EVAL] condition=9/21 complete loss=0.165955 elapsed=66.0s
+[EVAL] condition=10/21 step=20000 sigma=0.5 objective=value ablation=normal batches=200
+[EVAL] condition=10/21 batch=10/200 rate=3.47 batch/s elapsed=2.9s ETA=54.8s
+[EVAL] condition=10/21 batch=20/200 rate=3.69 batch/s elapsed=5.4s ETA=48.8s
+[EVAL] condition=10/21 batch=30/200 rate=3.26 batch/s elapsed=9.2s ETA=52.2s
+[EVAL] condition=10/21 batch=40/200 rate=3.24 batch/s elapsed=12.4s ETA=49.4s
+[EVAL] condition=10/21 batch=50/200 rate=3.23 batch/s elapsed=15.5s ETA=46.5s
+[EVAL] condition=10/21 batch=60/200 rate=3.15 batch/s elapsed=19.0s ETA=44.4s
+[EVAL] condition=10/21 batch=70/200 rate=3.14 batch/s elapsed=22.3s ETA=41.3s
+[EVAL] condition=10/21 batch=80/200 rate=3.15 batch/s elapsed=25.4s ETA=38.0s
+[EVAL] condition=10/21 batch=90/200 rate=3.08 batch/s elapsed=29.2s ETA=35.7s
+[EVAL] condition=10/21 batch=100/200 rate=3.08 batch/s elapsed=32.4s ETA=32.4s
+[EVAL] condition=10/21 batch=110/200 rate=3.08 batch/s elapsed=35.7s ETA=29.2s
+[EVAL] condition=10/21 batch=120/200 rate=3.04 batch/s elapsed=39.5s ETA=26.3s
+[EVAL] condition=10/21 batch=130/200 rate=3.03 batch/s elapsed=42.9s ETA=23.1s
+[EVAL] condition=10/21 batch=140/200 rate=3.03 batch/s elapsed=46.1s ETA=19.8s
+[EVAL] condition=10/21 batch=150/200 rate=3.01 batch/s elapsed=49.8s ETA=16.6s
+[EVAL] condition=10/21 batch=160/200 rate=3.03 batch/s elapsed=52.8s ETA=13.2s
+[EVAL] condition=10/21 batch=170/200 rate=3.05 batch/s elapsed=55.8s ETA=9.8s
+[EVAL] condition=10/21 batch=180/200 rate=3.02 batch/s elapsed=59.5s ETA=6.6s
+[EVAL] condition=10/21 batch=190/200 rate=3.03 batch/s elapsed=62.6s ETA=3.3s
+[EVAL] condition=10/21 batch=200/200 rate=3.05 batch/s elapsed=65.7s ETA=0.0s
+[EVAL] condition=10/21 complete loss=0.029571 elapsed=65.7s
+[EVAL] condition=11/21 step=20000 sigma=0.5 objective=inverse_dynamics ablation=normal batches=200
+[EVAL] condition=11/21 batch=10/200 rate=3.33 batch/s elapsed=3.0s ETA=57.0s
+[EVAL] condition=11/21 batch=20/200 rate=3.62 batch/s elapsed=5.5s ETA=49.7s
+[EVAL] condition=11/21 batch=30/200 rate=3.20 batch/s elapsed=9.4s ETA=53.1s
+[EVAL] condition=11/21 batch=40/200 rate=3.13 batch/s elapsed=12.8s ETA=51.2s
+[EVAL] condition=11/21 batch=50/200 rate=3.13 batch/s elapsed=16.0s ETA=47.9s
+[EVAL] condition=11/21 batch=60/200 rate=3.04 batch/s elapsed=19.8s ETA=46.1s
+[EVAL] condition=11/21 batch=70/200 rate=3.04 batch/s elapsed=23.1s ETA=42.8s
+[EVAL] condition=11/21 batch=80/200 rate=3.04 batch/s elapsed=26.3s ETA=39.5s
+[EVAL] condition=11/21 batch=90/200 rate=2.98 batch/s elapsed=30.2s ETA=36.9s
+[EVAL] condition=11/21 batch=100/200 rate=2.99 batch/s elapsed=33.5s ETA=33.5s
+[EVAL] condition=11/21 batch=110/200 rate=3.00 batch/s elapsed=36.7s ETA=30.0s
+[EVAL] condition=11/21 batch=120/200 rate=2.95 batch/s elapsed=40.7s ETA=27.1s
+[EVAL] condition=11/21 batch=130/200 rate=2.93 batch/s elapsed=44.3s ETA=23.9s
+[EVAL] condition=11/21 batch=140/200 rate=2.93 batch/s elapsed=47.8s ETA=20.5s
+[EVAL] condition=11/21 batch=150/200 rate=2.91 batch/s elapsed=51.6s ETA=17.2s
+[EVAL] condition=11/21 batch=160/200 rate=2.92 batch/s elapsed=54.8s ETA=13.7s
+[EVAL] condition=11/21 batch=170/200 rate=2.93 batch/s elapsed=58.0s ETA=10.2s
+[EVAL] condition=11/21 batch=180/200 rate=2.91 batch/s elapsed=61.9s ETA=6.9s
+[EVAL] condition=11/21 batch=190/200 rate=2.92 batch/s elapsed=65.1s ETA=3.4s
+[EVAL] condition=11/21 batch=200/200 rate=2.92 batch/s elapsed=68.4s ETA=0.0s
+[EVAL] condition=11/21 complete loss=0.100512 elapsed=68.4s
+[EVAL] condition=12/21 step=20000 sigma=0.5 objective=inverse_dynamics ablation=current_only batches=200
+[EVAL] condition=12/21 batch=10/200 rate=3.32 batch/s elapsed=3.0s ETA=57.3s
+[EVAL] condition=12/21 batch=20/200 rate=3.55 batch/s elapsed=5.6s ETA=50.7s
+[EVAL] condition=12/21 batch=30/200 rate=3.11 batch/s elapsed=9.6s ETA=54.7s
+[EVAL] condition=12/21 batch=40/200 rate=3.09 batch/s elapsed=12.9s ETA=51.7s
+[EVAL] condition=12/21 batch=50/200 rate=3.08 batch/s elapsed=16.2s ETA=48.7s
+[EVAL] condition=12/21 batch=60/200 rate=3.01 batch/s elapsed=19.9s ETA=46.5s
+[EVAL] condition=12/21 batch=70/200 rate=3.00 batch/s elapsed=23.4s ETA=43.4s
+[EVAL] condition=12/21 batch=80/200 rate=3.02 batch/s elapsed=26.5s ETA=39.8s
+[EVAL] condition=12/21 batch=90/200 rate=2.95 batch/s elapsed=30.5s ETA=37.3s
+[EVAL] condition=12/21 batch=100/200 rate=2.94 batch/s elapsed=34.0s ETA=34.0s
+[EVAL] condition=12/21 batch=110/200 rate=2.95 batch/s elapsed=37.3s ETA=30.5s
+[EVAL] condition=12/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=12/21 batch=130/200 rate=2.89 batch/s elapsed=44.9s ETA=24.2s
+[EVAL] condition=12/21 batch=140/200 rate=2.90 batch/s elapsed=48.3s ETA=20.7s
+[EVAL] condition=12/21 batch=150/200 rate=2.87 batch/s elapsed=52.2s ETA=17.4s
+[EVAL] condition=12/21 batch=160/200 rate=2.89 batch/s elapsed=55.4s ETA=13.8s
+[EVAL] condition=12/21 batch=170/200 rate=2.90 batch/s elapsed=58.5s ETA=10.3s
+[EVAL] condition=12/21 batch=180/200 rate=2.89 batch/s elapsed=62.4s ETA=6.9s
+[EVAL] condition=12/21 batch=190/200 rate=2.90 batch/s elapsed=65.5s ETA=3.4s
+[EVAL] condition=12/21 batch=200/200 rate=2.91 batch/s elapsed=68.7s ETA=0.0s
+[EVAL] condition=12/21 complete loss=0.127146 elapsed=68.7s
+[EVAL] condition=13/21 step=20000 sigma=0.5 objective=inverse_dynamics ablation=future_only batches=200
+[EVAL] condition=13/21 batch=10/200 rate=3.23 batch/s elapsed=3.1s ETA=58.8s
+[EVAL] condition=13/21 batch=20/200 rate=3.50 batch/s elapsed=5.7s ETA=51.4s
+[EVAL] condition=13/21 batch=30/200 rate=3.11 batch/s elapsed=9.6s ETA=54.6s
+[EVAL] condition=13/21 batch=40/200 rate=3.08 batch/s elapsed=13.0s ETA=51.9s
+[EVAL] condition=13/21 batch=50/200 rate=3.09 batch/s elapsed=16.2s ETA=48.5s
+[EVAL] condition=13/21 batch=60/200 rate=3.03 batch/s elapsed=19.8s ETA=46.1s
+[EVAL] condition=13/21 batch=70/200 rate=3.03 batch/s elapsed=23.1s ETA=42.9s
+[EVAL] condition=13/21 batch=80/200 rate=3.05 batch/s elapsed=26.3s ETA=39.4s
+[EVAL] condition=13/21 batch=90/200 rate=2.99 batch/s elapsed=30.1s ETA=36.8s
+[EVAL] condition=13/21 batch=100/200 rate=2.98 batch/s elapsed=33.5s ETA=33.5s
+[EVAL] condition=13/21 batch=110/200 rate=2.99 batch/s elapsed=36.8s ETA=30.1s
+[EVAL] condition=13/21 batch=120/200 rate=2.95 batch/s elapsed=40.7s ETA=27.1s
+[EVAL] condition=13/21 batch=130/200 rate=2.94 batch/s elapsed=44.2s ETA=23.8s
+[EVAL] condition=13/21 batch=140/200 rate=2.95 batch/s elapsed=47.5s ETA=20.3s
+[EVAL] condition=13/21 batch=150/200 rate=2.92 batch/s elapsed=51.4s ETA=17.1s
+[EVAL] condition=13/21 batch=160/200 rate=2.94 batch/s elapsed=54.4s ETA=13.6s
+[EVAL] condition=13/21 batch=170/200 rate=2.96 batch/s elapsed=57.5s ETA=10.1s
+[EVAL] condition=13/21 batch=180/200 rate=2.94 batch/s elapsed=61.3s ETA=6.8s
+[EVAL] condition=13/21 batch=190/200 rate=2.95 batch/s elapsed=64.4s ETA=3.4s
+[EVAL] condition=13/21 batch=200/200 rate=2.96 batch/s elapsed=67.7s ETA=0.0s
+[EVAL] condition=13/21 complete loss=0.917274 elapsed=67.7s
+[EVAL] condition=14/21 step=20000 sigma=0.5 objective=inverse_dynamics ablation=future_shuffle batches=200
+[EVAL] condition=14/21 batch=10/200 rate=1.74 batch/s elapsed=5.7s ETA=109.1s
+[EVAL] condition=14/21 batch=20/200 rate=1.97 batch/s elapsed=10.1s ETA=91.2s
+[EVAL] condition=14/21 batch=30/200 rate=1.76 batch/s elapsed=17.1s ETA=96.6s
+[EVAL] condition=14/21 batch=40/200 rate=1.79 batch/s elapsed=22.4s ETA=89.5s
+[EVAL] condition=14/21 batch=50/200 rate=1.79 batch/s elapsed=28.0s ETA=84.0s
+[EVAL] condition=14/21 batch=60/200 rate=1.73 batch/s elapsed=34.7s ETA=81.0s
+[EVAL] condition=14/21 batch=70/200 rate=1.73 batch/s elapsed=40.5s ETA=75.2s
+[EVAL] condition=14/21 batch=80/200 rate=1.74 batch/s elapsed=45.9s ETA=68.8s
+[EVAL] condition=14/21 batch=90/200 rate=1.71 batch/s elapsed=52.5s ETA=64.2s
+[EVAL] condition=14/21 batch=100/200 rate=1.72 batch/s elapsed=58.0s ETA=58.0s
+[EVAL] condition=14/21 batch=110/200 rate=1.72 batch/s elapsed=64.1s ETA=52.4s
+[EVAL] condition=14/21 batch=120/200 rate=1.69 batch/s elapsed=71.2s ETA=47.5s
+[EVAL] condition=14/21 batch=130/200 rate=1.69 batch/s elapsed=77.1s ETA=41.5s
+[EVAL] condition=14/21 batch=140/200 rate=1.70 batch/s elapsed=82.2s ETA=35.2s
+[EVAL] condition=14/21 batch=150/200 rate=1.69 batch/s elapsed=89.0s ETA=29.7s
+[EVAL] condition=14/21 batch=160/200 rate=1.69 batch/s elapsed=94.5s ETA=23.6s
+[EVAL] condition=14/21 batch=170/200 rate=1.70 batch/s elapsed=99.9s ETA=17.6s
+[EVAL] condition=14/21 batch=180/200 rate=1.69 batch/s elapsed=106.8s ETA=11.9s
+[EVAL] condition=14/21 batch=190/200 rate=1.69 batch/s elapsed=112.5s ETA=5.9s
+[EVAL] condition=14/21 batch=200/200 rate=1.69 batch/s elapsed=118.0s ETA=0.0s
+[EVAL] condition=14/21 complete loss=0.135428 elapsed=118.0s
+[EVAL] condition=15/21 step=20000 sigma=0.9 objective=policy ablation=normal batches=200
+[EVAL] condition=15/21 batch=10/200 rate=3.28 batch/s elapsed=3.0s ETA=57.8s
+[EVAL] condition=15/21 batch=20/200 rate=3.54 batch/s elapsed=5.6s ETA=50.8s
+[EVAL] condition=15/21 batch=30/200 rate=3.12 batch/s elapsed=9.6s ETA=54.5s
+[EVAL] condition=15/21 batch=40/200 rate=3.10 batch/s elapsed=12.9s ETA=51.6s
+[EVAL] condition=15/21 batch=50/200 rate=3.08 batch/s elapsed=16.3s ETA=48.8s
+[EVAL] condition=15/21 batch=60/200 rate=2.98 batch/s elapsed=20.1s ETA=46.9s
+[EVAL] condition=15/21 batch=70/200 rate=2.97 batch/s elapsed=23.6s ETA=43.8s
+[EVAL] condition=15/21 batch=80/200 rate=2.98 batch/s elapsed=26.9s ETA=40.3s
+[EVAL] condition=15/21 batch=90/200 rate=2.92 batch/s elapsed=30.9s ETA=37.7s
+[EVAL] condition=15/21 batch=100/200 rate=2.92 batch/s elapsed=34.2s ETA=34.2s
+[EVAL] condition=15/21 batch=110/200 rate=2.92 batch/s elapsed=37.6s ETA=30.8s
+[EVAL] condition=15/21 batch=120/200 rate=2.86 batch/s elapsed=41.9s ETA=27.9s
+[EVAL] condition=15/21 batch=130/200 rate=2.86 batch/s elapsed=45.4s ETA=24.5s
+[EVAL] condition=15/21 batch=140/200 rate=2.84 batch/s elapsed=49.2s ETA=21.1s
+[EVAL] condition=15/21 batch=150/200 rate=2.83 batch/s elapsed=53.1s ETA=17.7s
+[EVAL] condition=15/21 batch=160/200 rate=2.85 batch/s elapsed=56.2s ETA=14.1s
+[EVAL] condition=15/21 batch=170/200 rate=2.87 batch/s elapsed=59.3s ETA=10.5s
+[EVAL] condition=15/21 batch=180/200 rate=2.85 batch/s elapsed=63.2s ETA=7.0s
+[EVAL] condition=15/21 batch=190/200 rate=2.86 batch/s elapsed=66.4s ETA=3.5s
+[EVAL] condition=15/21 batch=200/200 rate=2.88 batch/s elapsed=69.5s ETA=0.0s
+[EVAL] condition=15/21 complete loss=0.094633 elapsed=69.5s
+[EVAL] condition=16/21 step=20000 sigma=0.9 objective=world ablation=normal batches=200
+[EVAL] condition=16/21 batch=10/200 rate=3.30 batch/s elapsed=3.0s ETA=57.5s
+[EVAL] condition=16/21 batch=20/200 rate=3.60 batch/s elapsed=5.6s ETA=50.1s
+[EVAL] condition=16/21 batch=30/200 rate=3.17 batch/s elapsed=9.5s ETA=53.6s
+[EVAL] condition=16/21 batch=40/200 rate=3.15 batch/s elapsed=12.7s ETA=50.8s
+[EVAL] condition=16/21 batch=50/200 rate=3.11 batch/s elapsed=16.1s ETA=48.2s
+[EVAL] condition=16/21 batch=60/200 rate=3.05 batch/s elapsed=19.7s ETA=45.9s
+[EVAL] condition=16/21 batch=70/200 rate=3.05 batch/s elapsed=22.9s ETA=42.6s
+[EVAL] condition=16/21 batch=80/200 rate=3.06 batch/s elapsed=26.1s ETA=39.2s
+[EVAL] condition=16/21 batch=90/200 rate=3.00 batch/s elapsed=30.0s ETA=36.6s
+[EVAL] condition=16/21 batch=100/200 rate=2.97 batch/s elapsed=33.7s ETA=33.7s
+[EVAL] condition=16/21 batch=110/200 rate=2.98 batch/s elapsed=36.9s ETA=30.2s
+[EVAL] condition=16/21 batch=120/200 rate=2.93 batch/s elapsed=40.9s ETA=27.3s
+[EVAL] condition=16/21 batch=130/200 rate=2.93 batch/s elapsed=44.3s ETA=23.9s
+[EVAL] condition=16/21 batch=140/200 rate=2.94 batch/s elapsed=47.6s ETA=20.4s
+[EVAL] condition=16/21 batch=150/200 rate=2.92 batch/s elapsed=51.4s ETA=17.1s
+[EVAL] condition=16/21 batch=160/200 rate=2.93 batch/s elapsed=54.6s ETA=13.7s
+[EVAL] condition=16/21 batch=170/200 rate=2.95 batch/s elapsed=57.7s ETA=10.2s
+[EVAL] condition=16/21 batch=180/200 rate=2.93 batch/s elapsed=61.5s ETA=6.8s
+[EVAL] condition=16/21 batch=190/200 rate=2.94 batch/s elapsed=64.6s ETA=3.4s
+[EVAL] condition=16/21 batch=200/200 rate=2.95 batch/s elapsed=67.8s ETA=0.0s
+[EVAL] condition=16/21 complete loss=0.106091 elapsed=67.8s
+[EVAL] condition=17/21 step=20000 sigma=0.9 objective=value ablation=normal batches=200
+[EVAL] condition=17/21 batch=10/200 rate=3.37 batch/s elapsed=3.0s ETA=56.3s
+[EVAL] condition=17/21 batch=20/200 rate=3.64 batch/s elapsed=5.5s ETA=49.5s
+[EVAL] condition=17/21 batch=30/200 rate=3.20 batch/s elapsed=9.4s ETA=53.1s
+[EVAL] condition=17/21 batch=40/200 rate=3.17 batch/s elapsed=12.6s ETA=50.5s
+[EVAL] condition=17/21 batch=50/200 rate=3.16 batch/s elapsed=15.8s ETA=47.5s
+[EVAL] condition=17/21 batch=60/200 rate=3.08 batch/s elapsed=19.5s ETA=45.5s
+[EVAL] condition=17/21 batch=70/200 rate=3.06 batch/s elapsed=22.9s ETA=42.5s
+[EVAL] condition=17/21 batch=80/200 rate=3.07 batch/s elapsed=26.1s ETA=39.1s
+[EVAL] condition=17/21 batch=90/200 rate=3.00 batch/s elapsed=30.0s ETA=36.6s
+[EVAL] condition=17/21 batch=100/200 rate=3.01 batch/s elapsed=33.2s ETA=33.2s
+[EVAL] condition=17/21 batch=110/200 rate=3.02 batch/s elapsed=36.5s ETA=29.8s
+[EVAL] condition=17/21 batch=120/200 rate=2.96 batch/s elapsed=40.5s ETA=27.0s
+[EVAL] condition=17/21 batch=130/200 rate=2.94 batch/s elapsed=44.2s ETA=23.8s
+[EVAL] condition=17/21 batch=140/200 rate=2.94 batch/s elapsed=47.6s ETA=20.4s
+[EVAL] condition=17/21 batch=150/200 rate=2.92 batch/s elapsed=51.4s ETA=17.1s
+[EVAL] condition=17/21 batch=160/200 rate=2.93 batch/s elapsed=54.5s ETA=13.6s
+[EVAL] condition=17/21 batch=170/200 rate=2.95 batch/s elapsed=57.6s ETA=10.2s
+[EVAL] condition=17/21 batch=180/200 rate=2.93 batch/s elapsed=61.4s ETA=6.8s
+[EVAL] condition=17/21 batch=190/200 rate=2.94 batch/s elapsed=64.6s ETA=3.4s
+[EVAL] condition=17/21 batch=200/200 rate=2.95 batch/s elapsed=67.8s ETA=0.0s
+[EVAL] condition=17/21 complete loss=0.016021 elapsed=67.8s
+[EVAL] condition=18/21 step=20000 sigma=0.9 objective=inverse_dynamics ablation=normal batches=200
+[EVAL] condition=18/21 batch=10/200 rate=3.34 batch/s elapsed=3.0s ETA=56.8s
+[EVAL] condition=18/21 batch=20/200 rate=3.46 batch/s elapsed=5.8s ETA=52.1s
+[EVAL] condition=18/21 batch=30/200 rate=3.07 batch/s elapsed=9.8s ETA=55.3s
+[EVAL] condition=18/21 batch=40/200 rate=3.05 batch/s elapsed=13.1s ETA=52.5s
+[EVAL] condition=18/21 batch=50/200 rate=3.05 batch/s elapsed=16.4s ETA=49.2s
+[EVAL] condition=18/21 batch=60/200 rate=2.98 batch/s elapsed=20.1s ETA=46.9s
+[EVAL] condition=18/21 batch=70/200 rate=2.97 batch/s elapsed=23.6s ETA=43.8s
+[EVAL] condition=18/21 batch=80/200 rate=2.99 batch/s elapsed=26.8s ETA=40.2s
+[EVAL] condition=18/21 batch=90/200 rate=2.92 batch/s elapsed=30.8s ETA=37.7s
+[EVAL] condition=18/21 batch=100/200 rate=2.93 batch/s elapsed=34.1s ETA=34.1s
+[EVAL] condition=18/21 batch=110/200 rate=2.94 batch/s elapsed=37.4s ETA=30.6s
+[EVAL] condition=18/21 batch=120/200 rate=2.90 batch/s elapsed=41.4s ETA=27.6s
+[EVAL] condition=18/21 batch=130/200 rate=2.89 batch/s elapsed=45.0s ETA=24.2s
+[EVAL] condition=18/21 batch=140/200 rate=2.89 batch/s elapsed=48.4s ETA=20.7s
+[EVAL] condition=18/21 batch=150/200 rate=2.87 batch/s elapsed=52.2s ETA=17.4s
+[EVAL] condition=18/21 batch=160/200 rate=2.89 batch/s elapsed=55.4s ETA=13.9s
+[EVAL] condition=18/21 batch=170/200 rate=2.90 batch/s elapsed=58.5s ETA=10.3s
+[EVAL] condition=18/21 batch=180/200 rate=2.89 batch/s elapsed=62.4s ETA=6.9s
+[EVAL] condition=18/21 batch=190/200 rate=2.90 batch/s elapsed=65.5s ETA=3.4s
+[EVAL] condition=18/21 batch=200/200 rate=2.91 batch/s elapsed=68.7s ETA=0.0s
+[EVAL] condition=18/21 complete loss=0.054586 elapsed=68.7s
+[EVAL] condition=19/21 step=20000 sigma=0.9 objective=inverse_dynamics ablation=current_only batches=200
+[EVAL] condition=19/21 batch=10/200 rate=3.30 batch/s elapsed=3.0s ETA=57.6s
+[EVAL] condition=19/21 batch=20/200 rate=3.55 batch/s elapsed=5.6s ETA=50.7s
+[EVAL] condition=19/21 batch=30/200 rate=3.14 batch/s elapsed=9.6s ETA=54.2s
+[EVAL] condition=19/21 batch=40/200 rate=3.11 batch/s elapsed=12.9s ETA=51.5s
+[EVAL] condition=19/21 batch=50/200 rate=3.11 batch/s elapsed=16.1s ETA=48.3s
+[EVAL] condition=19/21 batch=60/200 rate=3.04 batch/s elapsed=19.8s ETA=46.1s
+[EVAL] condition=19/21 batch=70/200 rate=3.02 batch/s elapsed=23.2s ETA=43.0s
+[EVAL] condition=19/21 batch=80/200 rate=3.02 batch/s elapsed=26.5s ETA=39.7s
+[EVAL] condition=19/21 batch=90/200 rate=2.96 batch/s elapsed=30.4s ETA=37.2s
+[EVAL] condition=19/21 batch=100/200 rate=2.96 batch/s elapsed=33.8s ETA=33.8s
+[EVAL] condition=19/21 batch=110/200 rate=2.96 batch/s elapsed=37.1s ETA=30.4s
+[EVAL] condition=19/21 batch=120/200 rate=2.92 batch/s elapsed=41.1s ETA=27.4s
+[EVAL] condition=19/21 batch=130/200 rate=2.91 batch/s elapsed=44.7s ETA=24.1s
+[EVAL] condition=19/21 batch=140/200 rate=2.91 batch/s elapsed=48.1s ETA=20.6s
+[EVAL] condition=19/21 batch=150/200 rate=2.89 batch/s elapsed=51.9s ETA=17.3s
+[EVAL] condition=19/21 batch=160/200 rate=2.91 batch/s elapsed=55.1s ETA=13.8s
+[EVAL] condition=19/21 batch=170/200 rate=2.92 batch/s elapsed=58.2s ETA=10.3s
+[EVAL] condition=19/21 batch=180/200 rate=2.90 batch/s elapsed=62.0s ETA=6.9s
+[EVAL] condition=19/21 batch=190/200 rate=2.91 batch/s elapsed=65.2s ETA=3.4s
+[EVAL] condition=19/21 batch=200/200 rate=2.92 batch/s elapsed=68.4s ETA=0.0s
+[EVAL] condition=19/21 complete loss=0.056307 elapsed=68.4s
+[EVAL] condition=20/21 step=20000 sigma=0.9 objective=inverse_dynamics ablation=future_only batches=200
+[EVAL] condition=20/21 batch=10/200 rate=3.30 batch/s elapsed=3.0s ETA=57.5s
+[EVAL] condition=20/21 batch=20/200 rate=3.55 batch/s elapsed=5.6s ETA=50.7s
+[EVAL] condition=20/21 batch=30/200 rate=3.13 batch/s elapsed=9.6s ETA=54.3s
+[EVAL] condition=20/21 batch=40/200 rate=3.10 batch/s elapsed=12.9s ETA=51.6s
+[EVAL] condition=20/21 batch=50/200 rate=3.10 batch/s elapsed=16.1s ETA=48.4s
+[EVAL] condition=20/21 batch=60/200 rate=3.02 batch/s elapsed=19.9s ETA=46.3s
+[EVAL] condition=20/21 batch=70/200 rate=3.00 batch/s elapsed=23.3s ETA=43.3s
+[EVAL] condition=20/21 batch=80/200 rate=3.01 batch/s elapsed=26.6s ETA=39.8s
+[EVAL] condition=20/21 batch=90/200 rate=2.96 batch/s elapsed=30.5s ETA=37.2s
+[EVAL] condition=20/21 batch=100/200 rate=2.96 batch/s elapsed=33.8s ETA=33.8s
+[EVAL] condition=20/21 batch=110/200 rate=2.97 batch/s elapsed=37.1s ETA=30.4s
+[EVAL] condition=20/21 batch=120/200 rate=2.92 batch/s elapsed=41.1s ETA=27.4s
+[EVAL] condition=20/21 batch=130/200 rate=2.91 batch/s elapsed=44.7s ETA=24.1s
+[EVAL] condition=20/21 batch=140/200 rate=2.91 batch/s elapsed=48.1s ETA=20.6s
+[EVAL] condition=20/21 batch=150/200 rate=2.89 batch/s elapsed=51.9s ETA=17.3s
+[EVAL] condition=20/21 batch=160/200 rate=2.90 batch/s elapsed=55.2s ETA=13.8s
+[EVAL] condition=20/21 batch=170/200 rate=2.92 batch/s elapsed=58.3s ETA=10.3s
+[EVAL] condition=20/21 batch=180/200 rate=2.89 batch/s elapsed=62.2s ETA=6.9s
+[EVAL] condition=20/21 batch=190/200 rate=2.91 batch/s elapsed=65.4s ETA=3.4s
+[EVAL] condition=20/21 batch=200/200 rate=2.90 batch/s elapsed=69.0s ETA=0.0s
+[EVAL] condition=20/21 complete loss=0.789029 elapsed=69.0s
+[EVAL] condition=21/21 step=20000 sigma=0.9 objective=inverse_dynamics ablation=future_shuffle batches=200
+[EVAL] condition=21/21 batch=10/200 rate=1.86 batch/s elapsed=5.4s ETA=102.4s
+[EVAL] condition=21/21 batch=20/200 rate=2.00 batch/s elapsed=10.0s ETA=90.0s
+[EVAL] condition=21/21 batch=30/200 rate=1.75 batch/s elapsed=17.2s ETA=97.4s
+[EVAL] condition=21/21 batch=40/200 rate=1.76 batch/s elapsed=22.7s ETA=90.9s
+[EVAL] condition=21/21 batch=50/200 rate=1.74 batch/s elapsed=28.7s ETA=86.2s
+[EVAL] condition=21/21 batch=60/200 rate=1.68 batch/s elapsed=35.6s ETA=83.1s
+[EVAL] condition=21/21 batch=70/200 rate=1.68 batch/s elapsed=41.6s ETA=77.3s
+[EVAL] condition=21/21 batch=80/200 rate=1.70 batch/s elapsed=47.2s ETA=70.8s
+[EVAL] condition=21/21 batch=90/200 rate=1.66 batch/s elapsed=54.1s ETA=66.1s
+[EVAL] condition=21/21 batch=100/200 rate=1.68 batch/s elapsed=59.7s ETA=59.7s
+[EVAL] condition=21/21 batch=110/200 rate=1.67 batch/s elapsed=65.7s ETA=53.8s
+[EVAL] condition=21/21 batch=120/200 rate=1.65 batch/s elapsed=72.9s ETA=48.6s
+[EVAL] condition=21/21 batch=130/200 rate=1.65 batch/s elapsed=79.0s ETA=42.6s
+[EVAL] condition=21/21 batch=140/200 rate=1.66 batch/s elapsed=84.1s ETA=36.1s
+[EVAL] condition=21/21 batch=150/200 rate=1.64 batch/s elapsed=91.5s ETA=30.5s
+[EVAL] condition=21/21 batch=160/200 rate=1.65 batch/s elapsed=97.0s ETA=24.3s
+[EVAL] condition=21/21 batch=170/200 rate=1.67 batch/s elapsed=101.9s ETA=18.0s
+[EVAL] condition=21/21 batch=180/200 rate=1.65 batch/s elapsed=109.0s ETA=12.1s
+[EVAL] condition=21/21 batch=190/200 rate=1.66 batch/s elapsed=114.7s ETA=6.0s
+[EVAL] condition=21/21 batch=200/200 rate=1.66 batch/s elapsed=120.4s ETA=0.0s
+[EVAL] condition=21/21 complete loss=0.073435 elapsed=120.4s
+[VAL] epoch=1 loss=0.412435 elapsed=1589.7s
+[VAL] summary=/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_eval_all_200/step_000020000/validation_summary_step_000020000.json
+[VAL] episode_summary=/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_eval_all_200/step_000020000/validation_episode_summary_step_000020000.json

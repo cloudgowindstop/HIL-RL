@@ -1,0 +1,44 @@
+Cosmos Parquet comparison
+=========================
+candidate: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_cosmos/pick_spoon_puppet_next_frame_cosmos_rotation_6d/data/chunk-000/episode_000000.parquet
+reference: /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_cosmos/pick_spoon_cosmos_6d/data/chunk-000/episode_000000.parquet
+schema_equal: True
+
+Regular fields
+--------------
+action: exact=False max_abs=1.9999821186065674 different=2598
+proprio: exact=True max_abs=0.0 different=0
+future_proprio: exact=True max_abs=0.0 different=0
+value_function_return: exact=True max_abs=0.0 different=0
+next.reward: exact=True max_abs=0.0 different=0
+next.done: exact=True max_abs=n/a different=0
+timestamp: exact=True max_abs=0.0 different=0
+frame_index: exact=True max_abs=0.0 different=0
+episode_index: exact=True max_abs=0.0 different=0
+index: exact=True max_abs=0.0 different=0
+task_index: exact=True max_abs=0.0 different=0
+
+Action normalization round-trip
+------------------------------
+available: True
+formula: 0.5 * (candidate + 1) * (actions_max - actions_min) + actions_min
+max_abs_difference: 4.423782229423523e-08
+mean_abs_difference: 1.5116614626720093e-09
+allclose_atol_2e-6: True
+
+Latent action injection
+-----------------------
+candidate: passed=True max_abs=0.0 different=0
+reference: passed=True max_abs=0.0 different=0
+
+Latent time comparison
+----------------------
+t=0: mean_abs=0.000288525335163 max_abs=0.015625 different=357136
+t=1: mean_abs=0 max_abs=0 different=0
+t=2: mean_abs=0.000502951100522 max_abs=0.03125 different=458394
+t=3: mean_abs=0.000485530682768 max_abs=0.03125 different=520080
+t=4: mean_abs=0.423344813426 max_abs=1.99998211861 different=3254571
+t=5: mean_abs=0 max_abs=0 different=0
+t=6: mean_abs=0.000500229151655 max_abs=0.03125 different=408909
+t=7: mean_abs=0.000391994580087 max_abs=0.03125 different=422501
+t=8: mean_abs=0 max_abs=0 different=0

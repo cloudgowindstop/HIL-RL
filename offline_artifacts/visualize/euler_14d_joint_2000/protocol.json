@@ -1,0 +1,43 @@
+{
+  "mode": "world",
+  "num_steps": 10,
+  "guidance": 1.0,
+  "seed": 20260820,
+  "solver_option": "2ab",
+  "checkpoint": "/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/action_representation_20260903/euler_14d_joint_2000/checkpoints/step_000002000.pt",
+  "checkpoint_sha256": "fc1316c58f1597391dcfa68085ea17f279b7a51e60ad0dbc8faf6b1369669867",
+  "checkpoint_step": 2000,
+  "config": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/configs/compare/visualize_euler.yaml",
+  "samples_path": "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/experiments/action_representation_20260903/visualization_samples_legacy_euler.json",
+  "encoding": "legacy_euler",
+  "action_encoding": "legacy_euler",
+  "action_dimension": 14,
+  "sample_ids": [
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000000.parquet:393",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000000.parquet:688",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000000.parquet:664",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000000.parquet:1163",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000001.parquet:422",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000001.parquet:738",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000002.parquet:428",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000002.parquet:750",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000001.parquet:719",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000001.parquet:1258",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000003.parquet:419",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0804_am_success/data/chunk-000/episode_000003.parquet:734",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000002.parquet:621",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000002.parquet:1087",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000003.parquet:595",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/paired_action_data_20260903/visualization/legacy_euler/0803_pm_success/data/chunk-000/episode_000003.parquet:1042"
+  ],
+  "future_slices": {
+    "future_wrist": [
+      21,
+      25
+    ],
+    "future_primary": [
+      25,
+      29
+    ]
+  }
+}

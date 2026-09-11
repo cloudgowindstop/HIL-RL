@@ -1,0 +1,71 @@
+{
+  "stations": {
+    "天轶7": "tienyi_7",
+    "天轶9": "tienyi_9",
+    "天轶30": "tienyi_30",
+    "天轶31": "tienyi_31"
+  },
+  "tasks": {
+    "5-7线缆连接": {
+      "task_id": "plug_cables",
+      "task_description_en": "Pick up the Ethernet, USB Type-C, and USB cables one by one and plug them into their corresponding ports on the device.",
+      "reviewed": true
+    },
+    "1电机中间插管": {
+      "task_id": "insert_hose",
+      "task_description_en": "Pick up the black hose and insert it into the port on the silver motor.",
+      "reviewed": true
+    },
+    "15 背部提手安装": {
+      "task_id": "back_handle",
+      "task_description_en": "Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle.",
+      "reviewed": true
+    },
+    "13-14背部小电池安装+小电池盖板安装": {
+      "task_id": "back_battery_and_cover",
+      "task_description_en": null,
+      "reviewed": false
+    },
+    "轴承装配": {
+      "task_id": "assemble_bearings",
+      "task_description_en": "Pick up a black bearing housing and place it in the fixture. Then pick up a silver bearing, insert it into the housing, and press them together.",
+      "reviewed": true
+    }
+  },
+  "source_overrides": {
+    "任务管理:2": {
+      "expected_task": "15 背部提手安装",
+      "expected_raw_sha256": "24ec1c5b551e7c076878f4ca8ceb4d0df01f2fa93d27d537a28f9569146fe4d0",
+      "sources": [
+        {
+          "bos_path": "BOS::raw_data/tienyi_prod2_dualArm-gripper-3cameras_394/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail",
+          "source_batch": "back_handle_20260804_am_failure"
+        },
+        {
+          "bos_path": "BOS::raw_data/tienyi_prod2_dualArm-gripper-3cameras_394/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am",
+          "source_batch": "back_handle_20260804_am_success"
+        },
+        {
+          "bos_path": "BOS::raw_data/tienyi_prod2_dualArm-gripper-3cameras_394/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm-fail",
+          "source_batch": "back_handle_20260803_pm_failure"
+        },
+        {
+          "bos_path": "BOS::raw_data/tienyi_prod2_dualArm-gripper-3cameras_394/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm",
+          "source_batch": "tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm"
+        }
+      ]
+    }
+  },
+  "path_task_patterns": {
+    "back-handle-installation": "back_handle",
+    "plug_in_ethernet_type-c_usb": "plug_cables",
+    "insert_hose_into_motor": "insert_hose",
+    "Back_small_battery_installation_and_small_battery_cover_installation": "back_battery_and_cover",
+    "assemble_bearings": "assemble_bearings"
+  },
+  "inventory": {
+    "robot_dir_prefix": "tienyi_prod2_dualArm-gripper-3cameras_",
+    "exclude_local_dir_suffixes": ["_left_gripper_cut"],
+    "organized_skip_dirs": ["_metadata"]
+  }
+}

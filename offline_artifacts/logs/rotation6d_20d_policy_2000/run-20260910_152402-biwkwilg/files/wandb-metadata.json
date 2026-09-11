@@ -1,0 +1,66 @@
+{
+  "os":  "Linux-5.15.0-151-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.10.12",
+  "startedAt":  "2026-09-10T07:24:02.996072Z",
+  "docker":  "gistry.baidubce.com/cce-plugin-pro/ftagent@sha256:4a3ff4d7385d0946fa4d1fe347b2b53aef243b6f4ba5add589af8831e92506e2",
+  "args":  [
+    "--config",
+    "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/cosmos_offline_train/configs/compare/rotation6d_20d_policy.yaml",
+    "--mode",
+    "train"
+  ],
+  "program":  "-m cosmos_offline_train.train",
+  "git":  {
+    "remote":  "https://github.com/oyeey/HIL-RL-Project.git",
+    "commit":  "c2f4f464a72b157bc09fd9bb0ed532c4a9065559"
+  },
+  "email":  "mingboge86@gmail.com",
+  "root":  "/media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/action_representation_20260903/rotation6d_20d_policy_2000",
+  "host":  "job-puaf47yfnras-master-0",
+  "executable":  "/media/jushen/mingbo-ge/.venv/bin/python3.10",
+  "cpu_count":  58,
+  "cpu_count_logical":  116,
+  "gpu":  "NVIDIA A100-SXM4-80GB",
+  "gpu_count":  4,
+  "disk":  {
+    "/":  {
+      "total":  "7619772375040",
+      "used":  "3917838045184"
+    }
+  },
+  "memory":  {
+    "total":  "1033555214336"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-25226f00-1eae-9679-20b4-45661828b4f4"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-0953c864-df91-00e3-f77c-78c4cdba1fcb"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-6525fa85-561c-314c-0fd1-479d5b1c1e4b"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-d8e46589-9c90-1d6b-281a-b338b2c943df"
+    }
+  ],
+  "cudaVersion":  "12.2",
+  "writerId":  "h22wxq315002ywx6nogx552fq9bfgqgp"
+}

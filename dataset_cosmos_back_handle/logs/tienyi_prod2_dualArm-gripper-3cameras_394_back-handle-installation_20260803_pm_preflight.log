@@ -1,0 +1,26 @@
+  raw:     /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260803_pm
+  cosmos:  /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_cosmos_back_handle/back_handle_20260803_pm_success
+  task:    Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle.
+  action:  legacy_euler (puppet_next_frame)
+  outcome: success
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/convert.py", line 133, in <module>
+    main()
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/convert.py", line 129, in main
+    ConversionPipeline(config).run(preflight_only=preflight_only)
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/pipeline.py", line 68, in run
+    episodes, report = self.prepare()
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/pipeline.py", line 29, in prepare
+    episodes = [load_episode(path) for path in paths]
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/pipeline.py", line 29, in <listcomp>
+    episodes = [load_episode(path) for path in paths]
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/episode.py", line 96, in load_episode
+    _validate_arm(left, length, "left")
+  File "/media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/data_convert_refactored/episode.py", line 73, in _validate_arm
+    raise ValueError(f"{label}.{name} length {len(value)} != {length}")
+ValueError: left.puppet_joints length 995 != 993
+  ❌ 失败!

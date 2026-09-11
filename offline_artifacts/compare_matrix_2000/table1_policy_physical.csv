@@ -1,0 +1,3 @@
+run,step,left_rotation_geodesic_deg,right_rotation_geodesic_deg,left_translation_mae,right_translation_mae,left_gripper_accuracy,right_gripper_accuracy,left_horizon_16_rotation_geodesic_deg,right_horizon_16_rotation_geodesic_deg,left_horizon_16_translation_mae,right_horizon_16_translation_mae
+E-P,2000,0.0,0.0,0.02810154502512887,0.016218870226293803,0.9630859375,1.0,0.0,0.0,0.03531328667886555,0.016063276468776165
+6D-P,2000,0.0,0.0,0.049363879137672484,0.015411313378717751,0.966015625,1.0,0.0,0.0,0.05465082010487095,0.016694712184835224

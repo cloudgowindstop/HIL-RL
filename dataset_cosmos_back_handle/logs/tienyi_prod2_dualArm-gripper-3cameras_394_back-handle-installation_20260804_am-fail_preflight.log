@@ -1,0 +1,185 @@
+  raw:     /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail
+  cosmos:  /media/jushen/mingbo-ge/HIL-RL-Project/HIL-RL/dataset_cosmos_back_handle/back_handle_20260804_am_failure
+  task:    Pick up the left black handle and attach it to the white back panel. Then pick up the two black screws one by one and place them onto the handle.
+  action:  legacy_euler (puppet_next_frame)
+  outcome: failure
+[WARNING] official stats range exceeded; normalization is not clipped:
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_084549/data/trajectory.hdf5: proprio below=[] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_084838/data/trajectory.hdf5: proprio below=[5] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_085007/data/trajectory.hdf5: proprio below=[6] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_085059/data/trajectory.hdf5: proprio below=[5, 14] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_085310/data/trajectory.hdf5: proprio below=[0, 5] above=[1, 6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_090250/data/trajectory.hdf5: proprio below=[5] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_090408/data/trajectory.hdf5: proprio below=[6] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_090557/data/trajectory.hdf5: actions below=[] above=[11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_090557/data/trajectory.hdf5: proprio below=[6] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_090839/data/trajectory.hdf5: actions below=[] above=[2]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_090839/data/trajectory.hdf5: proprio below=[0, 3, 6] above=[1, 5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_091111/data/trajectory.hdf5: actions below=[] above=[2]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_091111/data/trajectory.hdf5: proprio below=[0, 5] above=[1, 6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_091340/data/trajectory.hdf5: proprio below=[6] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_091829/data/trajectory.hdf5: proprio below=[5] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_092009/data/trajectory.hdf5: proprio below=[6] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_092123/data/trajectory.hdf5: proprio below=[5] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_092245/data/trajectory.hdf5: proprio below=[6] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_092314/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_092820/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_092914/data/trajectory.hdf5: proprio below=[14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_093111/data/trajectory.hdf5: proprio below=[4, 5, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_093553/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_093700/data/trajectory.hdf5: proprio below=[6] above=[10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_094219/data/trajectory.hdf5: actions below=[8] above=[12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_094219/data/trajectory.hdf5: proprio below=[6] above=[10, 13]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_094424/data/trajectory.hdf5: proprio below=[6, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_094448/data/trajectory.hdf5: proprio below=[6, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_094802/data/trajectory.hdf5: proprio below=[6] above=[10, 13]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_094943/data/trajectory.hdf5: proprio below=[6] above=[8, 10, 14]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_095125/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_095508/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_095620/data/trajectory.hdf5: proprio below=[6] above=[10, 14]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_095657/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_095924/data/trajectory.hdf5: actions below=[] above=[8, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_095924/data/trajectory.hdf5: proprio below=[6] above=[10, 13]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_100105/data/trajectory.hdf5: proprio below=[6] above=[10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_100232/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_100259/data/trajectory.hdf5: proprio below=[3, 6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_100619/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_100801/data/trajectory.hdf5: actions below=[12] above=[12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_100801/data/trajectory.hdf5: proprio below=[4, 5] above=[10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_131644/data/trajectory.hdf5: proprio below=[4, 5] above=[6, 10, 13]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_133857/data/trajectory.hdf5: proprio below=[6, 8] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134033/data/trajectory.hdf5: proprio below=[0, 6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134200/data/trajectory.hdf5: actions below=[7, 12] above=[8, 11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134200/data/trajectory.hdf5: proprio below=[0, 2, 6, 8, 9, 10, 13, 14] above=[1, 10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134305/data/trajectory.hdf5: proprio below=[0, 2] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134345/data/trajectory.hdf5: actions below=[1, 2, 7, 12] above=[8, 9, 11, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134345/data/trajectory.hdf5: proprio below=[0, 2, 4, 5, 8, 10, 12] above=[6, 14]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134445/data/trajectory.hdf5: actions below=[] above=[2, 11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134445/data/trajectory.hdf5: proprio below=[0, 2, 4, 5, 8, 9, 10] above=[1, 6, 14]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134653/data/trajectory.hdf5: actions below=[12] above=[9, 11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134653/data/trajectory.hdf5: proprio below=[0, 2, 4, 5, 8, 9, 13, 14] above=[1, 6, 10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134816/data/trajectory.hdf5: actions below=[7, 12] above=[9, 11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134816/data/trajectory.hdf5: proprio below=[0, 2, 4, 5, 8, 9, 10, 13, 14] above=[1, 6, 10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134926/data/trajectory.hdf5: actions below=[0, 1, 2, 7, 9, 12] above=[2, 8, 9, 11, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_134926/data/trajectory.hdf5: proprio below=[0, 2, 4, 5, 8, 10, 13, 14] above=[1, 6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135033/data/trajectory.hdf5: actions below=[0, 12] above=[2]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135033/data/trajectory.hdf5: proprio below=[0, 2, 4, 8, 9, 14] above=[1, 6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135057/data/trajectory.hdf5: actions below=[] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135057/data/trajectory.hdf5: proprio below=[6] above=[7]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135132/data/trajectory.hdf5: proprio below=[4, 5, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135209/data/trajectory.hdf5: actions below=[12] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135209/data/trajectory.hdf5: proprio below=[0, 4, 5, 13, 14] above=[6]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135303/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135349/data/trajectory.hdf5: proprio below=[2, 4, 5] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135421/data/trajectory.hdf5: actions below=[0, 7, 12] above=[11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135421/data/trajectory.hdf5: proprio below=[0, 2, 4, 5, 8, 10, 12] above=[6, 8, 10, 13, 14]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135705/data/trajectory.hdf5: proprio below=[3, 6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135839/data/trajectory.hdf5: proprio below=[3, 6] above=[2]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135922/data/trajectory.hdf5: actions below=[] above=[12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_135922/data/trajectory.hdf5: proprio below=[3, 6, 13, 14] above=[2, 10, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_140225/data/trajectory.hdf5: proprio below=[6, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_140328/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_140829/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[8]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_141031/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_141415/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[8, 10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_141521/data/trajectory.hdf5: proprio below=[4, 5] above=[6, 8, 10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_141956/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_142058/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_142151/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_142212/data/trajectory.hdf5: actions below=[] above=[12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_142212/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_142601/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_150426/data/trajectory.hdf5: proprio below=[1, 6, 13, 14] above=[5]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_150759/data/trajectory.hdf5: actions below=[7] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_150759/data/trajectory.hdf5: proprio below=[1, 6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_150908/data/trajectory.hdf5: proprio below=[13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151022/data/trajectory.hdf5: proprio below=[6, 13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151111/data/trajectory.hdf5: proprio below=[13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151153/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[5, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151409/data/trajectory.hdf5: actions below=[0] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151409/data/trajectory.hdf5: proprio below=[0, 3, 6, 13] above=[1, 2, 10, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151506/data/trajectory.hdf5: actions below=[0, 12] above=[11]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151506/data/trajectory.hdf5: proprio below=[0, 3, 6, 13, 14] above=[1, 2, 10, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151610/data/trajectory.hdf5: actions below=[12] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151610/data/trajectory.hdf5: proprio below=[0, 3, 6, 13, 14] above=[1, 2, 10, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_151746/data/trajectory.hdf5: proprio below=[3, 6, 13] above=[2, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152047/data/trajectory.hdf5: proprio below=[2, 12] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152212/data/trajectory.hdf5: proprio below=[14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152251/data/trajectory.hdf5: proprio below=[4, 5, 13, 14] above=[10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152344/data/trajectory.hdf5: proprio below=[6] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152424/data/trajectory.hdf5: actions below=[8] above=[9]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152424/data/trajectory.hdf5: proprio below=[6, 9, 13, 14] above=[8, 10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152722/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[10]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152837/data/trajectory.hdf5: proprio below=[6, 13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_152915/data/trajectory.hdf5: proprio below=[6, 13, 14] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153031/data/trajectory.hdf5: proprio below=[6, 9] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153104/data/trajectory.hdf5: actions below=[12] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153104/data/trajectory.hdf5: proprio below=[13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153156/data/trajectory.hdf5: proprio below=[6, 9, 13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153739/data/trajectory.hdf5: proprio below=[4, 5, 13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153910/data/trajectory.hdf5: actions below=[0] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153910/data/trajectory.hdf5: proprio below=[3, 6, 13] above=[2, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_153956/data/trajectory.hdf5: proprio below=[6, 13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_154052/data/trajectory.hdf5: proprio below=[6, 13] above=[]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_154135/data/trajectory.hdf5: proprio below=[0, 3, 6, 13] above=[1, 2, 10, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_154231/data/trajectory.hdf5: proprio below=[3, 6, 13] above=[2, 10, 12]
+  /media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_154326/data/trajectory.hdf5: proprio below=[3, 6] above=[12]
+{
+  "episode_count": 96,
+  "robot_type": "dual",
+  "action_dimension": 14,
+  "proprio_dimension": 16,
+  "cameras": [
+    "camera_head",
+    "camera_left",
+    "camera_right"
+  ],
+  "action_source": "puppet_next_frame",
+  "action_encoding": "legacy_euler",
+  "episode_outcome": "failure",
+  "source_fps": 30,
+  "cosmos_conditioning_fps": 16,
+  "fk": null
+}
+{
+  "episode": "/media/jushen/project-rl-dataset/raw_data_0804download/tienyi_prod2_dualArm-gripper-3cameras_394_back-handle-installation_20260804_am-fail/0804_084549/data/trajectory.hdf5",
+  "shape": [
+    135,
+    14
+  ],
+  "finite": true,
+  "minimum": [
+    -0.40999045968055725,
+    -0.09195835888385773,
+    -0.15855835378170013,
+    -0.5930821895599365,
+    -0.11059863865375519,
+    -0.21997769176959991,
+    0.09803921729326248,
+    -0.04144003242254257,
+    -0.15377698838710785,
+    -0.004570976831018925,
+    -0.19258740544319153,
+    -0.048913437873125076,
+    -0.06877929717302322,
+    0.0117647061124444
+  ],
+  "maximum": [
+    0.19626255333423615,
+    0.3376188576221466,
+    0.17272040247917175,
+    0.9699748754501343,
+    0.2846640348434448,
+    0.18114729225635529,
+    0.5960784554481506,
+    0.04495896399021149,
+    0.019606387242674828,
+    0.01429129671305418,
+    0.01962088979780674,
+    0.020657971501350403,
+    0.047213368117809296,
+    0.0117647061124444
+  ],
+  "last_action_is_padding": true
+}
+  ✅ 预检通过

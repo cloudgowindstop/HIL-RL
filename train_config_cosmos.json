@@ -1,0 +1,72 @@
+{
+    "suite": "libero",
+
+    "model_family": "cosmos",
+    "config": "cosmos_predict2_2b_480p_our_dataset__inference_only",
+    "ckpt_path": "/home/eai/Dev/hermine/HIL-RL-Project/dataset/insert_usb/all_data/iter_000010000",
+    "planning_model_config_name": "",
+    "planning_model_ckpt_path": "",
+    "config_file": "cosmos_policy.config.config.py",
+    
+    "use_third_person_image": true, 
+    "num_third_person_images": 1,
+    "use_wrist_image": true,
+    "num_wrist_images": 1,
+    "use_proprio": true,
+    
+    "flip_images": true,
+    "use_variance_scale": false,
+    "use_jpeg_compression": true,
+    "ar_future_prediction": false,
+    "ar_value_prediction": false,
+    "ar_qvalue_prediction": false,
+    "num_denoising_steps_action": 5,
+    "num_denoising_steps_future_state": 1,
+    "num_denoising_steps_value": 1,
+    "unnormalize_actions": true,
+    
+    "normalize_proprio": true,
+    
+    "dataset_stats_path": "/media/hermine_dataset/franka1/franka1_h5data_convert_cosmos/pick_toy/demo_data/dataset_statistics.json",
+    "t5_text_embeddings_path": "/media/hermine_dataset/franka1/franka1_h5data_convert_cosmos/pick_toy/demo_data/t5_embeddings.pkl",
+    "trained_with_image_aug": true,
+    "chunk_size": 16,
+    "num_open_loop_steps": 16,
+
+    "deterministic": true,
+    "deterministic_reset": false,
+    "deterministic_reset_seed": 0,
+
+    "use_ensemble_future_state_predictions": false,
+    "num_future_state_predictions_in_ensemble": 3,
+    "future_state_ensemble_aggregation_scheme": "average",
+    "use_ensemble_value_predictions": false,
+    "num_value_predictions_in_ensemble": 5,
+    "value_ensemble_aggregation_scheme": "average",
+    "search_depth": 1,
+    "mask_current_state_action_for_value_prediction": false,
+    "mask_future_state_for_qvalue_prediction": false,
+    
+    "num_queries_best_of_n": 1,
+    "use_parallel_inference": false,
+    "available_gpus": "0",
+    "parallel_timeout": 15,
+    
+    "task_suite_name": "libero_10",
+    "num_trials_per_task": 1,
+    "initial_states_path": "/home/eai/Dev/hermine/HIL-RL-Project/cosmos-policy/cosmos_policy/experiments/robot/libero/libero_10_metainfo.json",
+    "env_img_res": 256,
+    
+    "local_log_dir": "cosmos_policy/experiments/robot/libero/logs/",
+    "run_id_note": "chkpt45000--5stepAct--seed195--deterministic",
+    
+    "use_wandb": false,
+    "wandb_entity": "1684308419",
+    "wandb_project": "cosmos-policy",
+
+    "seed": 195,
+    "randomize_seed": false,
+    
+    "data_collection": false,
+    "jpeg_compress": true
+}

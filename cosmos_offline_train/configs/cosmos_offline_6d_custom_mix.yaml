@@ -1,0 +1,64 @@
+# Dual-arm rotation-6D smoke test for the custom-mix value branch.
+# Production experiments should replace these test-only probabilities.
+model:
+  experiment: cosmos_predict2_2b_480p_our_dataset
+  config_file: cosmos_policy/config/config.py
+  initialization: predict2_base
+  checkpoint_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/model-480p-16fps.pt
+  tokenizer_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos-policy/cosmos_policy/models/Cosmos-Policy-LIBERO-Predict2-2B/tokenizer/tokenizer.pth
+  precision: bfloat16
+  strict_checkpoint: false
+
+data:
+  source_root: null
+  root: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos_data_6drotation_monitor_20260819/back_handle_20260803_pm_success
+  train_manifest: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_0803_smoke/splits/smoke_v1/train.json
+  val_manifest: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_0803_smoke/splits/smoke_v1/val.json
+  test_manifest: null
+  t5_embeddings_path: /media/jushen/mingbo-ge/HIL-RL-Project/t5_embeddings_by_task/back_handle_installation_20260803_pm/t5_embeddings.pkl
+  statistics_path: /media/jushen/mingbo-ge/HIL-RL-Project/cosmos_data_6drotation_monitor_20260819/back_handle_20260803_pm_success/dataset_statistics.json
+  action_encoding: cosmos_rotation_6d
+  action_dimension: 20
+  action_includes_gripper: true
+  number_of_arms: 2
+  chunk_size: 16
+  workers_per_rank: 4
+  prefetch_factor: 2
+  pin_memory: true
+  persistent_workers: true
+
+training:
+  seed: 42
+  epochs: 1
+  max_steps: null
+  batch_size_per_rank: 1
+  gradient_accumulation_steps: 1
+  learning_rate: 1.0e-4
+  validation_every_epochs: 1
+  checkpoint_every_steps: 1000
+  log_every_steps: 1
+  gradient_clip_norm: 10.0
+
+objectives:
+  training_mode: custom_mix
+  policy_probability: 0.0
+  world_probability: 0.0
+  value_probability: 1.0
+
+split:
+  create_if_missing: true
+  overwrite: false
+  seed: 42
+  max_episodes: 10
+  ratios: [0.8, 0.2, 0.0]
+
+evaluation:
+  noise_seed: 20260820
+  sigma_values: [0.1, 0.5, 0.9]
+  max_validation_batches: 2
+
+runtime:
+  output_dir: /media/jushen/mingbo-ge/HIL-RL-Project/train_outputs/back_handle_0803_custom_mix_smoke
+  smoke_test: true
+  smoke_max_train_steps: 10
+  smoke_max_validation_batches: 2
